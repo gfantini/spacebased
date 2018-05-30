@@ -1,0 +1,229 @@
+This script will look up for the MC (g4cuore) files.
+====================================================
+[INFO] PATH_LIST_MC = /nfs/cuore1/data/simulation/CUORE/BkgModel/fit_reference/ListMC.txt
+[INFO] PATH_HAYSTACK = /nfs/cuore1/data/simulation/CUORE/
+[INFO] For each file listed, will run find -L <HAYSTACK> -name <LINE>
+****************************************************
+ 
+N1 2nuFIJK-100M.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/2nuFIJK-100M.root
+-----------------------------------------------------
+N2 TeO2-pb210_cnaf1.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2-pb210_cnaf1.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2-pb210_cnaf1.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-pb210_cnaf1.root
+-----------------------------------------------------
+N3 TeO2-th232only_cnaf3.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2-th232only_cnaf3.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2-th232only_cnaf3.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-th232only_cnaf3.root
+-----------------------------------------------------
+N4 TeO2-ra228-pb208_cnaf4.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2-ra228-pb208_cnaf4.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2-ra228-pb208_cnaf4.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-ra228-pb208_cnaf4.root
+-----------------------------------------------------
+N5 TeO2-u238-th230_cnaf5.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2-u238-th230_cnaf5.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2-u238-th230_cnaf5.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-u238-th230_cnaf5.root
+-----------------------------------------------------
+N6 TeO2-th230only_cnaf6.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2-th230only_cnaf6.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2-th230only_cnaf6.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-th230only_cnaf6.root
+-----------------------------------------------------
+N7 TeO2-ra226-pb210_cnaf7.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2-ra226-pb210_cnaf7.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2-ra226-pb210_cnaf7.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-ra226-pb210_cnaf7.root
+-----------------------------------------------------
+N8 TeO2-k40_cnaf125.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2-k40_cnaf125.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-k40_cnaf125.root
+-----------------------------------------------------
+N9 TeO2-co60_cnaf107.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2-co60_cnaf107.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-co60_cnaf107.root
+-----------------------------------------------------
+N10 TeO2-sb125_cnaf149.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-sb125_cnaf149.root
+-----------------------------------------------------
+N11 TeO2-pt190_cnaf8.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2-pt190_cnaf8.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2-pt190_cnaf8.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-pt190_cnaf8.root
+-----------------------------------------------------
+N12 CuNOSV-th232.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-th232.root
+-----------------------------------------------------
+N13 CuNOSV-u238.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-u238.root
+-----------------------------------------------------
+N14 CuNOSV-k40.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-k40.root
+-----------------------------------------------------
+N15 CuNOSV-co60.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-co60.root
+-----------------------------------------------------
+N16 CuNOSV-mn54.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-mn54.root
+-----------------------------------------------------
+N17 PbRCu-th232_cnaf80.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/PbRCu-th232_cnaf80.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/PbRCu-th232_cnaf80.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/PbRCu-th232_cnaf80.root
+-----------------------------------------------------
+N18 PbRCu-u238_cnaf82.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/PbRCu-u238_cnaf82.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/PbRCu-u238_cnaf82.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/PbRCu-u238_cnaf82.root
+-----------------------------------------------------
+N19 600mK-th232.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/600mK-th232.root
+-----------------------------------------------------
+N20 600mK-u238.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/600mK-u238.root
+-----------------------------------------------------
+N21 600mK-co60.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/600mK-co60.root
+-----------------------------------------------------
+N22 PbR-th232_cnaf78.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/PbR-th232_cnaf78.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/PbR-th232_cnaf78.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/PbR-th232_cnaf78.root
+-----------------------------------------------------
+N23 PbR-u238_cnaf79.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/PbR-u238_cnaf79.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/PbR-u238_cnaf79.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/PbR-u238_cnaf79.root
+-----------------------------------------------------
+N24 PbR-ag108m_cnaf177.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/PbR-ag108m_cnaf177.root
+-----------------------------------------------------
+N25 StdPbPlug-th232_cnaf81.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/StdPbPlug-th232_cnaf81.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/StdPbPlug-th232_cnaf81.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/StdPbPlug-th232_cnaf81.root
+-----------------------------------------------------
+N26 StdPbPlug-u238_cnaf83.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/StdPbPlug-u238_cnaf83.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/StdPbPlug-u238_cnaf83.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/StdPbPlug-u238_cnaf83.root
+-----------------------------------------------------
+N27 ExtPb5cm_210Bi_cnaf135.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/ExtPb5cm_210Bi_cnaf135.root
+-----------------------------------------------------
+N28 TopPb5cm_210Bi_cnaf136.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TopPb5cm_210Bi_cnaf136.root
+-----------------------------------------------------
+N29 TeO2Sx-th232only-.01_cnaf9.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2Sx-th232only-.01_cnaf9.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2Sx-th232only-.01_cnaf9.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-th232only-.01_cnaf9.root
+-----------------------------------------------------
+N30 TeO2Sx-ra228-pb208-.01_cnaf10.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2Sx-ra228-pb208-.01_cnaf10.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2Sx-ra228-pb208-.01_cnaf10.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-ra228-pb208-.01_cnaf10.root
+-----------------------------------------------------
+N31 TeO2Sx-u238-th230-.01_cnaf11.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2Sx-u238-th230-.01_cnaf11.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2Sx-u238-th230-.01_cnaf11.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-u238-th230-.01_cnaf11.root
+-----------------------------------------------------
+N32 TeO2Sx-th230only-.01_cnaf12.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2Sx-th230only-.01_cnaf12.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2Sx-th230only-.01_cnaf12.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-th230only-.01_cnaf12.root
+-----------------------------------------------------
+N33 TeO2Sx-ra226-pb210-.01_cnaf13.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2Sx-ra226-pb210-.01_cnaf13.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2Sx-ra226-pb210-.01_cnaf13.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-ra226-pb210-.01_cnaf13.root
+-----------------------------------------------------
+N34 TeO2Sx-pb210-.001_cnaf14.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2Sx-pb210-.001_cnaf14.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2Sx-pb210-.001_cnaf14.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-pb210-.001_cnaf14.root
+-----------------------------------------------------
+N35 TeO2Sx-pb210-1_cnaf15.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2Sx-pb210-1_cnaf15.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2Sx-pb210-1_cnaf15.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-pb210-1_cnaf15.root
+-----------------------------------------------------
+N36 TeO2Sx-pb210-10_cnaf16.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2Sx-pb210-10_cnaf16.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2Sx-pb210-10_cnaf16.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-pb210-10_cnaf16.root
+-----------------------------------------------------
+N37 TeO2Sx-th232-10_cnaf17.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2Sx-th232-10_cnaf17.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2Sx-th232-10_cnaf17.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-th232-10_cnaf17.root
+-----------------------------------------------------
+N38 TeO2Sx-u238-10_cnaf18.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/TeO2Sx-u238-10_cnaf18.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/TeO2Sx-u238-10_cnaf18.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-u238-10_cnaf18.root
+-----------------------------------------------------
+N39 CuNOSVTowerSx-pb210-.01.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-.01.root
+-----------------------------------------------------
+N40 CuNOSVOthersSx-pb210-.01.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-pb210-.01.root
+-----------------------------------------------------
+N41 CuNOSVTowerSx-pb210-.1.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-.1.root
+-----------------------------------------------------
+N42 CuNOSVOthersSx-pb210-.1.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-pb210-.1.root
+-----------------------------------------------------
+N43 CuNOSVTowerSx-pb210-1.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-1.root
+-----------------------------------------------------
+N44 CuNOSVOthersSx-pb210-1.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-pb210-1.root
+-----------------------------------------------------
+N45 CuNOSVTowerSx-pb210-10.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-10.root
+-----------------------------------------------------
+N46 CuNOSVOthersSx-pb210-10.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-pb210-10.root
+-----------------------------------------------------
+N47 CuNOSVTowerSx-th232-10.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-th232-10.root
+-----------------------------------------------------
+N48 CuNOSVOthersSx-th232-10.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-th232-10.root
+-----------------------------------------------------
+N49 CuNOSVTowerSx-u238-10.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-u238-10.root
+-----------------------------------------------------
+N50 CuNOSVOthersSx-u238-10.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-u238-10.root
+-----------------------------------------------------
+N51 CuNOSVTowerSx-th232-.01.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-th232-.01.root
+-----------------------------------------------------
+N52 CuNOSVOthersSx-th232-.01.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-th232-.01.root
+-----------------------------------------------------
+N53 CuNOSVTowerSx-u238-.01.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-u238-.01.root
+-----------------------------------------------------
+N54 CuNOSVOthersSx-u238-.01.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-u238-.01.root
+-----------------------------------------------------
+N55 4K-th232_cnaf86.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp_t15.11_1mHz/4K-th232_cnaf86.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/4K-th232_cnaf86.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/4K-th232_cnaf86.root
+-----------------------------------------------------
+N56 4KTot-co60.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/4KTot-co60.root
+-----------------------------------------------------
+N57 mu-R5m_cnaf127.root
+/nfs/cuore1/data/simulation/CUORE/v_9.6/t16.03/ntp/mu-R5m_cnaf127.root
+/nfs/cuore1/data/simulation/CUORE/2017/ntp/mu-R5m_cnaf127.root
+-----------------------------------------------------

@@ -1,0 +1,5042 @@
+  [SETUP]  Diana software environment set to /nfs/cuore1/scratch/gfantini/cuoresw
+  [SETUP]  CUORE DB Host : cuore-postgres.lngs.infn.it:35432
+  [SETUP]  CUORE DB User : cuore
+  [SETUP]  CUORE DB Name : qdb
+HOST IS  cuorenode124
+MANPATH=/cuore/soft/root_v5.34.34/man:/usr/share/man/overrides:/usr/share/man:/usr/local/share/man
+HOSTNAME=cuorenode124
+PBS_VERSION=TORQUE-4.2.10
+SHELL=/bin/bash
+HISTSIZE=1000
+PBS_JOBNAME=ProduceJagsM2spectrum.pbs
+PBS_ENVIRONMENT=PBS_BATCH
+CUORE_INSTALL=/nfs/cuore1/scratch/gfantini/cuoresw
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+CUORE_DB_HOST=cuore-postgres.lngs.infn.it
+PBS_O_WORKDIR=/nfs/cuore1/scratch/gfantini/spacebased/jobs
+USER=gfantini
+PBS_TASKNUM=1
+LD_LIBRARY_PATH=/afs/lngs.infn.it/experiment/cuore/soft_node101/postgresql-9.6.6/lib:/cuore/soft_node101/gsl-1.16/lib:/cuore/soft/fftw/lib:/nfs/cuore1/scratch/gfantini/cuoresw/lib:/cuore/soft/root_v5.34.34/lib
+PBS_O_HOME=/home/gfantini
+PBS_WALLTIME=360000
+LIBPATH=/cuore/soft/root_v5.34.34/lib
+PBS_MOMPORT=15003
+PBS_GPUFILE=/var/lib/torque/aux//2532544.xmaster.lngs.infn.itgpu
+CUORE_DB_PWD=
+CUORE_DB_USER=cuore
+PBS_O_QUEUE=cuore
+PATH=/afs/lngs.infn.it/experiment/cuore/soft_node101/postgresql-9.6.6/bin:/nfs/cuore1/scratch/gfantini/cuoresw/bin:/cuore/soft/root_v5.34.34/bin:/usr/lib64/qt-3.3/bin:/usr/local/git/bin/:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin
+PBS_O_LOGNAME=gfantini
+MAIL=/var/spool/mail/gfantini
+PBS_O_LANG=en_US.UTF-8
+PBS_JOBCOOKIE=AA6BEB282BA296788289DBAA074A06A3
+PWD=/afs/lngs.infn.it/user/cuore/gfantini
+LANG=C
+PBS_NODENUM=0
+PBS_NUM_NODES=1
+PBS_O_SHELL=/bin/bash
+PBS_JOBID=2532544.xmaster.lngs.infn.it
+ROOTSYS=/cuore/soft/root_v5.34.34
+ENVIRONMENT=BATCH
+HISTCONTROL=ignoredups
+HOME=/home/gfantini
+SHLVL=2
+PBS_O_HOST=cuore-login2.lngs.infn.it
+CUORE_DB_PORT=35432
+DYLD_LIBRARY_PATH=/cuore/soft/root_v5.34.34/lib
+PBS_VNODENUM=0
+PYTHONPATH=/cuore/soft/root_v5.34.34/lib
+LOGNAME=gfantini
+CVS_RSH=ssh
+QTLIB=/usr/lib64/qt-3.3/lib
+PBS_QUEUE=cuore
+PBS_O_MAIL=/var/spool/mail/gfantini
+PBS_MICFILE=/var/lib/torque/aux//2532544.xmaster.lngs.infn.itmic
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+SHLIB_PATH=/cuore/soft/root_v5.34.34/lib
+CUORE_DB_NAME=qdb
+PBS_NP=1
+PBS_O_SERVER=xmaster.lngs.infn.it
+PBS_NUM_PPN=1
+PBS_NODEFILE=/var/lib/torque/aux//2532544.xmaster.lngs.infn.it
+G_BROKEN_FILENAMES=1
+PBS_O_PATH=/afs/lngs.infn.it/experiment/cuore/soft_node101/postgresql-9.6.6/bin:/nfs/cuore1/scratch/gfantini/cuoresw/bin:/cuore/soft/root_v5.34.34/bin:/nfs/cuore/geant4///bin/9.6.p03:/cuore/soft/mongo/scons/bin:/cuore/soft/fftw/bin:/cuore/soft/gsl/bin:/cuore/soft/postgresql/bin:/cuore/soft/bin:/usr/lib64/qt-3.3/bin:/usr/local/git/bin/:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/nfs/cuore1/scratch/gfantini/JagsBkgAnalysis/Codes/back2ground/2.6/:/nfs/cuore1/scratch/gfantini/JagsBkgAnalysis/Codes/jags2root/:/nfs/cuore1/scratch/gfantini/JagsBkgAnalysis/Codes/PrepareData/CUORE/:/nfs/cuore1/scratch/gfantini/JagsBkgAnalysis/scripts/:/cuore/soft/root/lib
+_=/usr/bin/printenv
+Loaded position for channel 1: 	-176.7 / 44.1 / -348
+Loaded position for channel 2: 	-176.7 / 44.1 / -290
+Loaded position for channel 3: 	-176.7 / 44.1 / -232
+Loaded position for channel 4: 	-176.7 / 44.1 / -174
+Loaded position for channel 5: 	-176.7 / 44.1 / -116
+Loaded position for channel 6: 	-176.7 / 44.1 / -58
+Loaded position for channel 7: 	-176.7 / 44.1 / 0
+Loaded position for channel 8: 	-176.7 / 44.1 / 58
+Loaded position for channel 9: 	-176.7 / 44.1 / 116
+Loaded position for channel 10: 	-176.7 / 44.1 / 174
+Loaded position for channel 11: 	-176.7 / 44.1 / 232
+Loaded position for channel 12: 	-176.7 / 44.1 / 290
+Loaded position for channel 13: 	-176.7 / 44.1 / 348
+Loaded position for channel 14: 	-117.3 / 44.1 / -348
+Loaded position for channel 15: 	-117.3 / 44.1 / -290
+Loaded position for channel 16: 	-117.3 / 44.1 / -232
+Loaded position for channel 17: 	-117.3 / 44.1 / -174
+Loaded position for channel 18: 	-117.3 / 44.1 / -116
+Loaded position for channel 19: 	-117.3 / 44.1 / -58
+Loaded position for channel 20: 	-117.3 / 44.1 / 0
+Loaded position for channel 21: 	-117.3 / 44.1 / 58
+Loaded position for channel 22: 	-117.3 / 44.1 / 116
+Loaded position for channel 23: 	-117.3 / 44.1 / 174
+Loaded position for channel 24: 	-117.3 / 44.1 / 232
+Loaded position for channel 25: 	-117.3 / 44.1 / 290
+Loaded position for channel 26: 	-117.3 / 44.1 / 348
+Loaded position for channel 27: 	-117.3 / 102.9 / -348
+Loaded position for channel 28: 	-117.3 / 102.9 / -290
+Loaded position for channel 29: 	-117.3 / 102.9 / -232
+Loaded position for channel 30: 	-117.3 / 102.9 / -174
+Loaded position for channel 31: 	-117.3 / 102.9 / -116
+Loaded position for channel 32: 	-117.3 / 102.9 / -58
+Loaded position for channel 33: 	-117.3 / 102.9 / 0
+Loaded position for channel 34: 	-117.3 / 102.9 / 58
+Loaded position for channel 35: 	-117.3 / 102.9 / 116
+Loaded position for channel 36: 	-117.3 / 102.9 / 174
+Loaded position for channel 37: 	-117.3 / 102.9 / 232
+Loaded position for channel 38: 	-117.3 / 102.9 / 290
+Loaded position for channel 39: 	-117.3 / 102.9 / 348
+Loaded position for channel 40: 	-176.7 / 102.9 / -348
+Loaded position for channel 41: 	-176.7 / 102.9 / -290
+Loaded position for channel 42: 	-176.7 / 102.9 / -232
+Loaded position for channel 43: 	-176.7 / 102.9 / -174
+Loaded position for channel 44: 	-176.7 / 102.9 / -116
+Loaded position for channel 45: 	-176.7 / 102.9 / -58
+Loaded position for channel 46: 	-176.7 / 102.9 / 0
+Loaded position for channel 47: 	-176.7 / 102.9 / 58
+Loaded position for channel 48: 	-176.7 / 102.9 / 116
+Loaded position for channel 49: 	-176.7 / 102.9 / 174
+Loaded position for channel 50: 	-176.7 / 102.9 / 232
+Loaded position for channel 51: 	-176.7 / 102.9 / 290
+Loaded position for channel 52: 	-176.7 / 102.9 / 348
+Loaded position for channel 53: 	-176.7 / 191.1 / -348
+Loaded position for channel 54: 	-176.7 / 191.1 / -290
+Loaded position for channel 55: 	-176.7 / 191.1 / -232
+Loaded position for channel 56: 	-176.7 / 191.1 / -174
+Loaded position for channel 57: 	-176.7 / 191.1 / -116
+Loaded position for channel 58: 	-176.7 / 191.1 / -58
+Loaded position for channel 59: 	-176.7 / 191.1 / 0
+Loaded position for channel 60: 	-176.7 / 191.1 / 58
+Loaded position for channel 61: 	-176.7 / 191.1 / 116
+Loaded position for channel 62: 	-176.7 / 191.1 / 174
+Loaded position for channel 63: 	-176.7 / 191.1 / 232
+Loaded position for channel 64: 	-176.7 / 191.1 / 290
+Loaded position for channel 65: 	-176.7 / 191.1 / 348
+Loaded position for channel 66: 	-117.3 / 191.1 / -348
+Loaded position for channel 67: 	-117.3 / 191.1 / -290
+Loaded position for channel 68: 	-117.3 / 191.1 / -232
+Loaded position for channel 69: 	-117.3 / 191.1 / -174
+Loaded position for channel 70: 	-117.3 / 191.1 / -116
+Loaded position for channel 71: 	-117.3 / 191.1 / -58
+Loaded position for channel 72: 	-117.3 / 191.1 / 0
+Loaded position for channel 73: 	-117.3 / 191.1 / 58
+Loaded position for channel 74: 	-117.3 / 191.1 / 116
+Loaded position for channel 75: 	-117.3 / 191.1 / 174
+Loaded position for channel 76: 	-117.3 / 191.1 / 232
+Loaded position for channel 77: 	-117.3 / 191.1 / 290
+Loaded position for channel 78: 	-117.3 / 191.1 / 348
+Loaded position for channel 79: 	-117.3 / 249.9 / -348
+Loaded position for channel 80: 	-117.3 / 249.9 / -290
+Loaded position for channel 81: 	-117.3 / 249.9 / -232
+Loaded position for channel 82: 	-117.3 / 249.9 / -174
+Loaded position for channel 83: 	-117.3 / 249.9 / -116
+Loaded position for channel 84: 	-117.3 / 249.9 / -58
+Loaded position for channel 85: 	-117.3 / 249.9 / 0
+Loaded position for channel 86: 	-117.3 / 249.9 / 58
+Loaded position for channel 87: 	-117.3 / 249.9 / 116
+Loaded position for channel 88: 	-117.3 / 249.9 / 174
+Loaded position for channel 89: 	-117.3 / 249.9 / 232
+Loaded position for channel 90: 	-117.3 / 249.9 / 290
+Loaded position for channel 91: 	-117.3 / 249.9 / 348
+Loaded position for channel 92: 	-176.7 / 249.9 / -348
+Loaded position for channel 93: 	-176.7 / 249.9 / -290
+Loaded position for channel 94: 	-176.7 / 249.9 / -232
+Loaded position for channel 95: 	-176.7 / 249.9 / -174
+Loaded position for channel 96: 	-176.7 / 249.9 / -116
+Loaded position for channel 97: 	-176.7 / 249.9 / -58
+Loaded position for channel 98: 	-176.7 / 249.9 / 0
+Loaded position for channel 99: 	-176.7 / 249.9 / 58
+Loaded position for channel 100: 	-176.7 / 249.9 / 116
+Loaded position for channel 101: 	-176.7 / 249.9 / 174
+Loaded position for channel 102: 	-176.7 / 249.9 / 232
+Loaded position for channel 103: 	-176.7 / 249.9 / 290
+Loaded position for channel 104: 	-176.7 / 249.9 / 348
+Loaded position for channel 105: 	-323.7 / -29.4 / -348
+Loaded position for channel 106: 	-323.7 / -29.4 / -290
+Loaded position for channel 107: 	-323.7 / -29.4 / -232
+Loaded position for channel 108: 	-323.7 / -29.4 / -174
+Loaded position for channel 109: 	-323.7 / -29.4 / -116
+Loaded position for channel 110: 	-323.7 / -29.4 / -58
+Loaded position for channel 111: 	-323.7 / -29.4 / 0
+Loaded position for channel 112: 	-323.7 / -29.4 / 58
+Loaded position for channel 113: 	-323.7 / -29.4 / 116
+Loaded position for channel 114: 	-323.7 / -29.4 / 174
+Loaded position for channel 115: 	-323.7 / -29.4 / 232
+Loaded position for channel 116: 	-323.7 / -29.4 / 290
+Loaded position for channel 117: 	-323.7 / -29.4 / 348
+Loaded position for channel 118: 	-264.3 / -29.4 / -348
+Loaded position for channel 119: 	-264.3 / -29.4 / -290
+Loaded position for channel 120: 	-264.3 / -29.4 / -232
+Loaded position for channel 121: 	-264.3 / -29.4 / -174
+Loaded position for channel 122: 	-264.3 / -29.4 / -116
+Loaded position for channel 123: 	-264.3 / -29.4 / -58
+Loaded position for channel 124: 	-264.3 / -29.4 / 0
+Loaded position for channel 125: 	-264.3 / -29.4 / 58
+Loaded position for channel 126: 	-264.3 / -29.4 / 116
+Loaded position for channel 127: 	-264.3 / -29.4 / 174
+Loaded position for channel 128: 	-264.3 / -29.4 / 232
+Loaded position for channel 129: 	-264.3 / -29.4 / 290
+Loaded position for channel 130: 	-264.3 / -29.4 / 348
+Loaded position for channel 131: 	-264.3 / 29.4 / -348
+Loaded position for channel 132: 	-264.3 / 29.4 / -290
+Loaded position for channel 133: 	-264.3 / 29.4 / -232
+Loaded position for channel 134: 	-264.3 / 29.4 / -174
+Loaded position for channel 135: 	-264.3 / 29.4 / -116
+Loaded position for channel 136: 	-264.3 / 29.4 / -58
+Loaded position for channel 137: 	-264.3 / 29.4 / 0
+Loaded position for channel 138: 	-264.3 / 29.4 / 58
+Loaded position for channel 139: 	-264.3 / 29.4 / 116
+Loaded position for channel 140: 	-264.3 / 29.4 / 174
+Loaded position for channel 141: 	-264.3 / 29.4 / 232
+Loaded position for channel 142: 	-264.3 / 29.4 / 290
+Loaded position for channel 143: 	-264.3 / 29.4 / 348
+Loaded position for channel 144: 	-323.7 / 29.4 / -348
+Loaded position for channel 145: 	-323.7 / 29.4 / -290
+Loaded position for channel 146: 	-323.7 / 29.4 / -232
+Loaded position for channel 147: 	-323.7 / 29.4 / -174
+Loaded position for channel 148: 	-323.7 / 29.4 / -116
+Loaded position for channel 149: 	-323.7 / 29.4 / -58
+Loaded position for channel 150: 	-323.7 / 29.4 / 0
+Loaded position for channel 151: 	-323.7 / 29.4 / 58
+Loaded position for channel 152: 	-323.7 / 29.4 / 116
+Loaded position for channel 153: 	-323.7 / 29.4 / 174
+Loaded position for channel 154: 	-323.7 / 29.4 / 232
+Loaded position for channel 155: 	-323.7 / 29.4 / 290
+Loaded position for channel 156: 	-323.7 / 29.4 / 348
+Loaded position for channel 157: 	-323.7 / 117.6 / -348
+Loaded position for channel 158: 	-323.7 / 117.6 / -290
+Loaded position for channel 159: 	-323.7 / 117.6 / -232
+Loaded position for channel 160: 	-323.7 / 117.6 / -174
+Loaded position for channel 161: 	-323.7 / 117.6 / -116
+Loaded position for channel 162: 	-323.7 / 117.6 / -58
+Loaded position for channel 163: 	-323.7 / 117.6 / 0
+Loaded position for channel 164: 	-323.7 / 117.6 / 58
+Loaded position for channel 165: 	-323.7 / 117.6 / 116
+Loaded position for channel 166: 	-323.7 / 117.6 / 174
+Loaded position for channel 167: 	-323.7 / 117.6 / 232
+Loaded position for channel 168: 	-323.7 / 117.6 / 290
+Loaded position for channel 169: 	-323.7 / 117.6 / 348
+Loaded position for channel 170: 	-264.3 / 117.6 / -348
+Loaded position for channel 171: 	-264.3 / 117.6 / -290
+Loaded position for channel 172: 	-264.3 / 117.6 / -232
+Loaded position for channel 173: 	-264.3 / 117.6 / -174
+Loaded position for channel 174: 	-264.3 / 117.6 / -116
+Loaded position for channel 175: 	-264.3 / 117.6 / -58
+Loaded position for channel 176: 	-264.3 / 117.6 / 0
+Loaded position for channel 177: 	-264.3 / 117.6 / 58
+Loaded position for channel 178: 	-264.3 / 117.6 / 116
+Loaded position for channel 179: 	-264.3 / 117.6 / 174
+Loaded position for channel 180: 	-264.3 / 117.6 / 232
+Loaded position for channel 181: 	-264.3 / 117.6 / 290
+Loaded position for channel 182: 	-264.3 / 117.6 / 348
+Loaded position for channel 183: 	-264.3 / 176.4 / -348
+Loaded position for channel 184: 	-264.3 / 176.4 / -290
+Loaded position for channel 185: 	-264.3 / 176.4 / -232
+Loaded position for channel 186: 	-264.3 / 176.4 / -174
+Loaded position for channel 187: 	-264.3 / 176.4 / -116
+Loaded position for channel 188: 	-264.3 / 176.4 / -58
+Loaded position for channel 189: 	-264.3 / 176.4 / 0
+Loaded position for channel 190: 	-264.3 / 176.4 / 58
+Loaded position for channel 191: 	-264.3 / 176.4 / 116
+Loaded position for channel 192: 	-264.3 / 176.4 / 174
+Loaded position for channel 193: 	-264.3 / 176.4 / 232
+Loaded position for channel 194: 	-264.3 / 176.4 / 290
+Loaded position for channel 195: 	-264.3 / 176.4 / 348
+Loaded position for channel 196: 	-323.7 / 176.4 / -348
+Loaded position for channel 197: 	-323.7 / 176.4 / -290
+Loaded position for channel 198: 	-323.7 / 176.4 / -232
+Loaded position for channel 199: 	-323.7 / 176.4 / -174
+Loaded position for channel 200: 	-323.7 / 176.4 / -116
+Loaded position for channel 201: 	-323.7 / 176.4 / -58
+Loaded position for channel 202: 	-323.7 / 176.4 / 0
+Loaded position for channel 203: 	-323.7 / 176.4 / 58
+Loaded position for channel 204: 	-323.7 / 176.4 / 116
+Loaded position for channel 205: 	-323.7 / 176.4 / 174
+Loaded position for channel 206: 	-323.7 / 176.4 / 232
+Loaded position for channel 207: 	-323.7 / 176.4 / 290
+Loaded position for channel 208: 	-323.7 / 176.4 / 348
+Loaded position for channel 209: 	-29.7 / -29.4 / -348
+Loaded position for channel 210: 	-29.7 / -29.4 / -290
+Loaded position for channel 211: 	-29.7 / -29.4 / -232
+Loaded position for channel 212: 	-29.7 / -29.4 / -174
+Loaded position for channel 213: 	-29.7 / -29.4 / -116
+Loaded position for channel 214: 	-29.7 / -29.4 / -58
+Loaded position for channel 215: 	-29.7 / -29.4 / 0
+Loaded position for channel 216: 	-29.7 / -29.4 / 58
+Loaded position for channel 217: 	-29.7 / -29.4 / 116
+Loaded position for channel 218: 	-29.7 / -29.4 / 174
+Loaded position for channel 219: 	-29.7 / -29.4 / 232
+Loaded position for channel 220: 	-29.7 / -29.4 / 290
+Loaded position for channel 221: 	-29.7 / -29.4 / 348
+Loaded position for channel 222: 	29.7 / -29.4 / -348
+Loaded position for channel 223: 	29.7 / -29.4 / -290
+Loaded position for channel 224: 	29.7 / -29.4 / -232
+Loaded position for channel 225: 	29.7 / -29.4 / -174
+Loaded position for channel 226: 	29.7 / -29.4 / -116
+Loaded position for channel 227: 	29.7 / -29.4 / -58
+Loaded position for channel 228: 	29.7 / -29.4 / 0
+Loaded position for channel 229: 	29.7 / -29.4 / 58
+Loaded position for channel 230: 	29.7 / -29.4 / 116
+Loaded position for channel 231: 	29.7 / -29.4 / 174
+Loaded position for channel 232: 	29.7 / -29.4 / 232
+Loaded position for channel 233: 	29.7 / -29.4 / 290
+Loaded position for channel 234: 	29.7 / -29.4 / 348
+Loaded position for channel 235: 	29.7 / 29.4 / -348
+Loaded position for channel 236: 	29.7 / 29.4 / -290
+Loaded position for channel 237: 	29.7 / 29.4 / -232
+Loaded position for channel 238: 	29.7 / 29.4 / -174
+Loaded position for channel 239: 	29.7 / 29.4 / -116
+Loaded position for channel 240: 	29.7 / 29.4 / -58
+Loaded position for channel 241: 	29.7 / 29.4 / 0
+Loaded position for channel 242: 	29.7 / 29.4 / 58
+Loaded position for channel 243: 	29.7 / 29.4 / 116
+Loaded position for channel 244: 	29.7 / 29.4 / 174
+Loaded position for channel 245: 	29.7 / 29.4 / 232
+Loaded position for channel 246: 	29.7 / 29.4 / 290
+Loaded position for channel 247: 	29.7 / 29.4 / 348
+Loaded position for channel 248: 	-29.7 / 29.4 / -348
+Loaded position for channel 249: 	-29.7 / 29.4 / -290
+Loaded position for channel 250: 	-29.7 / 29.4 / -232
+Loaded position for channel 251: 	-29.7 / 29.4 / -174
+Loaded position for channel 252: 	-29.7 / 29.4 / -116
+Loaded position for channel 253: 	-29.7 / 29.4 / -58
+Loaded position for channel 254: 	-29.7 / 29.4 / 0
+Loaded position for channel 255: 	-29.7 / 29.4 / 58
+Loaded position for channel 256: 	-29.7 / 29.4 / 116
+Loaded position for channel 257: 	-29.7 / 29.4 / 174
+Loaded position for channel 258: 	-29.7 / 29.4 / 232
+Loaded position for channel 259: 	-29.7 / 29.4 / 290
+Loaded position for channel 260: 	-29.7 / 29.4 / 348
+Loaded position for channel 261: 	-29.7 / 117.6 / -348
+Loaded position for channel 262: 	-29.7 / 117.6 / -290
+Loaded position for channel 263: 	-29.7 / 117.6 / -232
+Loaded position for channel 264: 	-29.7 / 117.6 / -174
+Loaded position for channel 265: 	-29.7 / 117.6 / -116
+Loaded position for channel 266: 	-29.7 / 117.6 / -58
+Loaded position for channel 267: 	-29.7 / 117.6 / 0
+Loaded position for channel 268: 	-29.7 / 117.6 / 58
+Loaded position for channel 269: 	-29.7 / 117.6 / 116
+Loaded position for channel 270: 	-29.7 / 117.6 / 174
+Loaded position for channel 271: 	-29.7 / 117.6 / 232
+Loaded position for channel 272: 	-29.7 / 117.6 / 290
+Loaded position for channel 273: 	-29.7 / 117.6 / 348
+Loaded position for channel 274: 	29.7 / 117.6 / -348
+Loaded position for channel 275: 	29.7 / 117.6 / -290
+Loaded position for channel 276: 	29.7 / 117.6 / -232
+Loaded position for channel 277: 	29.7 / 117.6 / -174
+Loaded position for channel 278: 	29.7 / 117.6 / -116
+Loaded position for channel 279: 	29.7 / 117.6 / -58
+Loaded position for channel 280: 	29.7 / 117.6 / 0
+Loaded position for channel 281: 	29.7 / 117.6 / 58
+Loaded position for channel 282: 	29.7 / 117.6 / 116
+Loaded position for channel 283: 	29.7 / 117.6 / 174
+Loaded position for channel 284: 	29.7 / 117.6 / 232
+Loaded position for channel 285: 	29.7 / 117.6 / 290
+Loaded position for channel 286: 	29.7 / 117.6 / 348
+Loaded position for channel 287: 	29.7 / 176.4 / -348
+Loaded position for channel 288: 	29.7 / 176.4 / -290
+Loaded position for channel 289: 	29.7 / 176.4 / -232
+Loaded position for channel 290: 	29.7 / 176.4 / -174
+Loaded position for channel 291: 	29.7 / 176.4 / -116
+Loaded position for channel 292: 	29.7 / 176.4 / -58
+Loaded position for channel 293: 	29.7 / 176.4 / 0
+Loaded position for channel 294: 	29.7 / 176.4 / 58
+Loaded position for channel 295: 	29.7 / 176.4 / 116
+Loaded position for channel 296: 	29.7 / 176.4 / 174
+Loaded position for channel 297: 	29.7 / 176.4 / 232
+Loaded position for channel 298: 	29.7 / 176.4 / 290
+Loaded position for channel 299: 	29.7 / 176.4 / 348
+Loaded position for channel 300: 	-29.7 / 176.4 / -348
+Loaded position for channel 301: 	-29.7 / 176.4 / -290
+Loaded position for channel 302: 	-29.7 / 176.4 / -232
+Loaded position for channel 303: 	-29.7 / 176.4 / -174
+Loaded position for channel 304: 	-29.7 / 176.4 / -116
+Loaded position for channel 305: 	-29.7 / 176.4 / -58
+Loaded position for channel 306: 	-29.7 / 176.4 / 0
+Loaded position for channel 307: 	-29.7 / 176.4 / 58
+Loaded position for channel 308: 	-29.7 / 176.4 / 116
+Loaded position for channel 309: 	-29.7 / 176.4 / 174
+Loaded position for channel 310: 	-29.7 / 176.4 / 232
+Loaded position for channel 311: 	-29.7 / 176.4 / 290
+Loaded position for channel 312: 	-29.7 / 176.4 / 348
+Loaded position for channel 313: 	-29.7 / 264.6 / -348
+Loaded position for channel 314: 	-29.7 / 264.6 / -290
+Loaded position for channel 315: 	-29.7 / 264.6 / -232
+Loaded position for channel 316: 	-29.7 / 264.6 / -174
+Loaded position for channel 317: 	-29.7 / 264.6 / -116
+Loaded position for channel 318: 	-29.7 / 264.6 / -58
+Loaded position for channel 319: 	-29.7 / 264.6 / 0
+Loaded position for channel 320: 	-29.7 / 264.6 / 58
+Loaded position for channel 321: 	-29.7 / 264.6 / 116
+Loaded position for channel 322: 	-29.7 / 264.6 / 174
+Loaded position for channel 323: 	-29.7 / 264.6 / 232
+Loaded position for channel 324: 	-29.7 / 264.6 / 290
+Loaded position for channel 325: 	-29.7 / 264.6 / 348
+Loaded position for channel 326: 	29.7 / 264.6 / -348
+Loaded position for channel 327: 	29.7 / 264.6 / -290
+Loaded position for channel 328: 	29.7 / 264.6 / -232
+Loaded position for channel 329: 	29.7 / 264.6 / -174
+Loaded position for channel 330: 	29.7 / 264.6 / -116
+Loaded position for channel 331: 	29.7 / 264.6 / -58
+Loaded position for channel 332: 	29.7 / 264.6 / 0
+Loaded position for channel 333: 	29.7 / 264.6 / 58
+Loaded position for channel 334: 	29.7 / 264.6 / 116
+Loaded position for channel 335: 	29.7 / 264.6 / 174
+Loaded position for channel 336: 	29.7 / 264.6 / 232
+Loaded position for channel 337: 	29.7 / 264.6 / 290
+Loaded position for channel 338: 	29.7 / 264.6 / 348
+Loaded position for channel 339: 	29.7 / 323.4 / -348
+Loaded position for channel 340: 	29.7 / 323.4 / -290
+Loaded position for channel 341: 	29.7 / 323.4 / -232
+Loaded position for channel 342: 	29.7 / 323.4 / -174
+Loaded position for channel 343: 	29.7 / 323.4 / -116
+Loaded position for channel 344: 	29.7 / 323.4 / -58
+Loaded position for channel 345: 	29.7 / 323.4 / 0
+Loaded position for channel 346: 	29.7 / 323.4 / 58
+Loaded position for channel 347: 	29.7 / 323.4 / 116
+Loaded position for channel 348: 	29.7 / 323.4 / 174
+Loaded position for channel 349: 	29.7 / 323.4 / 232
+Loaded position for channel 350: 	29.7 / 323.4 / 290
+Loaded position for channel 351: 	29.7 / 323.4 / 348
+Loaded position for channel 352: 	-29.7 / 323.4 / -348
+Loaded position for channel 353: 	-29.7 / 323.4 / -290
+Loaded position for channel 354: 	-29.7 / 323.4 / -232
+Loaded position for channel 355: 	-29.7 / 323.4 / -174
+Loaded position for channel 356: 	-29.7 / 323.4 / -116
+Loaded position for channel 357: 	-29.7 / 323.4 / -58
+Loaded position for channel 358: 	-29.7 / 323.4 / 0
+Loaded position for channel 359: 	-29.7 / 323.4 / 58
+Loaded position for channel 360: 	-29.7 / 323.4 / 116
+Loaded position for channel 361: 	-29.7 / 323.4 / 174
+Loaded position for channel 362: 	-29.7 / 323.4 / 232
+Loaded position for channel 363: 	-29.7 / 323.4 / 290
+Loaded position for channel 364: 	-29.7 / 323.4 / 348
+Loaded position for channel 365: 	117.3 / 44.1 / -348
+Loaded position for channel 366: 	117.3 / 44.1 / -290
+Loaded position for channel 367: 	117.3 / 44.1 / -232
+Loaded position for channel 368: 	117.3 / 44.1 / -174
+Loaded position for channel 369: 	117.3 / 44.1 / -116
+Loaded position for channel 370: 	117.3 / 44.1 / -58
+Loaded position for channel 371: 	117.3 / 44.1 / 0
+Loaded position for channel 372: 	117.3 / 44.1 / 58
+Loaded position for channel 373: 	117.3 / 44.1 / 116
+Loaded position for channel 374: 	117.3 / 44.1 / 174
+Loaded position for channel 375: 	117.3 / 44.1 / 232
+Loaded position for channel 376: 	117.3 / 44.1 / 290
+Loaded position for channel 377: 	117.3 / 44.1 / 348
+Loaded position for channel 378: 	176.7 / 44.1 / -348
+Loaded position for channel 379: 	176.7 / 44.1 / -290
+Loaded position for channel 380: 	176.7 / 44.1 / -232
+Loaded position for channel 381: 	176.7 / 44.1 / -174
+Loaded position for channel 382: 	176.7 / 44.1 / -116
+Loaded position for channel 383: 	176.7 / 44.1 / -58
+Loaded position for channel 384: 	176.7 / 44.1 / 0
+Loaded position for channel 385: 	176.7 / 44.1 / 58
+Loaded position for channel 386: 	176.7 / 44.1 / 116
+Loaded position for channel 387: 	176.7 / 44.1 / 174
+Loaded position for channel 388: 	176.7 / 44.1 / 232
+Loaded position for channel 389: 	176.7 / 44.1 / 290
+Loaded position for channel 390: 	176.7 / 44.1 / 348
+Loaded position for channel 391: 	176.7 / 102.9 / -348
+Loaded position for channel 392: 	176.7 / 102.9 / -290
+Loaded position for channel 393: 	176.7 / 102.9 / -232
+Loaded position for channel 394: 	176.7 / 102.9 / -174
+Loaded position for channel 395: 	176.7 / 102.9 / -116
+Loaded position for channel 396: 	176.7 / 102.9 / -58
+Loaded position for channel 397: 	176.7 / 102.9 / 0
+Loaded position for channel 398: 	176.7 / 102.9 / 58
+Loaded position for channel 399: 	176.7 / 102.9 / 116
+Loaded position for channel 400: 	176.7 / 102.9 / 174
+Loaded position for channel 401: 	176.7 / 102.9 / 232
+Loaded position for channel 402: 	176.7 / 102.9 / 290
+Loaded position for channel 403: 	176.7 / 102.9 / 348
+Loaded position for channel 404: 	117.3 / 102.9 / -348
+Loaded position for channel 405: 	117.3 / 102.9 / -290
+Loaded position for channel 406: 	117.3 / 102.9 / -232
+Loaded position for channel 407: 	117.3 / 102.9 / -174
+Loaded position for channel 408: 	117.3 / 102.9 / -116
+Loaded position for channel 409: 	117.3 / 102.9 / -58
+Loaded position for channel 410: 	117.3 / 102.9 / 0
+Loaded position for channel 411: 	117.3 / 102.9 / 58
+Loaded position for channel 412: 	117.3 / 102.9 / 116
+Loaded position for channel 413: 	117.3 / 102.9 / 174
+Loaded position for channel 414: 	117.3 / 102.9 / 232
+Loaded position for channel 415: 	117.3 / 102.9 / 290
+Loaded position for channel 416: 	117.3 / 102.9 / 348
+Loaded position for channel 417: 	117.3 / 191.1 / -348
+Loaded position for channel 418: 	117.3 / 191.1 / -290
+Loaded position for channel 419: 	117.3 / 191.1 / -232
+Loaded position for channel 420: 	117.3 / 191.1 / -174
+Loaded position for channel 421: 	117.3 / 191.1 / -116
+Loaded position for channel 422: 	117.3 / 191.1 / -58
+Loaded position for channel 423: 	117.3 / 191.1 / 0
+Loaded position for channel 424: 	117.3 / 191.1 / 58
+Loaded position for channel 425: 	117.3 / 191.1 / 116
+Loaded position for channel 426: 	117.3 / 191.1 / 174
+Loaded position for channel 427: 	117.3 / 191.1 / 232
+Loaded position for channel 428: 	117.3 / 191.1 / 290
+Loaded position for channel 429: 	117.3 / 191.1 / 348
+Loaded position for channel 430: 	176.7 / 191.1 / -348
+Loaded position for channel 431: 	176.7 / 191.1 / -290
+Loaded position for channel 432: 	176.7 / 191.1 / -232
+Loaded position for channel 433: 	176.7 / 191.1 / -174
+Loaded position for channel 434: 	176.7 / 191.1 / -116
+Loaded position for channel 435: 	176.7 / 191.1 / -58
+Loaded position for channel 436: 	176.7 / 191.1 / 0
+Loaded position for channel 437: 	176.7 / 191.1 / 58
+Loaded position for channel 438: 	176.7 / 191.1 / 116
+Loaded position for channel 439: 	176.7 / 191.1 / 174
+Loaded position for channel 440: 	176.7 / 191.1 / 232
+Loaded position for channel 441: 	176.7 / 191.1 / 290
+Loaded position for channel 442: 	176.7 / 191.1 / 348
+Loaded position for channel 443: 	176.7 / 249.9 / -348
+Loaded position for channel 444: 	176.7 / 249.9 / -290
+Loaded position for channel 445: 	176.7 / 249.9 / -232
+Loaded position for channel 446: 	176.7 / 249.9 / -174
+Loaded position for channel 447: 	176.7 / 249.9 / -116
+Loaded position for channel 448: 	176.7 / 249.9 / -58
+Loaded position for channel 449: 	176.7 / 249.9 / 0
+Loaded position for channel 450: 	176.7 / 249.9 / 58
+Loaded position for channel 451: 	176.7 / 249.9 / 116
+Loaded position for channel 452: 	176.7 / 249.9 / 174
+Loaded position for channel 453: 	176.7 / 249.9 / 232
+Loaded position for channel 454: 	176.7 / 249.9 / 290
+Loaded position for channel 455: 	176.7 / 249.9 / 348
+Loaded position for channel 456: 	117.3 / 249.9 / -348
+Loaded position for channel 457: 	117.3 / 249.9 / -290
+Loaded position for channel 458: 	117.3 / 249.9 / -232
+Loaded position for channel 459: 	117.3 / 249.9 / -174
+Loaded position for channel 460: 	117.3 / 249.9 / -116
+Loaded position for channel 461: 	117.3 / 249.9 / -58
+Loaded position for channel 462: 	117.3 / 249.9 / 0
+Loaded position for channel 463: 	117.3 / 249.9 / 58
+Loaded position for channel 464: 	117.3 / 249.9 / 116
+Loaded position for channel 465: 	117.3 / 249.9 / 174
+Loaded position for channel 466: 	117.3 / 249.9 / 232
+Loaded position for channel 467: 	117.3 / 249.9 / 290
+Loaded position for channel 468: 	117.3 / 249.9 / 348
+Loaded position for channel 469: 	264.3 / -29.4 / -348
+Loaded position for channel 470: 	264.3 / -29.4 / -290
+Loaded position for channel 471: 	264.3 / -29.4 / -232
+Loaded position for channel 472: 	264.3 / -29.4 / -174
+Loaded position for channel 473: 	264.3 / -29.4 / -116
+Loaded position for channel 474: 	264.3 / -29.4 / -58
+Loaded position for channel 475: 	264.3 / -29.4 / 0
+Loaded position for channel 476: 	264.3 / -29.4 / 58
+Loaded position for channel 477: 	264.3 / -29.4 / 116
+Loaded position for channel 478: 	264.3 / -29.4 / 174
+Loaded position for channel 479: 	264.3 / -29.4 / 232
+Loaded position for channel 480: 	264.3 / -29.4 / 290
+Loaded position for channel 481: 	264.3 / -29.4 / 348
+Loaded position for channel 482: 	323.7 / -29.4 / -348
+Loaded position for channel 483: 	323.7 / -29.4 / -290
+Loaded position for channel 484: 	323.7 / -29.4 / -232
+Loaded position for channel 485: 	323.7 / -29.4 / -174
+Loaded position for channel 486: 	323.7 / -29.4 / -116
+Loaded position for channel 487: 	323.7 / -29.4 / -58
+Loaded position for channel 488: 	323.7 / -29.4 / 0
+Loaded position for channel 489: 	323.7 / -29.4 / 58
+Loaded position for channel 490: 	323.7 / -29.4 / 116
+Loaded position for channel 491: 	323.7 / -29.4 / 174
+Loaded position for channel 492: 	323.7 / -29.4 / 232
+Loaded position for channel 493: 	323.7 / -29.4 / 290
+Loaded position for channel 494: 	323.7 / -29.4 / 348
+Loaded position for channel 495: 	323.7 / 29.4 / -348
+Loaded position for channel 496: 	323.7 / 29.4 / -290
+Loaded position for channel 497: 	323.7 / 29.4 / -232
+Loaded position for channel 498: 	323.7 / 29.4 / -174
+Loaded position for channel 499: 	323.7 / 29.4 / -116
+Loaded position for channel 500: 	323.7 / 29.4 / -58
+Loaded position for channel 501: 	323.7 / 29.4 / 0
+Loaded position for channel 502: 	323.7 / 29.4 / 58
+Loaded position for channel 503: 	323.7 / 29.4 / 116
+Loaded position for channel 504: 	323.7 / 29.4 / 174
+Loaded position for channel 505: 	323.7 / 29.4 / 232
+Loaded position for channel 506: 	323.7 / 29.4 / 290
+Loaded position for channel 507: 	323.7 / 29.4 / 348
+Loaded position for channel 508: 	264.3 / 29.4 / -348
+Loaded position for channel 509: 	264.3 / 29.4 / -290
+Loaded position for channel 510: 	264.3 / 29.4 / -232
+Loaded position for channel 511: 	264.3 / 29.4 / -174
+Loaded position for channel 512: 	264.3 / 29.4 / -116
+Loaded position for channel 513: 	264.3 / 29.4 / -58
+Loaded position for channel 514: 	264.3 / 29.4 / 0
+Loaded position for channel 515: 	264.3 / 29.4 / 58
+Loaded position for channel 516: 	264.3 / 29.4 / 116
+Loaded position for channel 517: 	264.3 / 29.4 / 174
+Loaded position for channel 518: 	264.3 / 29.4 / 232
+Loaded position for channel 519: 	264.3 / 29.4 / 290
+Loaded position for channel 520: 	264.3 / 29.4 / 348
+Loaded position for channel 521: 	264.3 / 117.6 / -348
+Loaded position for channel 522: 	264.3 / 117.6 / -290
+Loaded position for channel 523: 	264.3 / 117.6 / -232
+Loaded position for channel 524: 	264.3 / 117.6 / -174
+Loaded position for channel 525: 	264.3 / 117.6 / -116
+Loaded position for channel 526: 	264.3 / 117.6 / -58
+Loaded position for channel 527: 	264.3 / 117.6 / 0
+Loaded position for channel 528: 	264.3 / 117.6 / 58
+Loaded position for channel 529: 	264.3 / 117.6 / 116
+Loaded position for channel 530: 	264.3 / 117.6 / 174
+Loaded position for channel 531: 	264.3 / 117.6 / 232
+Loaded position for channel 532: 	264.3 / 117.6 / 290
+Loaded position for channel 533: 	264.3 / 117.6 / 348
+Loaded position for channel 534: 	323.7 / 117.6 / -348
+Loaded position for channel 535: 	323.7 / 117.6 / -290
+Loaded position for channel 536: 	323.7 / 117.6 / -232
+Loaded position for channel 537: 	323.7 / 117.6 / -174
+Loaded position for channel 538: 	323.7 / 117.6 / -116
+Loaded position for channel 539: 	323.7 / 117.6 / -58
+Loaded position for channel 540: 	323.7 / 117.6 / 0
+Loaded position for channel 541: 	323.7 / 117.6 / 58
+Loaded position for channel 542: 	323.7 / 117.6 / 116
+Loaded position for channel 543: 	323.7 / 117.6 / 174
+Loaded position for channel 544: 	323.7 / 117.6 / 232
+Loaded position for channel 545: 	323.7 / 117.6 / 290
+Loaded position for channel 546: 	323.7 / 117.6 / 348
+Loaded position for channel 547: 	323.7 / 176.4 / -348
+Loaded position for channel 548: 	323.7 / 176.4 / -290
+Loaded position for channel 549: 	323.7 / 176.4 / -232
+Loaded position for channel 550: 	323.7 / 176.4 / -174
+Loaded position for channel 551: 	323.7 / 176.4 / -116
+Loaded position for channel 552: 	323.7 / 176.4 / -58
+Loaded position for channel 553: 	323.7 / 176.4 / 0
+Loaded position for channel 554: 	323.7 / 176.4 / 58
+Loaded position for channel 555: 	323.7 / 176.4 / 116
+Loaded position for channel 556: 	323.7 / 176.4 / 174
+Loaded position for channel 557: 	323.7 / 176.4 / 232
+Loaded position for channel 558: 	323.7 / 176.4 / 290
+Loaded position for channel 559: 	323.7 / 176.4 / 348
+Loaded position for channel 560: 	264.3 / 176.4 / -348
+Loaded position for channel 561: 	264.3 / 176.4 / -290
+Loaded position for channel 562: 	264.3 / 176.4 / -232
+Loaded position for channel 563: 	264.3 / 176.4 / -174
+Loaded position for channel 564: 	264.3 / 176.4 / -116
+Loaded position for channel 565: 	264.3 / 176.4 / -58
+Loaded position for channel 566: 	264.3 / 176.4 / 0
+Loaded position for channel 567: 	264.3 / 176.4 / 58
+Loaded position for channel 568: 	264.3 / 176.4 / 116
+Loaded position for channel 569: 	264.3 / 176.4 / 174
+Loaded position for channel 570: 	264.3 / 176.4 / 232
+Loaded position for channel 571: 	264.3 / 176.4 / 290
+Loaded position for channel 572: 	264.3 / 176.4 / 348
+Loaded position for channel 573: 	29.7 / -264.6 / -348
+Loaded position for channel 574: 	29.7 / -264.6 / -290
+Loaded position for channel 575: 	29.7 / -264.6 / -232
+Loaded position for channel 576: 	29.7 / -264.6 / -174
+Loaded position for channel 577: 	29.7 / -264.6 / -116
+Loaded position for channel 578: 	29.7 / -264.6 / -58
+Loaded position for channel 579: 	29.7 / -264.6 / 0
+Loaded position for channel 580: 	29.7 / -264.6 / 58
+Loaded position for channel 581: 	29.7 / -264.6 / 116
+Loaded position for channel 582: 	29.7 / -264.6 / 174
+Loaded position for channel 583: 	29.7 / -264.6 / 232
+Loaded position for channel 584: 	29.7 / -264.6 / 290
+Loaded position for channel 585: 	29.7 / -264.6 / 348
+Loaded position for channel 586: 	-29.7 / -264.6 / -348
+Loaded position for channel 587: 	-29.7 / -264.6 / -290
+Loaded position for channel 588: 	-29.7 / -264.6 / -232
+Loaded position for channel 589: 	-29.7 / -264.6 / -174
+Loaded position for channel 590: 	-29.7 / -264.6 / -116
+Loaded position for channel 591: 	-29.7 / -264.6 / -58
+Loaded position for channel 592: 	-29.7 / -264.6 / 0
+Loaded position for channel 593: 	-29.7 / -264.6 / 58
+Loaded position for channel 594: 	-29.7 / -264.6 / 116
+Loaded position for channel 595: 	-29.7 / -264.6 / 174
+Loaded position for channel 596: 	-29.7 / -264.6 / 232
+Loaded position for channel 597: 	-29.7 / -264.6 / 290
+Loaded position for channel 598: 	-29.7 / -264.6 / 348
+Loaded position for channel 599: 	-29.7 / -323.4 / -348
+Loaded position for channel 600: 	-29.7 / -323.4 / -290
+Loaded position for channel 601: 	-29.7 / -323.4 / -232
+Loaded position for channel 602: 	-29.7 / -323.4 / -174
+Loaded position for channel 603: 	-29.7 / -323.4 / -116
+Loaded position for channel 604: 	-29.7 / -323.4 / -58
+Loaded position for channel 605: 	-29.7 / -323.4 / 0
+Loaded position for channel 606: 	-29.7 / -323.4 / 58
+Loaded position for channel 607: 	-29.7 / -323.4 / 116
+Loaded position for channel 608: 	-29.7 / -323.4 / 174
+Loaded position for channel 609: 	-29.7 / -323.4 / 232
+Loaded position for channel 610: 	-29.7 / -323.4 / 290
+Loaded position for channel 611: 	-29.7 / -323.4 / 348
+Loaded position for channel 612: 	29.7 / -323.4 / -348
+Loaded position for channel 613: 	29.7 / -323.4 / -290
+Loaded position for channel 614: 	29.7 / -323.4 / -232
+Loaded position for channel 615: 	29.7 / -323.4 / -174
+Loaded position for channel 616: 	29.7 / -323.4 / -116
+Loaded position for channel 617: 	29.7 / -323.4 / -58
+Loaded position for channel 618: 	29.7 / -323.4 / 0
+Loaded position for channel 619: 	29.7 / -323.4 / 58
+Loaded position for channel 620: 	29.7 / -323.4 / 116
+Loaded position for channel 621: 	29.7 / -323.4 / 174
+Loaded position for channel 622: 	29.7 / -323.4 / 232
+Loaded position for channel 623: 	29.7 / -323.4 / 290
+Loaded position for channel 624: 	29.7 / -323.4 / 348
+Loaded position for channel 625: 	176.7 / -44.1 / -348
+Loaded position for channel 626: 	176.7 / -44.1 / -290
+Loaded position for channel 627: 	176.7 / -44.1 / -232
+Loaded position for channel 628: 	176.7 / -44.1 / -174
+Loaded position for channel 629: 	176.7 / -44.1 / -116
+Loaded position for channel 630: 	176.7 / -44.1 / -58
+Loaded position for channel 631: 	176.7 / -44.1 / 0
+Loaded position for channel 632: 	176.7 / -44.1 / 58
+Loaded position for channel 633: 	176.7 / -44.1 / 116
+Loaded position for channel 634: 	176.7 / -44.1 / 174
+Loaded position for channel 635: 	176.7 / -44.1 / 232
+Loaded position for channel 636: 	176.7 / -44.1 / 290
+Loaded position for channel 637: 	176.7 / -44.1 / 348
+Loaded position for channel 638: 	117.3 / -44.1 / -348
+Loaded position for channel 639: 	117.3 / -44.1 / -290
+Loaded position for channel 640: 	117.3 / -44.1 / -232
+Loaded position for channel 641: 	117.3 / -44.1 / -174
+Loaded position for channel 642: 	117.3 / -44.1 / -116
+Loaded position for channel 643: 	117.3 / -44.1 / -58
+Loaded position for channel 644: 	117.3 / -44.1 / 0
+Loaded position for channel 645: 	117.3 / -44.1 / 58
+Loaded position for channel 646: 	117.3 / -44.1 / 116
+Loaded position for channel 647: 	117.3 / -44.1 / 174
+Loaded position for channel 648: 	117.3 / -44.1 / 232
+Loaded position for channel 649: 	117.3 / -44.1 / 290
+Loaded position for channel 650: 	117.3 / -44.1 / 348
+Loaded position for channel 651: 	117.3 / -102.9 / -348
+Loaded position for channel 652: 	117.3 / -102.9 / -290
+Loaded position for channel 653: 	117.3 / -102.9 / -232
+Loaded position for channel 654: 	117.3 / -102.9 / -174
+Loaded position for channel 655: 	117.3 / -102.9 / -116
+Loaded position for channel 656: 	117.3 / -102.9 / -58
+Loaded position for channel 657: 	117.3 / -102.9 / 0
+Loaded position for channel 658: 	117.3 / -102.9 / 58
+Loaded position for channel 659: 	117.3 / -102.9 / 116
+Loaded position for channel 660: 	117.3 / -102.9 / 174
+Loaded position for channel 661: 	117.3 / -102.9 / 232
+Loaded position for channel 662: 	117.3 / -102.9 / 290
+Loaded position for channel 663: 	117.3 / -102.9 / 348
+Loaded position for channel 664: 	176.7 / -102.9 / -348
+Loaded position for channel 665: 	176.7 / -102.9 / -290
+Loaded position for channel 666: 	176.7 / -102.9 / -232
+Loaded position for channel 667: 	176.7 / -102.9 / -174
+Loaded position for channel 668: 	176.7 / -102.9 / -116
+Loaded position for channel 669: 	176.7 / -102.9 / -58
+Loaded position for channel 670: 	176.7 / -102.9 / 0
+Loaded position for channel 671: 	176.7 / -102.9 / 58
+Loaded position for channel 672: 	176.7 / -102.9 / 116
+Loaded position for channel 673: 	176.7 / -102.9 / 174
+Loaded position for channel 674: 	176.7 / -102.9 / 232
+Loaded position for channel 675: 	176.7 / -102.9 / 290
+Loaded position for channel 676: 	176.7 / -102.9 / 348
+Loaded position for channel 677: 	176.7 / -191.1 / -348
+Loaded position for channel 678: 	176.7 / -191.1 / -290
+Loaded position for channel 679: 	176.7 / -191.1 / -232
+Loaded position for channel 680: 	176.7 / -191.1 / -174
+Loaded position for channel 681: 	176.7 / -191.1 / -116
+Loaded position for channel 682: 	176.7 / -191.1 / -58
+Loaded position for channel 683: 	176.7 / -191.1 / 0
+Loaded position for channel 684: 	176.7 / -191.1 / 58
+Loaded position for channel 685: 	176.7 / -191.1 / 116
+Loaded position for channel 686: 	176.7 / -191.1 / 174
+Loaded position for channel 687: 	176.7 / -191.1 / 232
+Loaded position for channel 688: 	176.7 / -191.1 / 290
+Loaded position for channel 689: 	176.7 / -191.1 / 348
+Loaded position for channel 690: 	117.3 / -191.1 / -348
+Loaded position for channel 691: 	117.3 / -191.1 / -290
+Loaded position for channel 692: 	117.3 / -191.1 / -232
+Loaded position for channel 693: 	117.3 / -191.1 / -174
+Loaded position for channel 694: 	117.3 / -191.1 / -116
+Loaded position for channel 695: 	117.3 / -191.1 / -58
+Loaded position for channel 696: 	117.3 / -191.1 / 0
+Loaded position for channel 697: 	117.3 / -191.1 / 58
+Loaded position for channel 698: 	117.3 / -191.1 / 116
+Loaded position for channel 699: 	117.3 / -191.1 / 174
+Loaded position for channel 700: 	117.3 / -191.1 / 232
+Loaded position for channel 701: 	117.3 / -191.1 / 290
+Loaded position for channel 702: 	117.3 / -191.1 / 348
+Loaded position for channel 703: 	117.3 / -249.9 / -348
+Loaded position for channel 704: 	117.3 / -249.9 / -290
+Loaded position for channel 705: 	117.3 / -249.9 / -232
+Loaded position for channel 706: 	117.3 / -249.9 / -174
+Loaded position for channel 707: 	117.3 / -249.9 / -116
+Loaded position for channel 708: 	117.3 / -249.9 / -58
+Loaded position for channel 709: 	117.3 / -249.9 / 0
+Loaded position for channel 710: 	117.3 / -249.9 / 58
+Loaded position for channel 711: 	117.3 / -249.9 / 116
+Loaded position for channel 712: 	117.3 / -249.9 / 174
+Loaded position for channel 713: 	117.3 / -249.9 / 232
+Loaded position for channel 714: 	117.3 / -249.9 / 290
+Loaded position for channel 715: 	117.3 / -249.9 / 348
+Loaded position for channel 716: 	176.7 / -249.9 / -348
+Loaded position for channel 717: 	176.7 / -249.9 / -290
+Loaded position for channel 718: 	176.7 / -249.9 / -232
+Loaded position for channel 719: 	176.7 / -249.9 / -174
+Loaded position for channel 720: 	176.7 / -249.9 / -116
+Loaded position for channel 721: 	176.7 / -249.9 / -58
+Loaded position for channel 722: 	176.7 / -249.9 / 0
+Loaded position for channel 723: 	176.7 / -249.9 / 58
+Loaded position for channel 724: 	176.7 / -249.9 / 116
+Loaded position for channel 725: 	176.7 / -249.9 / 174
+Loaded position for channel 726: 	176.7 / -249.9 / 232
+Loaded position for channel 727: 	176.7 / -249.9 / 290
+Loaded position for channel 728: 	176.7 / -249.9 / 348
+Loaded position for channel 729: 	323.7 / -117.6 / -348
+Loaded position for channel 730: 	323.7 / -117.6 / -290
+Loaded position for channel 731: 	323.7 / -117.6 / -232
+Loaded position for channel 732: 	323.7 / -117.6 / -174
+Loaded position for channel 733: 	323.7 / -117.6 / -116
+Loaded position for channel 734: 	323.7 / -117.6 / -58
+Loaded position for channel 735: 	323.7 / -117.6 / 0
+Loaded position for channel 736: 	323.7 / -117.6 / 58
+Loaded position for channel 737: 	323.7 / -117.6 / 116
+Loaded position for channel 738: 	323.7 / -117.6 / 174
+Loaded position for channel 739: 	323.7 / -117.6 / 232
+Loaded position for channel 740: 	323.7 / -117.6 / 290
+Loaded position for channel 741: 	323.7 / -117.6 / 348
+Loaded position for channel 742: 	264.3 / -117.6 / -348
+Loaded position for channel 743: 	264.3 / -117.6 / -290
+Loaded position for channel 744: 	264.3 / -117.6 / -232
+Loaded position for channel 745: 	264.3 / -117.6 / -174
+Loaded position for channel 746: 	264.3 / -117.6 / -116
+Loaded position for channel 747: 	264.3 / -117.6 / -58
+Loaded position for channel 748: 	264.3 / -117.6 / 0
+Loaded position for channel 749: 	264.3 / -117.6 / 58
+Loaded position for channel 750: 	264.3 / -117.6 / 116
+Loaded position for channel 751: 	264.3 / -117.6 / 174
+Loaded position for channel 752: 	264.3 / -117.6 / 232
+Loaded position for channel 753: 	264.3 / -117.6 / 290
+Loaded position for channel 754: 	264.3 / -117.6 / 348
+Loaded position for channel 755: 	264.3 / -176.4 / -348
+Loaded position for channel 756: 	264.3 / -176.4 / -290
+Loaded position for channel 757: 	264.3 / -176.4 / -232
+Loaded position for channel 758: 	264.3 / -176.4 / -174
+Loaded position for channel 759: 	264.3 / -176.4 / -116
+Loaded position for channel 760: 	264.3 / -176.4 / -58
+Loaded position for channel 761: 	264.3 / -176.4 / 0
+Loaded position for channel 762: 	264.3 / -176.4 / 58
+Loaded position for channel 763: 	264.3 / -176.4 / 116
+Loaded position for channel 764: 	264.3 / -176.4 / 174
+Loaded position for channel 765: 	264.3 / -176.4 / 232
+Loaded position for channel 766: 	264.3 / -176.4 / 290
+Loaded position for channel 767: 	264.3 / -176.4 / 348
+Loaded position for channel 768: 	323.7 / -176.4 / -348
+Loaded position for channel 769: 	323.7 / -176.4 / -290
+Loaded position for channel 770: 	323.7 / -176.4 / -232
+Loaded position for channel 771: 	323.7 / -176.4 / -174
+Loaded position for channel 772: 	323.7 / -176.4 / -116
+Loaded position for channel 773: 	323.7 / -176.4 / -58
+Loaded position for channel 774: 	323.7 / -176.4 / 0
+Loaded position for channel 775: 	323.7 / -176.4 / 58
+Loaded position for channel 776: 	323.7 / -176.4 / 116
+Loaded position for channel 777: 	323.7 / -176.4 / 174
+Loaded position for channel 778: 	323.7 / -176.4 / 232
+Loaded position for channel 779: 	323.7 / -176.4 / 290
+Loaded position for channel 780: 	323.7 / -176.4 / 348
+Loaded position for channel 781: 	29.7 / -117.6 / -348
+Loaded position for channel 782: 	29.7 / -117.6 / -290
+Loaded position for channel 783: 	29.7 / -117.6 / -232
+Loaded position for channel 784: 	29.7 / -117.6 / -174
+Loaded position for channel 785: 	29.7 / -117.6 / -116
+Loaded position for channel 786: 	29.7 / -117.6 / -58
+Loaded position for channel 787: 	29.7 / -117.6 / 0
+Loaded position for channel 788: 	29.7 / -117.6 / 58
+Loaded position for channel 789: 	29.7 / -117.6 / 116
+Loaded position for channel 790: 	29.7 / -117.6 / 174
+Loaded position for channel 791: 	29.7 / -117.6 / 232
+Loaded position for channel 792: 	29.7 / -117.6 / 290
+Loaded position for channel 793: 	29.7 / -117.6 / 348
+Loaded position for channel 794: 	-29.7 / -117.6 / -348
+Loaded position for channel 795: 	-29.7 / -117.6 / -290
+Loaded position for channel 796: 	-29.7 / -117.6 / -232
+Loaded position for channel 797: 	-29.7 / -117.6 / -174
+Loaded position for channel 798: 	-29.7 / -117.6 / -116
+Loaded position for channel 799: 	-29.7 / -117.6 / -58
+Loaded position for channel 800: 	-29.7 / -117.6 / 0
+Loaded position for channel 801: 	-29.7 / -117.6 / 58
+Loaded position for channel 802: 	-29.7 / -117.6 / 116
+Loaded position for channel 803: 	-29.7 / -117.6 / 174
+Loaded position for channel 804: 	-29.7 / -117.6 / 232
+Loaded position for channel 805: 	-29.7 / -117.6 / 290
+Loaded position for channel 806: 	-29.7 / -117.6 / 348
+Loaded position for channel 807: 	-29.7 / -176.4 / -348
+Loaded position for channel 808: 	-29.7 / -176.4 / -290
+Loaded position for channel 809: 	-29.7 / -176.4 / -232
+Loaded position for channel 810: 	-29.7 / -176.4 / -174
+Loaded position for channel 811: 	-29.7 / -176.4 / -116
+Loaded position for channel 812: 	-29.7 / -176.4 / -58
+Loaded position for channel 813: 	-29.7 / -176.4 / 0
+Loaded position for channel 814: 	-29.7 / -176.4 / 58
+Loaded position for channel 815: 	-29.7 / -176.4 / 116
+Loaded position for channel 816: 	-29.7 / -176.4 / 174
+Loaded position for channel 817: 	-29.7 / -176.4 / 232
+Loaded position for channel 818: 	-29.7 / -176.4 / 290
+Loaded position for channel 819: 	-29.7 / -176.4 / 348
+Loaded position for channel 820: 	29.7 / -176.4 / -348
+Loaded position for channel 821: 	29.7 / -176.4 / -290
+Loaded position for channel 822: 	29.7 / -176.4 / -232
+Loaded position for channel 823: 	29.7 / -176.4 / -174
+Loaded position for channel 824: 	29.7 / -176.4 / -116
+Loaded position for channel 825: 	29.7 / -176.4 / -58
+Loaded position for channel 826: 	29.7 / -176.4 / 0
+Loaded position for channel 827: 	29.7 / -176.4 / 58
+Loaded position for channel 828: 	29.7 / -176.4 / 116
+Loaded position for channel 829: 	29.7 / -176.4 / 174
+Loaded position for channel 830: 	29.7 / -176.4 / 232
+Loaded position for channel 831: 	29.7 / -176.4 / 290
+Loaded position for channel 832: 	29.7 / -176.4 / 348
+Loaded position for channel 833: 	-117.3 / -44.1 / -348
+Loaded position for channel 834: 	-117.3 / -44.1 / -290
+Loaded position for channel 835: 	-117.3 / -44.1 / -232
+Loaded position for channel 836: 	-117.3 / -44.1 / -174
+Loaded position for channel 837: 	-117.3 / -44.1 / -116
+Loaded position for channel 838: 	-117.3 / -44.1 / -58
+Loaded position for channel 839: 	-117.3 / -44.1 / 0
+Loaded position for channel 840: 	-117.3 / -44.1 / 58
+Loaded position for channel 841: 	-117.3 / -44.1 / 116
+Loaded position for channel 842: 	-117.3 / -44.1 / 174
+Loaded position for channel 843: 	-117.3 / -44.1 / 232
+Loaded position for channel 844: 	-117.3 / -44.1 / 290
+Loaded position for channel 845: 	-117.3 / -44.1 / 348
+Loaded position for channel 846: 	-176.7 / -44.1 / -348
+Loaded position for channel 847: 	-176.7 / -44.1 / -290
+Loaded position for channel 848: 	-176.7 / -44.1 / -232
+Loaded position for channel 849: 	-176.7 / -44.1 / -174
+Loaded position for channel 850: 	-176.7 / -44.1 / -116
+Loaded position for channel 851: 	-176.7 / -44.1 / -58
+Loaded position for channel 852: 	-176.7 / -44.1 / 0
+Loaded position for channel 853: 	-176.7 / -44.1 / 58
+Loaded position for channel 854: 	-176.7 / -44.1 / 116
+Loaded position for channel 855: 	-176.7 / -44.1 / 174
+Loaded position for channel 856: 	-176.7 / -44.1 / 232
+Loaded position for channel 857: 	-176.7 / -44.1 / 290
+Loaded position for channel 858: 	-176.7 / -44.1 / 348
+Loaded position for channel 859: 	-176.7 / -102.9 / -348
+Loaded position for channel 860: 	-176.7 / -102.9 / -290
+Loaded position for channel 861: 	-176.7 / -102.9 / -232
+Loaded position for channel 862: 	-176.7 / -102.9 / -174
+Loaded position for channel 863: 	-176.7 / -102.9 / -116
+Loaded position for channel 864: 	-176.7 / -102.9 / -58
+Loaded position for channel 865: 	-176.7 / -102.9 / 0
+Loaded position for channel 866: 	-176.7 / -102.9 / 58
+Loaded position for channel 867: 	-176.7 / -102.9 / 116
+Loaded position for channel 868: 	-176.7 / -102.9 / 174
+Loaded position for channel 869: 	-176.7 / -102.9 / 232
+Loaded position for channel 870: 	-176.7 / -102.9 / 290
+Loaded position for channel 871: 	-176.7 / -102.9 / 348
+Loaded position for channel 872: 	-117.3 / -102.9 / -348
+Loaded position for channel 873: 	-117.3 / -102.9 / -290
+Loaded position for channel 874: 	-117.3 / -102.9 / -232
+Loaded position for channel 875: 	-117.3 / -102.9 / -174
+Loaded position for channel 876: 	-117.3 / -102.9 / -116
+Loaded position for channel 877: 	-117.3 / -102.9 / -58
+Loaded position for channel 878: 	-117.3 / -102.9 / 0
+Loaded position for channel 879: 	-117.3 / -102.9 / 58
+Loaded position for channel 880: 	-117.3 / -102.9 / 116
+Loaded position for channel 881: 	-117.3 / -102.9 / 174
+Loaded position for channel 882: 	-117.3 / -102.9 / 232
+Loaded position for channel 883: 	-117.3 / -102.9 / 290
+Loaded position for channel 884: 	-117.3 / -102.9 / 348
+Loaded position for channel 885: 	-117.3 / -191.1 / -348
+Loaded position for channel 886: 	-117.3 / -191.1 / -290
+Loaded position for channel 887: 	-117.3 / -191.1 / -232
+Loaded position for channel 888: 	-117.3 / -191.1 / -174
+Loaded position for channel 889: 	-117.3 / -191.1 / -116
+Loaded position for channel 890: 	-117.3 / -191.1 / -58
+Loaded position for channel 891: 	-117.3 / -191.1 / 0
+Loaded position for channel 892: 	-117.3 / -191.1 / 58
+Loaded position for channel 893: 	-117.3 / -191.1 / 116
+Loaded position for channel 894: 	-117.3 / -191.1 / 174
+Loaded position for channel 895: 	-117.3 / -191.1 / 232
+Loaded position for channel 896: 	-117.3 / -191.1 / 290
+Loaded position for channel 897: 	-117.3 / -191.1 / 348
+Loaded position for channel 898: 	-176.7 / -191.1 / -348
+Loaded position for channel 899: 	-176.7 / -191.1 / -290
+Loaded position for channel 900: 	-176.7 / -191.1 / -232
+Loaded position for channel 901: 	-176.7 / -191.1 / -174
+Loaded position for channel 902: 	-176.7 / -191.1 / -116
+Loaded position for channel 903: 	-176.7 / -191.1 / -58
+Loaded position for channel 904: 	-176.7 / -191.1 / 0
+Loaded position for channel 905: 	-176.7 / -191.1 / 58
+Loaded position for channel 906: 	-176.7 / -191.1 / 116
+Loaded position for channel 907: 	-176.7 / -191.1 / 174
+Loaded position for channel 908: 	-176.7 / -191.1 / 232
+Loaded position for channel 909: 	-176.7 / -191.1 / 290
+Loaded position for channel 910: 	-176.7 / -191.1 / 348
+Loaded position for channel 911: 	-176.7 / -249.9 / -348
+Loaded position for channel 912: 	-176.7 / -249.9 / -290
+Loaded position for channel 913: 	-176.7 / -249.9 / -232
+Loaded position for channel 914: 	-176.7 / -249.9 / -174
+Loaded position for channel 915: 	-176.7 / -249.9 / -116
+Loaded position for channel 916: 	-176.7 / -249.9 / -58
+Loaded position for channel 917: 	-176.7 / -249.9 / 0
+Loaded position for channel 918: 	-176.7 / -249.9 / 58
+Loaded position for channel 919: 	-176.7 / -249.9 / 116
+Loaded position for channel 920: 	-176.7 / -249.9 / 174
+Loaded position for channel 921: 	-176.7 / -249.9 / 232
+Loaded position for channel 922: 	-176.7 / -249.9 / 290
+Loaded position for channel 923: 	-176.7 / -249.9 / 348
+Loaded position for channel 924: 	-117.3 / -249.9 / -348
+Loaded position for channel 925: 	-117.3 / -249.9 / -290
+Loaded position for channel 926: 	-117.3 / -249.9 / -232
+Loaded position for channel 927: 	-117.3 / -249.9 / -174
+Loaded position for channel 928: 	-117.3 / -249.9 / -116
+Loaded position for channel 929: 	-117.3 / -249.9 / -58
+Loaded position for channel 930: 	-117.3 / -249.9 / 0
+Loaded position for channel 931: 	-117.3 / -249.9 / 58
+Loaded position for channel 932: 	-117.3 / -249.9 / 116
+Loaded position for channel 933: 	-117.3 / -249.9 / 174
+Loaded position for channel 934: 	-117.3 / -249.9 / 232
+Loaded position for channel 935: 	-117.3 / -249.9 / 290
+Loaded position for channel 936: 	-117.3 / -249.9 / 348
+Loaded position for channel 937: 	-264.3 / -117.6 / -348
+Loaded position for channel 938: 	-264.3 / -117.6 / -290
+Loaded position for channel 939: 	-264.3 / -117.6 / -232
+Loaded position for channel 940: 	-264.3 / -117.6 / -174
+Loaded position for channel 941: 	-264.3 / -117.6 / -116
+Loaded position for channel 942: 	-264.3 / -117.6 / -58
+Loaded position for channel 943: 	-264.3 / -117.6 / 0
+Loaded position for channel 944: 	-264.3 / -117.6 / 58
+Loaded position for channel 945: 	-264.3 / -117.6 / 116
+Loaded position for channel 946: 	-264.3 / -117.6 / 174
+Loaded position for channel 947: 	-264.3 / -117.6 / 232
+Loaded position for channel 948: 	-264.3 / -117.6 / 290
+Loaded position for channel 949: 	-264.3 / -117.6 / 348
+Loaded position for channel 950: 	-323.7 / -117.6 / -348
+Loaded position for channel 951: 	-323.7 / -117.6 / -290
+Loaded position for channel 952: 	-323.7 / -117.6 / -232
+Loaded position for channel 953: 	-323.7 / -117.6 / -174
+Loaded position for channel 954: 	-323.7 / -117.6 / -116
+Loaded position for channel 955: 	-323.7 / -117.6 / -58
+Loaded position for channel 956: 	-323.7 / -117.6 / 0
+Loaded position for channel 957: 	-323.7 / -117.6 / 58
+Loaded position for channel 958: 	-323.7 / -117.6 / 116
+Loaded position for channel 959: 	-323.7 / -117.6 / 174
+Loaded position for channel 960: 	-323.7 / -117.6 / 232
+Loaded position for channel 961: 	-323.7 / -117.6 / 290
+Loaded position for channel 962: 	-323.7 / -117.6 / 348
+Loaded position for channel 963: 	-323.7 / -176.4 / -348
+Loaded position for channel 964: 	-323.7 / -176.4 / -290
+Loaded position for channel 965: 	-323.7 / -176.4 / -232
+Loaded position for channel 966: 	-323.7 / -176.4 / -174
+Loaded position for channel 967: 	-323.7 / -176.4 / -116
+Loaded position for channel 968: 	-323.7 / -176.4 / -58
+Loaded position for channel 969: 	-323.7 / -176.4 / 0
+Loaded position for channel 970: 	-323.7 / -176.4 / 58
+Loaded position for channel 971: 	-323.7 / -176.4 / 116
+Loaded position for channel 972: 	-323.7 / -176.4 / 174
+Loaded position for channel 973: 	-323.7 / -176.4 / 232
+Loaded position for channel 974: 	-323.7 / -176.4 / 290
+Loaded position for channel 975: 	-323.7 / -176.4 / 348
+Loaded position for channel 976: 	-264.3 / -176.4 / -348
+Loaded position for channel 977: 	-264.3 / -176.4 / -290
+Loaded position for channel 978: 	-264.3 / -176.4 / -232
+Loaded position for channel 979: 	-264.3 / -176.4 / -174
+Loaded position for channel 980: 	-264.3 / -176.4 / -116
+Loaded position for channel 981: 	-264.3 / -176.4 / -58
+Loaded position for channel 982: 	-264.3 / -176.4 / 0
+Loaded position for channel 983: 	-264.3 / -176.4 / 58
+Loaded position for channel 984: 	-264.3 / -176.4 / 116
+Loaded position for channel 985: 	-264.3 / -176.4 / 174
+Loaded position for channel 986: 	-264.3 / -176.4 / 232
+Loaded position for channel 987: 	-264.3 / -176.4 / 290
+Loaded position for channel 988: 	-264.3 / -176.4 / 348
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/2nuFIJK-100M.root
+Filename:	2nuFIJK-100M
+FunctionName:	gaus_n
+Mu:		1.503e-05
+Sigma:		0.97
+ReducedChi2:	0.001713
+Pvalue:		0.52
+MinGauss:	0.00169
+MaxGauss:	0.00174
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-pb210_cnaf1.root
+Filename:	TeO2-pb210_cnaf1
+FunctionName:	gaus_n
+Mu:		9.361e-05
+Sigma:		1.53
+ReducedChi2:	0.003611
+Pvalue:		0.03
+MinGauss:	0.00346
+MaxGauss:	0.00377
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-th232only_cnaf3.root
+Filename:	TeO2-th232only_cnaf3
+FunctionName:	gaus_n
+Mu:		6.053e-06
+Sigma:		1.14
+ReducedChi2:	4.405e-05
+Pvalue:		0.27
+MinGauss:	3.33e-05
+MaxGauss:	5.41e-05
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-ra228-pb208_cnaf4.root
+Filename:	TeO2-ra228-pb208_cnaf4
+FunctionName:	gaus_n
+Mu:		4.583e-05
+Sigma:		1.16
+ReducedChi2:	0.00024
+Pvalue:		0.24
+MinGauss:	0.000166
+MaxGauss:	0.00032
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-u238-th230_cnaf5.root
+Filename:	TeO2-u238-th230_cnaf5
+FunctionName:	*Gaus
+Mu:		5.411e-06
+Sigma:		1.19
+ReducedChi2:	-2.285e-05
+Pvalue:		0.22
+MinGauss:	0
+MaxGauss:	2.9e-06
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-th230only_cnaf6.root
+Filename:	TeO2-th230only_cnaf6
+FunctionName:	gaus_n
+Mu:		1.068e-05
+Sigma:		0.75
+ReducedChi2:	0.0002226
+Pvalue:		0.85
+MinGauss:	0.000205
+MaxGauss:	0.00024
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-ra226-pb210_cnaf7.root
+Filename:	TeO2-ra226-pb210_cnaf7
+FunctionName:	gaus_n
+Mu:		2.421e-05
+Sigma:		1.03
+ReducedChi2:	6.316e-05
+Pvalue:		0.42
+MinGauss:	2.3e-05
+MaxGauss:	0.000103
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-k40_cnaf125.root
+Filename:	TeO2-k40_cnaf125
+FunctionName:	gaus_n
+Mu:		2.477e-05
+Sigma:		0.73
+ReducedChi2:	0.0003592
+Pvalue:		0.87
+MinGauss:	0.00032
+MaxGauss:	0.000403
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-co60_cnaf107.root
+Filename:	TeO2-co60_cnaf107
+FunctionName:	*Gaus
+Mu:		3.912e-06
+Sigma:		1.07
+ReducedChi2:	-7.847e-06
+Pvalue:		0.36
+MinGauss:	0
+MaxGauss:	3.28e-06
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-sb125_cnaf149.root
+Filename:	TeO2-sb125_cnaf149
+FunctionName:	gaus_n
+Mu:		7.007e-06
+Sigma:		0.75
+ReducedChi2:	0.0001319
+Pvalue:		0.85
+MinGauss:	0.00012
+MaxGauss:	0.000144
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-pt190_cnaf8.root
+Filename:	TeO2-pt190_cnaf8
+FunctionName:	gaus_n
+Mu:		7.687e-06
+Sigma:		0.51
+ReducedChi2:	0.0004975
+Pvalue:		0.99
+MinGauss:	0.000485
+MaxGauss:	0.00051
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-th232.root
+Filename:	CuNOSV-th232
+FunctionName:	*Gaus
+Mu:		3.249e-05
+Sigma:		0.74
+ReducedChi2:	-0.0001335
+Pvalue:		0.87
+MinGauss:	0
+MaxGauss:	1.77e-05
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-u238.root
+Filename:	CuNOSV-u238
+FunctionName:	*Gaus
+Mu:		5.551e-05
+Sigma:		6.02
+ReducedChi2:	0.0001575
+Pvalue:		0
+MinGauss:	5.86e-05
+MaxGauss:	0.000251
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-k40.root
+Filename:	CuNOSV-k40
+FunctionName:	gaus_n
+Mu:		0.0001374
+Sigma:		0.87
+ReducedChi2:	0.008496
+Pvalue:		0.68
+MinGauss:	0.00824
+MaxGauss:	0.00872
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-co60.root
+Filename:	CuNOSV-co60
+FunctionName:	*Gaus
+Mu:		1.871e-05
+Sigma:		1.77
+ReducedChi2:	0.0004656
+Pvalue:		0
+MinGauss:	0.000434
+MaxGauss:	0.000498
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-mn54.root
+Filename:	CuNOSV-mn54
+FunctionName:	gaus_n
+Mu:		1.127e-05
+Sigma:		1.52
+ReducedChi2:	0.0001933
+Pvalue:		0.03
+MinGauss:	0.000175
+MaxGauss:	0.000213
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/PbRCu-th232_cnaf80.root
+Filename:	PbRCu-th232_cnaf80
+FunctionName:	*Gaus
+Mu:		0.005316
+Sigma:		2.58
+ReducedChi2:	-0.00278
+Pvalue:		0
+MinGauss:	0
+MaxGauss:	0.00775
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/PbRCu-u238_cnaf82.root
+Filename:	PbRCu-u238_cnaf82
+FunctionName:	*Gaus
+Mu:		0.005693
+Sigma:		1.13
+ReducedChi2:	-0.01754
+Pvalue:		0.27
+MinGauss:	0
+MaxGauss:	0.00394
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/600mK-th232.root
+Filename:	600mK-th232
+FunctionName:	*Gaus
+Mu:		0.0002465
+Sigma:		2.58
+ReducedChi2:	0.0001088
+Pvalue:		0
+MinGauss:	0
+MaxGauss:	0.0005
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/600mK-u238.root
+Filename:	600mK-u238
+FunctionName:	*Gaus
+Mu:		0.0002664
+Sigma:		1.38
+ReducedChi2:	0.000298
+Pvalue:		0.06
+MinGauss:	0
+MaxGauss:	0.000682
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/600mK-co60.root
+Filename:	600mK-co60
+FunctionName:	gaus_n
+Mu:		2.666e-05
+Sigma:		0.91
+ReducedChi2:	0.0002217
+Pvalue:		0.62
+MinGauss:	0.000177
+MaxGauss:	0.000265
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/PbR-th232_cnaf78.root
+Filename:	PbR-th232_cnaf78
+FunctionName:	*Gaus
+Mu:		0.0009034
+Sigma:		25.88
+ReducedChi2:	0.002023
+Pvalue:		0
+MinGauss:	0.000434
+MaxGauss:	0.00358
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/PbR-u238_cnaf79.root
+Filename:	PbR-u238_cnaf79
+FunctionName:	*Gaus
+Mu:		0.001175
+Sigma:		1.19
+ReducedChi2:	-0.00254
+Pvalue:		0.19
+MinGauss:	0
+MaxGauss:	0.000978
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/PbR-ag108m_cnaf177.root
+Filename:	PbR-ag108m_cnaf177
+FunctionName:	*Gaus
+Mu:		0.008339
+Sigma:		0.89
+ReducedChi2:	-0.03252
+Pvalue:		0.63
+MinGauss:	0
+MaxGauss:	0.00471
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/StdPbPlug-th232_cnaf81.root
+Filename:	StdPbPlug-th232_cnaf81
+FunctionName:	*Gaus
+Mu:		0.02264
+Sigma:		0.97
+ReducedChi2:	-0.05463
+Pvalue:		0.51
+MinGauss:	0
+MaxGauss:	0.0176
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/StdPbPlug-u238_cnaf83.root
+Filename:	StdPbPlug-u238_cnaf83
+FunctionName:	*Gaus
+Mu:		0.006953
+Sigma:		0.82
+ReducedChi2:	-0.02008
+Pvalue:		0.77
+MinGauss:	0
+MaxGauss:	0.0048
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/ExtPb5cm_210Bi_cnaf135.root
+Filename:	ExtPb5cm_210Bi_cnaf135
+FunctionName:	*Gaus
+Mu:		0.008218
+Sigma:		1.28
+ReducedChi2:	-0.03344
+Pvalue:		0.12
+MinGauss:	0
+MaxGauss:	0.00456
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TopPb5cm_210Bi_cnaf136.root
+Filename:	TopPb5cm_210Bi_cnaf136
+FunctionName:	gaus_n
+Mu:		8.496e-05
+Sigma:		1.26
+ReducedChi2:	0.006199
+Pvalue:		0.14
+MinGauss:	0.00605
+MaxGauss:	0.00635
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-th232only-.01_cnaf9.root
+Filename:	TeO2Sx-th232only-.01_cnaf9
+FunctionName:	gaus_n
+Mu:		5.618e-06
+Sigma:		0.95
+ReducedChi2:	1.8e-05
+Pvalue:		0.57
+MinGauss:	8.15e-06
+MaxGauss:	2.75e-05
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-ra228-pb208-.01_cnaf10.root
+Filename:	TeO2Sx-ra228-pb208-.01_cnaf10
+FunctionName:	gaus_n
+Mu:		3.279e-05
+Sigma:		0.84
+ReducedChi2:	0.00067
+Pvalue:		0.73
+MinGauss:	0.000615
+MaxGauss:	0.000729
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-u238-th230-.01_cnaf11.root
+Filename:	TeO2Sx-u238-th230-.01_cnaf11
+FunctionName:	*Gaus
+Mu:		1.609e-05
+Sigma:		2.11
+ReducedChi2:	0.0002573
+Pvalue:		0
+MinGauss:	0.000232
+MaxGauss:	0.000287
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-th230only-.01_cnaf12.root
+Filename:	TeO2Sx-th230only-.01_cnaf12
+FunctionName:	gaus_n
+Mu:		4.084e-06
+Sigma:		1.33
+ReducedChi2:	4.081e-05
+Pvalue:		0.09
+MinGauss:	3.36e-05
+MaxGauss:	4.73e-05
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-ra226-pb210-.01_cnaf13.root
+Filename:	TeO2Sx-ra226-pb210-.01_cnaf13
+FunctionName:	gaus_n
+Mu:		1.98e-05
+Sigma:		1.25
+ReducedChi2:	0.0006805
+Pvalue:		0.15
+MinGauss:	0.000647
+MaxGauss:	0.000713
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-pb210-.001_cnaf14.root
+Filename:	TeO2Sx-pb210-.001_cnaf14
+FunctionName:	gaus_n
+Mu:		7.891e-05
+Sigma:		0.92
+ReducedChi2:	0.01142
+Pvalue:		0.6
+MinGauss:	0.0113
+MaxGauss:	0.0116
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-pb210-1_cnaf15.root
+Filename:	TeO2Sx-pb210-1_cnaf15
+FunctionName:	gaus_n
+Mu:		8.323e-05
+Sigma:		1.15
+ReducedChi2:	0.001441
+Pvalue:		0.25
+MinGauss:	0.00129
+MaxGauss:	0.00158
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-pb210-10_cnaf16.root
+Filename:	TeO2Sx-pb210-10_cnaf16
+FunctionName:	gaus_n
+Mu:		0.0002466
+Sigma:		0.83
+ReducedChi2:	0.0005587
+Pvalue:		0.76
+MinGauss:	0.000134
+MaxGauss:	0.00094
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-th232-10_cnaf17.root
+Filename:	TeO2Sx-th232-10_cnaf17
+FunctionName:	*Gaus
+Mu:		6.72e-05
+Sigma:		1.89
+ReducedChi2:	0.0004116
+Pvalue:		0
+MinGauss:	0.000297
+MaxGauss:	0.000528
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-u238-10_cnaf18.root
+Filename:	TeO2Sx-u238-10_cnaf18
+FunctionName:	gaus_n
+Mu:		5.605e-05
+Sigma:		1.06
+ReducedChi2:	0.0001304
+Pvalue:		0.37
+MinGauss:	3.94e-05
+MaxGauss:	0.000221
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-.01.root
+Filename:	CuNOSVTowerSx-pb210-.01
+FunctionName:	gaus_n
+Mu:		0.0001803
+Sigma:		1.14
+ReducedChi2:	0.01194
+Pvalue:		0.26
+MinGauss:	0.0116
+MaxGauss:	0.0122
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-pb210-.01.root
+Filename:	CuNOSVOthersSx-pb210-.01
+FunctionName:	*Gaus
+Mu:		0.0001615
+Sigma:		2.98
+ReducedChi2:	0.000713
+Pvalue:		0
+MinGauss:	0.000451
+MaxGauss:	0.000992
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-.1.root
+Filename:	CuNOSVTowerSx-pb210-.1
+FunctionName:	gaus_n
+Mu:		0.0001316
+Sigma:		1.36
+ReducedChi2:	0.001231
+Pvalue:		0.08
+MinGauss:	0.000996
+MaxGauss:	0.00146
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-pb210-.1.root
+Filename:	CuNOSVOthersSx-pb210-.1
+FunctionName:	*Gaus
+Mu:		0.0002709
+Sigma:		1.15
+ReducedChi2:	-0.0004915
+Pvalue:		0.25
+MinGauss:	0
+MaxGauss:	0.00026
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-1.root
+Filename:	CuNOSVTowerSx-pb210-1
+FunctionName:	gaus_n
+Mu:		0.0001389
+Sigma:		1.27
+ReducedChi2:	0.001207
+Pvalue:		0.13
+MinGauss:	0.000979
+MaxGauss:	0.00146
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-pb210-1.root
+Filename:	CuNOSVOthersSx-pb210-1
+FunctionName:	*Gaus
+Mu:		6.833e-05
+Sigma:		0.96
+ReducedChi2:	-2.444e-06
+Pvalue:		0.54
+MinGauss:	0
+MaxGauss:	0.000115
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-10.root
+Filename:	CuNOSVTowerSx-pb210-10
+FunctionName:	*Gaus
+Mu:		7.958e-05
+Sigma:		1.11
+ReducedChi2:	-0.0003253
+Pvalue:		0.31
+MinGauss:	0
+MaxGauss:	4.22e-05
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-pb210-10.root
+Filename:	CuNOSVOthersSx-pb210-10
+FunctionName:	*Gaus
+Mu:		9.552e-05
+Sigma:		1.4
+ReducedChi2:	-0.0003932
+Pvalue:		0.05
+MinGauss:	0
+MaxGauss:	5e-05
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-th232-10.root
+Filename:	CuNOSVTowerSx-th232-10
+FunctionName:	gaus_n
+Mu:		7.114e-05
+Sigma:		0.81
+ReducedChi2:	0.0007813
+Pvalue:		0.77
+MinGauss:	0.000666
+MaxGauss:	0.000904
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-th232-10.root
+Filename:	CuNOSVOthersSx-th232-10
+FunctionName:	gaus_n
+Mu:		0.0001019
+Sigma:		1.57
+ReducedChi2:	0.0004125
+Pvalue:		0.01
+MinGauss:	0.000248
+MaxGauss:	0.000592
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-u238-10.root
+Filename:	CuNOSVTowerSx-u238-10
+FunctionName:	gaus_n
+Mu:		5.608e-05
+Sigma:		1.01
+ReducedChi2:	0.0004417
+Pvalue:		0.46
+MinGauss:	0.000347
+MaxGauss:	0.000537
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-u238-10.root
+Filename:	CuNOSVOthersSx-u238-10
+FunctionName:	*Gaus
+Mu:		0.0001416
+Sigma:		0.78
+ReducedChi2:	-0.000118
+Pvalue:		0.82
+MinGauss:	0
+MaxGauss:	0.000182
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-th232-.01.root
+Filename:	CuNOSVTowerSx-th232-.01
+FunctionName:	gaus_n
+Mu:		9.153e-06
+Sigma:		0.83
+ReducedChi2:	2.761e-05
+Pvalue:		0.76
+MinGauss:	1.18e-05
+MaxGauss:	4.27e-05
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-th232-.01.root
+Filename:	CuNOSVOthersSx-th232-.01
+FunctionName:	*Gaus
+Mu:		1.419e-05
+Sigma:		1.18
+ReducedChi2:	-1.608e-05
+Pvalue:		0.21
+MinGauss:	0
+MaxGauss:	1.61e-05
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-u238-.01.root
+Filename:	CuNOSVTowerSx-u238-.01
+FunctionName:	gaus_n
+Mu:		1.914e-05
+Sigma:		1.35
+ReducedChi2:	8.868e-05
+Pvalue:		0.08
+MinGauss:	5.46e-05
+MaxGauss:	0.000121
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-u238-.01.root
+Filename:	CuNOSVOthersSx-u238-.01
+FunctionName:	gaus_n
+Mu:		2.848e-05
+Sigma:		1.6
+ReducedChi2:	0.000115
+Pvalue:		0.01
+MinGauss:	6.59e-05
+MaxGauss:	0.000165
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/4K-th232_cnaf86.root
+Filename:	4K-th232_cnaf86
+FunctionName:	*Gaus
+Mu:		0.001224
+Sigma:		1.11
+ReducedChi2:	-0.001172
+Pvalue:		0.3
+MinGauss:	0
+MaxGauss:	0.00153
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/4KTot-co60.root
+Filename:	4KTot-co60
+FunctionName:	gaus_n
+Mu:		0.0004044
+Sigma:		1.24
+ReducedChi2:	0.004239
+Pvalue:		0.16
+MinGauss:	0.00351
+MaxGauss:	0.00494
+************************************************************************
+Added /nfs/cuore1/data/simulation/CUORE/2017/ntp/mu-R5m_cnaf127.root
+Filename:	mu-R5m_cnaf127
+FunctionName:	gaus_n
+Mu:		2.875e-05
+Sigma:		0.76
+ReducedChi2:	0.0003462
+Pvalue:		0.84
+MinGauss:	0.000298
+MaxGauss:	0.000396
+************************************************************************
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/2nuFIJK-100M.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-pb210_cnaf1.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-th232only_cnaf3.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-ra228-pb208_cnaf4.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-u238-th230_cnaf5.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-th230only_cnaf6.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-ra226-pb210_cnaf7.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-k40_cnaf125.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-co60_cnaf107.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-sb125_cnaf149.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-pt190_cnaf8.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-th232.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-u238.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-k40.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-co60.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-mn54.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/PbRCu-th232_cnaf80.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/PbRCu-u238_cnaf82.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/600mK-th232.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/600mK-u238.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/600mK-co60.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/PbR-th232_cnaf78.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/PbR-u238_cnaf79.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/PbR-ag108m_cnaf177.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/StdPbPlug-th232_cnaf81.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/StdPbPlug-u238_cnaf83.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/ExtPb5cm_210Bi_cnaf135.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TopPb5cm_210Bi_cnaf136.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-th232only-.01_cnaf9.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-ra228-pb208-.01_cnaf10.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-u238-th230-.01_cnaf11.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-th230only-.01_cnaf12.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-ra226-pb210-.01_cnaf13.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-pb210-.001_cnaf14.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-pb210-1_cnaf15.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-pb210-10_cnaf16.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-th232-10_cnaf17.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-u238-10_cnaf18.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-.01.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-pb210-.01.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-.1.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-pb210-.1.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-1.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-pb210-1.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-10.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-pb210-10.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-th232-10.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-th232-10.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-u238-10.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-u238-10.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-th232-.01.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-th232-.01.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-u238-.01.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-u238-.01.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/4K-th232_cnaf86.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/4KTot-co60.root found and readable.
+[INFO] File /nfs/cuore1/data/simulation/CUORE/2017/ntp/mu-R5m_cnaf127.root found and readable.
+Nsum: 	 0.00219209
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/2nuFIJK-100M.root
+[INFO] Loaded outTree.
+[INFO]0/47995890 completed.
+[INFO]479958/47995890 completed.
+[INFO]959916/47995890 completed.
+[INFO]1439874/47995890 completed.
+[INFO]1919832/47995890 completed.
+[INFO]2399790/47995890 completed.
+[INFO]2879748/47995890 completed.
+[INFO]3359706/47995890 completed.
+[INFO]3839664/47995890 completed.
+[INFO]4319622/47995890 completed.
+[INFO]4799580/47995890 completed.
+[INFO]5279538/47995890 completed.
+[INFO]5759496/47995890 completed.
+[INFO]6239454/47995890 completed.
+[INFO]6719412/47995890 completed.
+[INFO]7199370/47995890 completed.
+[INFO]7679328/47995890 completed.
+[INFO]8159286/47995890 completed.
+[INFO]8639244/47995890 completed.
+[INFO]9119202/47995890 completed.
+[INFO]9599160/47995890 completed.
+[INFO]10079118/47995890 completed.
+[INFO]10559076/47995890 completed.
+[INFO]11039034/47995890 completed.
+[INFO]11518992/47995890 completed.
+[INFO]11998950/47995890 completed.
+[INFO]12478908/47995890 completed.
+[INFO]12958866/47995890 completed.
+[INFO]13438824/47995890 completed.
+[INFO]13918782/47995890 completed.
+[INFO]14398740/47995890 completed.
+[INFO]14878698/47995890 completed.
+[INFO]15358656/47995890 completed.
+[INFO]15838614/47995890 completed.
+[INFO]16318572/47995890 completed.
+[INFO]16798530/47995890 completed.
+[INFO]17278488/47995890 completed.
+[INFO]17758446/47995890 completed.
+[INFO]18238404/47995890 completed.
+[INFO]18718362/47995890 completed.
+[INFO]19198320/47995890 completed.
+[INFO]19678278/47995890 completed.
+[INFO]20158236/47995890 completed.
+[INFO]20638194/47995890 completed.
+[INFO]21118152/47995890 completed.
+[INFO]21598110/47995890 completed.
+[INFO]22078068/47995890 completed.
+[INFO]22558026/47995890 completed.
+[INFO]23037984/47995890 completed.
+[INFO]23517942/47995890 completed.
+[INFO]23997900/47995890 completed.
+[INFO]24477858/47995890 completed.
+[INFO]24957816/47995890 completed.
+[INFO]25437774/47995890 completed.
+[INFO]25917732/47995890 completed.
+[INFO]26397690/47995890 completed.
+[INFO]26877648/47995890 completed.
+[INFO]27357606/47995890 completed.
+[INFO]27837564/47995890 completed.
+[INFO]28317522/47995890 completed.
+[INFO]28797480/47995890 completed.
+[INFO]29277438/47995890 completed.
+[INFO]29757396/47995890 completed.
+[INFO]30237354/47995890 completed.
+[INFO]30717312/47995890 completed.
+[INFO]31197270/47995890 completed.
+[INFO]31677228/47995890 completed.
+[INFO]32157186/47995890 completed.
+[INFO]32637144/47995890 completed.
+[INFO]33117102/47995890 completed.
+[INFO]33597060/47995890 completed.
+[INFO]34077018/47995890 completed.
+[INFO]34556976/47995890 completed.
+[INFO]35036934/47995890 completed.
+[INFO]35516892/47995890 completed.
+[INFO]35996850/47995890 completed.
+[INFO]36476808/47995890 completed.
+[INFO]36956766/47995890 completed.
+[INFO]37436724/47995890 completed.
+[INFO]37916682/47995890 completed.
+[INFO]38396640/47995890 completed.
+[INFO]38876598/47995890 completed.
+[INFO]39356556/47995890 completed.
+[INFO]39836514/47995890 completed.
+[INFO]40316472/47995890 completed.
+[INFO]40796430/47995890 completed.
+[INFO]41276388/47995890 completed.
+[INFO]41756346/47995890 completed.
+[INFO]42236304/47995890 completed.
+[INFO]42716262/47995890 completed.
+[INFO]43196220/47995890 completed.
+[INFO]43676178/47995890 completed.
+[INFO]44156136/47995890 completed.
+[INFO]44636094/47995890 completed.
+[INFO]45116052/47995890 completed.
+[INFO]45596010/47995890 completed.
+[INFO]46075968/47995890 completed.
+[INFO]46555926/47995890 completed.
+[INFO]47035884/47995890 completed.
+[INFO]47515842/47995890 completed.
+[INFO]47995800/47995890 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-pb210_cnaf1.root
+[INFO] Loaded outTree.
+[INFO]0/5797585 completed.
+[INFO]57975/5797585 completed.
+[INFO]115950/5797585 completed.
+[INFO]173925/5797585 completed.
+[INFO]231900/5797585 completed.
+[INFO]289875/5797585 completed.
+[INFO]347850/5797585 completed.
+[INFO]405825/5797585 completed.
+[INFO]463800/5797585 completed.
+[INFO]521775/5797585 completed.
+[INFO]579750/5797585 completed.
+[INFO]637725/5797585 completed.
+[INFO]695700/5797585 completed.
+[INFO]753675/5797585 completed.
+[INFO]811650/5797585 completed.
+[INFO]869625/5797585 completed.
+[INFO]927600/5797585 completed.
+[INFO]985575/5797585 completed.
+[INFO]1043550/5797585 completed.
+[INFO]1101525/5797585 completed.
+[INFO]1159500/5797585 completed.
+[INFO]1217475/5797585 completed.
+[INFO]1275450/5797585 completed.
+[INFO]1333425/5797585 completed.
+[INFO]1391400/5797585 completed.
+[INFO]1449375/5797585 completed.
+[INFO]1507350/5797585 completed.
+[INFO]1565325/5797585 completed.
+[INFO]1623300/5797585 completed.
+[INFO]1681275/5797585 completed.
+[INFO]1739250/5797585 completed.
+[INFO]1797225/5797585 completed.
+[INFO]1855200/5797585 completed.
+[INFO]1913175/5797585 completed.
+[INFO]1971150/5797585 completed.
+[INFO]2029125/5797585 completed.
+[INFO]2087100/5797585 completed.
+[INFO]2145075/5797585 completed.
+[INFO]2203050/5797585 completed.
+[INFO]2261025/5797585 completed.
+[INFO]2319000/5797585 completed.
+[INFO]2376975/5797585 completed.
+[INFO]2434950/5797585 completed.
+[INFO]2492925/5797585 completed.
+[INFO]2550900/5797585 completed.
+[INFO]2608875/5797585 completed.
+[INFO]2666850/5797585 completed.
+[INFO]2724825/5797585 completed.
+[INFO]2782800/5797585 completed.
+[INFO]2840775/5797585 completed.
+[INFO]2898750/5797585 completed.
+[INFO]2956725/5797585 completed.
+[INFO]3014700/5797585 completed.
+[INFO]3072675/5797585 completed.
+[INFO]3130650/5797585 completed.
+[INFO]3188625/5797585 completed.
+[INFO]3246600/5797585 completed.
+[INFO]3304575/5797585 completed.
+[INFO]3362550/5797585 completed.
+[INFO]3420525/5797585 completed.
+[INFO]3478500/5797585 completed.
+[INFO]3536475/5797585 completed.
+[INFO]3594450/5797585 completed.
+[INFO]3652425/5797585 completed.
+[INFO]3710400/5797585 completed.
+[INFO]3768375/5797585 completed.
+[INFO]3826350/5797585 completed.
+[INFO]3884325/5797585 completed.
+[INFO]3942300/5797585 completed.
+[INFO]4000275/5797585 completed.
+[INFO]4058250/5797585 completed.
+[INFO]4116225/5797585 completed.
+[INFO]4174200/5797585 completed.
+[INFO]4232175/5797585 completed.
+[INFO]4290150/5797585 completed.
+[INFO]4348125/5797585 completed.
+[INFO]4406100/5797585 completed.
+[INFO]4464075/5797585 completed.
+[INFO]4522050/5797585 completed.
+[INFO]4580025/5797585 completed.
+[INFO]4638000/5797585 completed.
+[INFO]4695975/5797585 completed.
+[INFO]4753950/5797585 completed.
+[INFO]4811925/5797585 completed.
+[INFO]4869900/5797585 completed.
+[INFO]4927875/5797585 completed.
+[INFO]4985850/5797585 completed.
+[INFO]5043825/5797585 completed.
+[INFO]5101800/5797585 completed.
+[INFO]5159775/5797585 completed.
+[INFO]5217750/5797585 completed.
+[INFO]5275725/5797585 completed.
+[INFO]5333700/5797585 completed.
+[INFO]5391675/5797585 completed.
+[INFO]5449650/5797585 completed.
+[INFO]5507625/5797585 completed.
+[INFO]5565600/5797585 completed.
+[INFO]5623575/5797585 completed.
+[INFO]5681550/5797585 completed.
+[INFO]5739525/5797585 completed.
+[INFO]5797500/5797585 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-th232only_cnaf3.root
+[INFO] Loaded outTree.
+[INFO]0/9464749 completed.
+[INFO]94647/9464749 completed.
+[INFO]189294/9464749 completed.
+[INFO]283941/9464749 completed.
+[INFO]378588/9464749 completed.
+[INFO]473235/9464749 completed.
+[INFO]567882/9464749 completed.
+[INFO]662529/9464749 completed.
+[INFO]757176/9464749 completed.
+[INFO]851823/9464749 completed.
+[INFO]946470/9464749 completed.
+[INFO]1041117/9464749 completed.
+[INFO]1135764/9464749 completed.
+[INFO]1230411/9464749 completed.
+[INFO]1325058/9464749 completed.
+[INFO]1419705/9464749 completed.
+[INFO]1514352/9464749 completed.
+[INFO]1608999/9464749 completed.
+[INFO]1703646/9464749 completed.
+[INFO]1798293/9464749 completed.
+[INFO]1892940/9464749 completed.
+[INFO]1987587/9464749 completed.
+[INFO]2082234/9464749 completed.
+[INFO]2176881/9464749 completed.
+[INFO]2271528/9464749 completed.
+[INFO]2366175/9464749 completed.
+[INFO]2460822/9464749 completed.
+[INFO]2555469/9464749 completed.
+[INFO]2650116/9464749 completed.
+[INFO]2744763/9464749 completed.
+[INFO]2839410/9464749 completed.
+[INFO]2934057/9464749 completed.
+[INFO]3028704/9464749 completed.
+[INFO]3123351/9464749 completed.
+[INFO]3217998/9464749 completed.
+[INFO]3312645/9464749 completed.
+[INFO]3407292/9464749 completed.
+[INFO]3501939/9464749 completed.
+[INFO]3596586/9464749 completed.
+[INFO]3691233/9464749 completed.
+[INFO]3785880/9464749 completed.
+[INFO]3880527/9464749 completed.
+[INFO]3975174/9464749 completed.
+[INFO]4069821/9464749 completed.
+[INFO]4164468/9464749 completed.
+[INFO]4259115/9464749 completed.
+[INFO]4353762/9464749 completed.
+[INFO]4448409/9464749 completed.
+[INFO]4543056/9464749 completed.
+[INFO]4637703/9464749 completed.
+[INFO]4732350/9464749 completed.
+[INFO]4826997/9464749 completed.
+[INFO]4921644/9464749 completed.
+[INFO]5016291/9464749 completed.
+[INFO]5110938/9464749 completed.
+[INFO]5205585/9464749 completed.
+[INFO]5300232/9464749 completed.
+[INFO]5394879/9464749 completed.
+[INFO]5489526/9464749 completed.
+[INFO]5584173/9464749 completed.
+[INFO]5678820/9464749 completed.
+[INFO]5773467/9464749 completed.
+[INFO]5868114/9464749 completed.
+[INFO]5962761/9464749 completed.
+[INFO]6057408/9464749 completed.
+[INFO]6152055/9464749 completed.
+[INFO]6246702/9464749 completed.
+[INFO]6341349/9464749 completed.
+[INFO]6435996/9464749 completed.
+[INFO]6530643/9464749 completed.
+[INFO]6625290/9464749 completed.
+[INFO]6719937/9464749 completed.
+[INFO]6814584/9464749 completed.
+[INFO]6909231/9464749 completed.
+[INFO]7003878/9464749 completed.
+[INFO]7098525/9464749 completed.
+[INFO]7193172/9464749 completed.
+[INFO]7287819/9464749 completed.
+[INFO]7382466/9464749 completed.
+[INFO]7477113/9464749 completed.
+[INFO]7571760/9464749 completed.
+[INFO]7666407/9464749 completed.
+[INFO]7761054/9464749 completed.
+[INFO]7855701/9464749 completed.
+[INFO]7950348/9464749 completed.
+[INFO]8044995/9464749 completed.
+[INFO]8139642/9464749 completed.
+[INFO]8234289/9464749 completed.
+[INFO]8328936/9464749 completed.
+[INFO]8423583/9464749 completed.
+[INFO]8518230/9464749 completed.
+[INFO]8612877/9464749 completed.
+[INFO]8707524/9464749 completed.
+[INFO]8802171/9464749 completed.
+[INFO]8896818/9464749 completed.
+[INFO]8991465/9464749 completed.
+[INFO]9086112/9464749 completed.
+[INFO]9180759/9464749 completed.
+[INFO]9275406/9464749 completed.
+[INFO]9370053/9464749 completed.
+[INFO]9464700/9464749 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-ra228-pb208_cnaf4.root
+[INFO] Loaded outTree.
+[INFO]0/7234778 completed.
+[INFO]72347/7234778 completed.
+[INFO]144694/7234778 completed.
+[INFO]217041/7234778 completed.
+[INFO]289388/7234778 completed.
+[INFO]361735/7234778 completed.
+[INFO]434082/7234778 completed.
+[INFO]506429/7234778 completed.
+[INFO]578776/7234778 completed.
+[INFO]651123/7234778 completed.
+[INFO]723470/7234778 completed.
+[INFO]795817/7234778 completed.
+[INFO]868164/7234778 completed.
+[INFO]940511/7234778 completed.
+[INFO]1012858/7234778 completed.
+[INFO]1085205/7234778 completed.
+[INFO]1157552/7234778 completed.
+[INFO]1229899/7234778 completed.
+[INFO]1302246/7234778 completed.
+[INFO]1374593/7234778 completed.
+[INFO]1446940/7234778 completed.
+[INFO]1519287/7234778 completed.
+[INFO]1591634/7234778 completed.
+[INFO]1663981/7234778 completed.
+[INFO]1736328/7234778 completed.
+[INFO]1808675/7234778 completed.
+[INFO]1881022/7234778 completed.
+[INFO]1953369/7234778 completed.
+[INFO]2025716/7234778 completed.
+[INFO]2098063/7234778 completed.
+[INFO]2170410/7234778 completed.
+[INFO]2242757/7234778 completed.
+[INFO]2315104/7234778 completed.
+[INFO]2387451/7234778 completed.
+[INFO]2459798/7234778 completed.
+[INFO]2532145/7234778 completed.
+[INFO]2604492/7234778 completed.
+[INFO]2676839/7234778 completed.
+[INFO]2749186/7234778 completed.
+[INFO]2821533/7234778 completed.
+[INFO]2893880/7234778 completed.
+[INFO]2966227/7234778 completed.
+[INFO]3038574/7234778 completed.
+[INFO]3110921/7234778 completed.
+[INFO]3183268/7234778 completed.
+[INFO]3255615/7234778 completed.
+[INFO]3327962/7234778 completed.
+[INFO]3400309/7234778 completed.
+[INFO]3472656/7234778 completed.
+[INFO]3545003/7234778 completed.
+[INFO]3617350/7234778 completed.
+[INFO]3689697/7234778 completed.
+[INFO]3762044/7234778 completed.
+[INFO]3834391/7234778 completed.
+[INFO]3906738/7234778 completed.
+[INFO]3979085/7234778 completed.
+[INFO]4051432/7234778 completed.
+[INFO]4123779/7234778 completed.
+[INFO]4196126/7234778 completed.
+[INFO]4268473/7234778 completed.
+[INFO]4340820/7234778 completed.
+[INFO]4413167/7234778 completed.
+[INFO]4485514/7234778 completed.
+[INFO]4557861/7234778 completed.
+[INFO]4630208/7234778 completed.
+[INFO]4702555/7234778 completed.
+[INFO]4774902/7234778 completed.
+[INFO]4847249/7234778 completed.
+[INFO]4919596/7234778 completed.
+[INFO]4991943/7234778 completed.
+[INFO]5064290/7234778 completed.
+[INFO]5136637/7234778 completed.
+[INFO]5208984/7234778 completed.
+[INFO]5281331/7234778 completed.
+[INFO]5353678/7234778 completed.
+[INFO]5426025/7234778 completed.
+[INFO]5498372/7234778 completed.
+[INFO]5570719/7234778 completed.
+[INFO]5643066/7234778 completed.
+[INFO]5715413/7234778 completed.
+[INFO]5787760/7234778 completed.
+[INFO]5860107/7234778 completed.
+[INFO]5932454/7234778 completed.
+[INFO]6004801/7234778 completed.
+[INFO]6077148/7234778 completed.
+[INFO]6149495/7234778 completed.
+[INFO]6221842/7234778 completed.
+[INFO]6294189/7234778 completed.
+[INFO]6366536/7234778 completed.
+[INFO]6438883/7234778 completed.
+[INFO]6511230/7234778 completed.
+[INFO]6583577/7234778 completed.
+[INFO]6655924/7234778 completed.
+[INFO]6728271/7234778 completed.
+[INFO]6800618/7234778 completed.
+[INFO]6872965/7234778 completed.
+[INFO]6945312/7234778 completed.
+[INFO]7017659/7234778 completed.
+[INFO]7090006/7234778 completed.
+[INFO]7162353/7234778 completed.
+[INFO]7234700/7234778 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-th230only_cnaf6.root
+[INFO] Loaded outTree.
+[INFO]0/5612525 completed.
+[INFO]56125/5612525 completed.
+[INFO]112250/5612525 completed.
+[INFO]168375/5612525 completed.
+[INFO]224500/5612525 completed.
+[INFO]280625/5612525 completed.
+[INFO]336750/5612525 completed.
+[INFO]392875/5612525 completed.
+[INFO]449000/5612525 completed.
+[INFO]505125/5612525 completed.
+[INFO]561250/5612525 completed.
+[INFO]617375/5612525 completed.
+[INFO]673500/5612525 completed.
+[INFO]729625/5612525 completed.
+[INFO]785750/5612525 completed.
+[INFO]841875/5612525 completed.
+[INFO]898000/5612525 completed.
+[INFO]954125/5612525 completed.
+[INFO]1010250/5612525 completed.
+[INFO]1066375/5612525 completed.
+[INFO]1122500/5612525 completed.
+[INFO]1178625/5612525 completed.
+[INFO]1234750/5612525 completed.
+[INFO]1290875/5612525 completed.
+[INFO]1347000/5612525 completed.
+[INFO]1403125/5612525 completed.
+[INFO]1459250/5612525 completed.
+[INFO]1515375/5612525 completed.
+[INFO]1571500/5612525 completed.
+[INFO]1627625/5612525 completed.
+[INFO]1683750/5612525 completed.
+[INFO]1739875/5612525 completed.
+[INFO]1796000/5612525 completed.
+[INFO]1852125/5612525 completed.
+[INFO]1908250/5612525 completed.
+[INFO]1964375/5612525 completed.
+[INFO]2020500/5612525 completed.
+[INFO]2076625/5612525 completed.
+[INFO]2132750/5612525 completed.
+[INFO]2188875/5612525 completed.
+[INFO]2245000/5612525 completed.
+[INFO]2301125/5612525 completed.
+[INFO]2357250/5612525 completed.
+[INFO]2413375/5612525 completed.
+[INFO]2469500/5612525 completed.
+[INFO]2525625/5612525 completed.
+[INFO]2581750/5612525 completed.
+[INFO]2637875/5612525 completed.
+[INFO]2694000/5612525 completed.
+[INFO]2750125/5612525 completed.
+[INFO]2806250/5612525 completed.
+[INFO]2862375/5612525 completed.
+[INFO]2918500/5612525 completed.
+[INFO]2974625/5612525 completed.
+[INFO]3030750/5612525 completed.
+[INFO]3086875/5612525 completed.
+[INFO]3143000/5612525 completed.
+[INFO]3199125/5612525 completed.
+[INFO]3255250/5612525 completed.
+[INFO]3311375/5612525 completed.
+[INFO]3367500/5612525 completed.
+[INFO]3423625/5612525 completed.
+[INFO]3479750/5612525 completed.
+[INFO]3535875/5612525 completed.
+[INFO]3592000/5612525 completed.
+[INFO]3648125/5612525 completed.
+[INFO]3704250/5612525 completed.
+[INFO]3760375/5612525 completed.
+[INFO]3816500/5612525 completed.
+[INFO]3872625/5612525 completed.
+[INFO]3928750/5612525 completed.
+[INFO]3984875/5612525 completed.
+[INFO]4041000/5612525 completed.
+[INFO]4097125/5612525 completed.
+[INFO]4153250/5612525 completed.
+[INFO]4209375/5612525 completed.
+[INFO]4265500/5612525 completed.
+[INFO]4321625/5612525 completed.
+[INFO]4377750/5612525 completed.
+[INFO]4433875/5612525 completed.
+[INFO]4490000/5612525 completed.
+[INFO]4546125/5612525 completed.
+[INFO]4602250/5612525 completed.
+[INFO]4658375/5612525 completed.
+[INFO]4714500/5612525 completed.
+[INFO]4770625/5612525 completed.
+[INFO]4826750/5612525 completed.
+[INFO]4882875/5612525 completed.
+[INFO]4939000/5612525 completed.
+[INFO]4995125/5612525 completed.
+[INFO]5051250/5612525 completed.
+[INFO]5107375/5612525 completed.
+[INFO]5163500/5612525 completed.
+[INFO]5219625/5612525 completed.
+[INFO]5275750/5612525 completed.
+[INFO]5331875/5612525 completed.
+[INFO]5388000/5612525 completed.
+[INFO]5444125/5612525 completed.
+[INFO]5500250/5612525 completed.
+[INFO]5556375/5612525 completed.
+[INFO]5612500/5612525 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-ra226-pb210_cnaf7.root
+[INFO] Loaded outTree.
+[INFO]0/9827690 completed.
+[INFO]98276/9827690 completed.
+[INFO]196552/9827690 completed.
+[INFO]294828/9827690 completed.
+[INFO]393104/9827690 completed.
+[INFO]491380/9827690 completed.
+[INFO]589656/9827690 completed.
+[INFO]687932/9827690 completed.
+[INFO]786208/9827690 completed.
+[INFO]884484/9827690 completed.
+[INFO]982760/9827690 completed.
+[INFO]1081036/9827690 completed.
+[INFO]1179312/9827690 completed.
+[INFO]1277588/9827690 completed.
+[INFO]1375864/9827690 completed.
+[INFO]1474140/9827690 completed.
+[INFO]1572416/9827690 completed.
+[INFO]1670692/9827690 completed.
+[INFO]1768968/9827690 completed.
+[INFO]1867244/9827690 completed.
+[INFO]1965520/9827690 completed.
+[INFO]2063796/9827690 completed.
+[INFO]2162072/9827690 completed.
+[INFO]2260348/9827690 completed.
+[INFO]2358624/9827690 completed.
+[INFO]2456900/9827690 completed.
+[INFO]2555176/9827690 completed.
+[INFO]2653452/9827690 completed.
+[INFO]2751728/9827690 completed.
+[INFO]2850004/9827690 completed.
+[INFO]2948280/9827690 completed.
+[INFO]3046556/9827690 completed.
+[INFO]3144832/9827690 completed.
+[INFO]3243108/9827690 completed.
+[INFO]3341384/9827690 completed.
+[INFO]3439660/9827690 completed.
+[INFO]3537936/9827690 completed.
+[INFO]3636212/9827690 completed.
+[INFO]3734488/9827690 completed.
+[INFO]3832764/9827690 completed.
+[INFO]3931040/9827690 completed.
+[INFO]4029316/9827690 completed.
+[INFO]4127592/9827690 completed.
+[INFO]4225868/9827690 completed.
+[INFO]4324144/9827690 completed.
+[INFO]4422420/9827690 completed.
+[INFO]4520696/9827690 completed.
+[INFO]4618972/9827690 completed.
+[INFO]4717248/9827690 completed.
+[INFO]4815524/9827690 completed.
+[INFO]4913800/9827690 completed.
+[INFO]5012076/9827690 completed.
+[INFO]5110352/9827690 completed.
+[INFO]5208628/9827690 completed.
+[INFO]5306904/9827690 completed.
+[INFO]5405180/9827690 completed.
+[INFO]5503456/9827690 completed.
+[INFO]5601732/9827690 completed.
+[INFO]5700008/9827690 completed.
+[INFO]5798284/9827690 completed.
+[INFO]5896560/9827690 completed.
+[INFO]5994836/9827690 completed.
+[INFO]6093112/9827690 completed.
+[INFO]6191388/9827690 completed.
+[INFO]6289664/9827690 completed.
+[INFO]6387940/9827690 completed.
+[INFO]6486216/9827690 completed.
+[INFO]6584492/9827690 completed.
+[INFO]6682768/9827690 completed.
+[INFO]6781044/9827690 completed.
+[INFO]6879320/9827690 completed.
+[INFO]6977596/9827690 completed.
+[INFO]7075872/9827690 completed.
+[INFO]7174148/9827690 completed.
+[INFO]7272424/9827690 completed.
+[INFO]7370700/9827690 completed.
+[INFO]7468976/9827690 completed.
+[INFO]7567252/9827690 completed.
+[INFO]7665528/9827690 completed.
+[INFO]7763804/9827690 completed.
+[INFO]7862080/9827690 completed.
+[INFO]7960356/9827690 completed.
+[INFO]8058632/9827690 completed.
+[INFO]8156908/9827690 completed.
+[INFO]8255184/9827690 completed.
+[INFO]8353460/9827690 completed.
+[INFO]8451736/9827690 completed.
+[INFO]8550012/9827690 completed.
+[INFO]8648288/9827690 completed.
+[INFO]8746564/9827690 completed.
+[INFO]8844840/9827690 completed.
+[INFO]8943116/9827690 completed.
+[INFO]9041392/9827690 completed.
+[INFO]9139668/9827690 completed.
+[INFO]9237944/9827690 completed.
+[INFO]9336220/9827690 completed.
+[INFO]9434496/9827690 completed.
+[INFO]9532772/9827690 completed.
+[INFO]9631048/9827690 completed.
+[INFO]9729324/9827690 completed.
+[INFO]9827600/9827690 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-k40_cnaf125.root
+[INFO] Loaded outTree.
+[INFO]0/47676290 completed.
+[INFO]476762/47676290 completed.
+[INFO]953524/47676290 completed.
+[INFO]1430286/47676290 completed.
+[INFO]1907048/47676290 completed.
+[INFO]2383810/47676290 completed.
+[INFO]2860572/47676290 completed.
+[INFO]3337334/47676290 completed.
+[INFO]3814096/47676290 completed.
+[INFO]4290858/47676290 completed.
+[INFO]4767620/47676290 completed.
+[INFO]5244382/47676290 completed.
+[INFO]5721144/47676290 completed.
+[INFO]6197906/47676290 completed.
+[INFO]6674668/47676290 completed.
+[INFO]7151430/47676290 completed.
+[INFO]7628192/47676290 completed.
+[INFO]8104954/47676290 completed.
+[INFO]8581716/47676290 completed.
+[INFO]9058478/47676290 completed.
+[INFO]9535240/47676290 completed.
+[INFO]10012002/47676290 completed.
+[INFO]10488764/47676290 completed.
+[INFO]10965526/47676290 completed.
+[INFO]11442288/47676290 completed.
+[INFO]11919050/47676290 completed.
+[INFO]12395812/47676290 completed.
+[INFO]12872574/47676290 completed.
+[INFO]13349336/47676290 completed.
+[INFO]13826098/47676290 completed.
+[INFO]14302860/47676290 completed.
+[INFO]14779622/47676290 completed.
+[INFO]15256384/47676290 completed.
+[INFO]15733146/47676290 completed.
+[INFO]16209908/47676290 completed.
+[INFO]16686670/47676290 completed.
+[INFO]17163432/47676290 completed.
+[INFO]17640194/47676290 completed.
+[INFO]18116956/47676290 completed.
+[INFO]18593718/47676290 completed.
+[INFO]19070480/47676290 completed.
+[INFO]19547242/47676290 completed.
+[INFO]20024004/47676290 completed.
+[INFO]20500766/47676290 completed.
+[INFO]20977528/47676290 completed.
+[INFO]21454290/47676290 completed.
+[INFO]21931052/47676290 completed.
+[INFO]22407814/47676290 completed.
+[INFO]22884576/47676290 completed.
+[INFO]23361338/47676290 completed.
+[INFO]23838100/47676290 completed.
+[INFO]24314862/47676290 completed.
+[INFO]24791624/47676290 completed.
+[INFO]25268386/47676290 completed.
+[INFO]25745148/47676290 completed.
+[INFO]26221910/47676290 completed.
+[INFO]26698672/47676290 completed.
+[INFO]27175434/47676290 completed.
+[INFO]27652196/47676290 completed.
+[INFO]28128958/47676290 completed.
+[INFO]28605720/47676290 completed.
+[INFO]29082482/47676290 completed.
+[INFO]29559244/47676290 completed.
+[INFO]30036006/47676290 completed.
+[INFO]30512768/47676290 completed.
+[INFO]30989530/47676290 completed.
+[INFO]31466292/47676290 completed.
+[INFO]31943054/47676290 completed.
+[INFO]32419816/47676290 completed.
+[INFO]32896578/47676290 completed.
+[INFO]33373340/47676290 completed.
+[INFO]33850102/47676290 completed.
+[INFO]34326864/47676290 completed.
+[INFO]34803626/47676290 completed.
+[INFO]35280388/47676290 completed.
+[INFO]35757150/47676290 completed.
+[INFO]36233912/47676290 completed.
+[INFO]36710674/47676290 completed.
+[INFO]37187436/47676290 completed.
+[INFO]37664198/47676290 completed.
+[INFO]38140960/47676290 completed.
+[INFO]38617722/47676290 completed.
+[INFO]39094484/47676290 completed.
+[INFO]39571246/47676290 completed.
+[INFO]40048008/47676290 completed.
+[INFO]40524770/47676290 completed.
+[INFO]41001532/47676290 completed.
+[INFO]41478294/47676290 completed.
+[INFO]41955056/47676290 completed.
+[INFO]42431818/47676290 completed.
+[INFO]42908580/47676290 completed.
+[INFO]43385342/47676290 completed.
+[INFO]43862104/47676290 completed.
+[INFO]44338866/47676290 completed.
+[INFO]44815628/47676290 completed.
+[INFO]45292390/47676290 completed.
+[INFO]45769152/47676290 completed.
+[INFO]46245914/47676290 completed.
+[INFO]46722676/47676290 completed.
+[INFO]47199438/47676290 completed.
+[INFO]47676200/47676290 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-sb125_cnaf149.root
+[INFO] Loaded outTree.
+[INFO]0/137738336 completed.
+[INFO]1377383/137738336 completed.
+[INFO]2754766/137738336 completed.
+[INFO]4132149/137738336 completed.
+[INFO]5509532/137738336 completed.
+[INFO]6886915/137738336 completed.
+[INFO]8264298/137738336 completed.
+[INFO]9641681/137738336 completed.
+[INFO]11019064/137738336 completed.
+[INFO]12396447/137738336 completed.
+[INFO]13773830/137738336 completed.
+[INFO]15151213/137738336 completed.
+[INFO]16528596/137738336 completed.
+[INFO]17905979/137738336 completed.
+[INFO]19283362/137738336 completed.
+[INFO]20660745/137738336 completed.
+[INFO]22038128/137738336 completed.
+[INFO]23415511/137738336 completed.
+[INFO]24792894/137738336 completed.
+[INFO]26170277/137738336 completed.
+[INFO]27547660/137738336 completed.
+[INFO]28925043/137738336 completed.
+[INFO]30302426/137738336 completed.
+[INFO]31679809/137738336 completed.
+[INFO]33057192/137738336 completed.
+[INFO]34434575/137738336 completed.
+[INFO]35811958/137738336 completed.
+[INFO]37189341/137738336 completed.
+[INFO]38566724/137738336 completed.
+[INFO]39944107/137738336 completed.
+[INFO]41321490/137738336 completed.
+[INFO]42698873/137738336 completed.
+[INFO]44076256/137738336 completed.
+[INFO]45453639/137738336 completed.
+[INFO]46831022/137738336 completed.
+[INFO]48208405/137738336 completed.
+[INFO]49585788/137738336 completed.
+[INFO]50963171/137738336 completed.
+[INFO]52340554/137738336 completed.
+[INFO]53717937/137738336 completed.
+[INFO]55095320/137738336 completed.
+[INFO]56472703/137738336 completed.
+[INFO]57850086/137738336 completed.
+[INFO]59227469/137738336 completed.
+[INFO]60604852/137738336 completed.
+[INFO]61982235/137738336 completed.
+[INFO]63359618/137738336 completed.
+[INFO]64737001/137738336 completed.
+[INFO]66114384/137738336 completed.
+[INFO]67491767/137738336 completed.
+[INFO]68869150/137738336 completed.
+[INFO]70246533/137738336 completed.
+[INFO]71623916/137738336 completed.
+[INFO]73001299/137738336 completed.
+[INFO]74378682/137738336 completed.
+[INFO]75756065/137738336 completed.
+[INFO]77133448/137738336 completed.
+[INFO]78510831/137738336 completed.
+[INFO]79888214/137738336 completed.
+[INFO]81265597/137738336 completed.
+[INFO]82642980/137738336 completed.
+[INFO]84020363/137738336 completed.
+[INFO]85397746/137738336 completed.
+[INFO]86775129/137738336 completed.
+[INFO]88152512/137738336 completed.
+[INFO]89529895/137738336 completed.
+[INFO]90907278/137738336 completed.
+[INFO]92284661/137738336 completed.
+[INFO]93662044/137738336 completed.
+[INFO]95039427/137738336 completed.
+[INFO]96416810/137738336 completed.
+[INFO]97794193/137738336 completed.
+[INFO]99171576/137738336 completed.
+[INFO]100548959/137738336 completed.
+[INFO]101926342/137738336 completed.
+[INFO]103303725/137738336 completed.
+[INFO]104681108/137738336 completed.
+[INFO]106058491/137738336 completed.
+[INFO]107435874/137738336 completed.
+[INFO]108813257/137738336 completed.
+[INFO]110190640/137738336 completed.
+[INFO]111568023/137738336 completed.
+[INFO]112945406/137738336 completed.
+[INFO]114322789/137738336 completed.
+[INFO]115700172/137738336 completed.
+[INFO]117077555/137738336 completed.
+[INFO]118454938/137738336 completed.
+[INFO]119832321/137738336 completed.
+[INFO]121209704/137738336 completed.
+[INFO]122587087/137738336 completed.
+[INFO]123964470/137738336 completed.
+[INFO]125341853/137738336 completed.
+[INFO]126719236/137738336 completed.
+[INFO]128096619/137738336 completed.
+[INFO]129474002/137738336 completed.
+[INFO]130851385/137738336 completed.
+[INFO]132228768/137738336 completed.
+[INFO]133606151/137738336 completed.
+[INFO]134983534/137738336 completed.
+[INFO]136360917/137738336 completed.
+[INFO]137738300/137738336 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2-pt190_cnaf8.root
+[INFO] Loaded outTree.
+[INFO]0/9463958 completed.
+[INFO]94639/9463958 completed.
+[INFO]189278/9463958 completed.
+[INFO]283917/9463958 completed.
+[INFO]378556/9463958 completed.
+[INFO]473195/9463958 completed.
+[INFO]567834/9463958 completed.
+[INFO]662473/9463958 completed.
+[INFO]757112/9463958 completed.
+[INFO]851751/9463958 completed.
+[INFO]946390/9463958 completed.
+[INFO]1041029/9463958 completed.
+[INFO]1135668/9463958 completed.
+[INFO]1230307/9463958 completed.
+[INFO]1324946/9463958 completed.
+[INFO]1419585/9463958 completed.
+[INFO]1514224/9463958 completed.
+[INFO]1608863/9463958 completed.
+[INFO]1703502/9463958 completed.
+[INFO]1798141/9463958 completed.
+[INFO]1892780/9463958 completed.
+[INFO]1987419/9463958 completed.
+[INFO]2082058/9463958 completed.
+[INFO]2176697/9463958 completed.
+[INFO]2271336/9463958 completed.
+[INFO]2365975/9463958 completed.
+[INFO]2460614/9463958 completed.
+[INFO]2555253/9463958 completed.
+[INFO]2649892/9463958 completed.
+[INFO]2744531/9463958 completed.
+[INFO]2839170/9463958 completed.
+[INFO]2933809/9463958 completed.
+[INFO]3028448/9463958 completed.
+[INFO]3123087/9463958 completed.
+[INFO]3217726/9463958 completed.
+[INFO]3312365/9463958 completed.
+[INFO]3407004/9463958 completed.
+[INFO]3501643/9463958 completed.
+[INFO]3596282/9463958 completed.
+[INFO]3690921/9463958 completed.
+[INFO]3785560/9463958 completed.
+[INFO]3880199/9463958 completed.
+[INFO]3974838/9463958 completed.
+[INFO]4069477/9463958 completed.
+[INFO]4164116/9463958 completed.
+[INFO]4258755/9463958 completed.
+[INFO]4353394/9463958 completed.
+[INFO]4448033/9463958 completed.
+[INFO]4542672/9463958 completed.
+[INFO]4637311/9463958 completed.
+[INFO]4731950/9463958 completed.
+[INFO]4826589/9463958 completed.
+[INFO]4921228/9463958 completed.
+[INFO]5015867/9463958 completed.
+[INFO]5110506/9463958 completed.
+[INFO]5205145/9463958 completed.
+[INFO]5299784/9463958 completed.
+[INFO]5394423/9463958 completed.
+[INFO]5489062/9463958 completed.
+[INFO]5583701/9463958 completed.
+[INFO]5678340/9463958 completed.
+[INFO]5772979/9463958 completed.
+[INFO]5867618/9463958 completed.
+[INFO]5962257/9463958 completed.
+[INFO]6056896/9463958 completed.
+[INFO]6151535/9463958 completed.
+[INFO]6246174/9463958 completed.
+[INFO]6340813/9463958 completed.
+[INFO]6435452/9463958 completed.
+[INFO]6530091/9463958 completed.
+[INFO]6624730/9463958 completed.
+[INFO]6719369/9463958 completed.
+[INFO]6814008/9463958 completed.
+[INFO]6908647/9463958 completed.
+[INFO]7003286/9463958 completed.
+[INFO]7097925/9463958 completed.
+[INFO]7192564/9463958 completed.
+[INFO]7287203/9463958 completed.
+[INFO]7381842/9463958 completed.
+[INFO]7476481/9463958 completed.
+[INFO]7571120/9463958 completed.
+[INFO]7665759/9463958 completed.
+[INFO]7760398/9463958 completed.
+[INFO]7855037/9463958 completed.
+[INFO]7949676/9463958 completed.
+[INFO]8044315/9463958 completed.
+[INFO]8138954/9463958 completed.
+[INFO]8233593/9463958 completed.
+[INFO]8328232/9463958 completed.
+[INFO]8422871/9463958 completed.
+[INFO]8517510/9463958 completed.
+[INFO]8612149/9463958 completed.
+[INFO]8706788/9463958 completed.
+[INFO]8801427/9463958 completed.
+[INFO]8896066/9463958 completed.
+[INFO]8990705/9463958 completed.
+[INFO]9085344/9463958 completed.
+[INFO]9179983/9463958 completed.
+[INFO]9274622/9463958 completed.
+[INFO]9369261/9463958 completed.
+[INFO]9463900/9463958 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-k40.root
+[INFO] Loaded outTree.
+[INFO]0/4072144 completed.
+[INFO]40721/4072144 completed.
+[INFO]81442/4072144 completed.
+[INFO]122163/4072144 completed.
+[INFO]162884/4072144 completed.
+[INFO]203605/4072144 completed.
+[INFO]244326/4072144 completed.
+[INFO]285047/4072144 completed.
+[INFO]325768/4072144 completed.
+[INFO]366489/4072144 completed.
+[INFO]407210/4072144 completed.
+[INFO]447931/4072144 completed.
+[INFO]488652/4072144 completed.
+[INFO]529373/4072144 completed.
+[INFO]570094/4072144 completed.
+[INFO]610815/4072144 completed.
+[INFO]651536/4072144 completed.
+[INFO]692257/4072144 completed.
+[INFO]732978/4072144 completed.
+[INFO]773699/4072144 completed.
+[INFO]814420/4072144 completed.
+[INFO]855141/4072144 completed.
+[INFO]895862/4072144 completed.
+[INFO]936583/4072144 completed.
+[INFO]977304/4072144 completed.
+[INFO]1018025/4072144 completed.
+[INFO]1058746/4072144 completed.
+[INFO]1099467/4072144 completed.
+[INFO]1140188/4072144 completed.
+[INFO]1180909/4072144 completed.
+[INFO]1221630/4072144 completed.
+[INFO]1262351/4072144 completed.
+[INFO]1303072/4072144 completed.
+[INFO]1343793/4072144 completed.
+[INFO]1384514/4072144 completed.
+[INFO]1425235/4072144 completed.
+[INFO]1465956/4072144 completed.
+[INFO]1506677/4072144 completed.
+[INFO]1547398/4072144 completed.
+[INFO]1588119/4072144 completed.
+[INFO]1628840/4072144 completed.
+[INFO]1669561/4072144 completed.
+[INFO]1710282/4072144 completed.
+[INFO]1751003/4072144 completed.
+[INFO]1791724/4072144 completed.
+[INFO]1832445/4072144 completed.
+[INFO]1873166/4072144 completed.
+[INFO]1913887/4072144 completed.
+[INFO]1954608/4072144 completed.
+[INFO]1995329/4072144 completed.
+[INFO]2036050/4072144 completed.
+[INFO]2076771/4072144 completed.
+[INFO]2117492/4072144 completed.
+[INFO]2158213/4072144 completed.
+[INFO]2198934/4072144 completed.
+[INFO]2239655/4072144 completed.
+[INFO]2280376/4072144 completed.
+[INFO]2321097/4072144 completed.
+[INFO]2361818/4072144 completed.
+[INFO]2402539/4072144 completed.
+[INFO]2443260/4072144 completed.
+[INFO]2483981/4072144 completed.
+[INFO]2524702/4072144 completed.
+[INFO]2565423/4072144 completed.
+[INFO]2606144/4072144 completed.
+[INFO]2646865/4072144 completed.
+[INFO]2687586/4072144 completed.
+[INFO]2728307/4072144 completed.
+[INFO]2769028/4072144 completed.
+[INFO]2809749/4072144 completed.
+[INFO]2850470/4072144 completed.
+[INFO]2891191/4072144 completed.
+[INFO]2931912/4072144 completed.
+[INFO]2972633/4072144 completed.
+[INFO]3013354/4072144 completed.
+[INFO]3054075/4072144 completed.
+[INFO]3094796/4072144 completed.
+[INFO]3135517/4072144 completed.
+[INFO]3176238/4072144 completed.
+[INFO]3216959/4072144 completed.
+[INFO]3257680/4072144 completed.
+[INFO]3298401/4072144 completed.
+[INFO]3339122/4072144 completed.
+[INFO]3379843/4072144 completed.
+[INFO]3420564/4072144 completed.
+[INFO]3461285/4072144 completed.
+[INFO]3502006/4072144 completed.
+[INFO]3542727/4072144 completed.
+[INFO]3583448/4072144 completed.
+[INFO]3624169/4072144 completed.
+[INFO]3664890/4072144 completed.
+[INFO]3705611/4072144 completed.
+[INFO]3746332/4072144 completed.
+[INFO]3787053/4072144 completed.
+[INFO]3827774/4072144 completed.
+[INFO]3868495/4072144 completed.
+[INFO]3909216/4072144 completed.
+[INFO]3949937/4072144 completed.
+[INFO]3990658/4072144 completed.
+[INFO]4031379/4072144 completed.
+[INFO]4072100/4072144 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSV-mn54.root
+[INFO] Loaded outTree.
+[INFO]0/27290864 completed.
+[INFO]272908/27290864 completed.
+[INFO]545816/27290864 completed.
+[INFO]818724/27290864 completed.
+[INFO]1091632/27290864 completed.
+[INFO]1364540/27290864 completed.
+[INFO]1637448/27290864 completed.
+[INFO]1910356/27290864 completed.
+[INFO]2183264/27290864 completed.
+[INFO]2456172/27290864 completed.
+[INFO]2729080/27290864 completed.
+[INFO]3001988/27290864 completed.
+[INFO]3274896/27290864 completed.
+[INFO]3547804/27290864 completed.
+[INFO]3820712/27290864 completed.
+[INFO]4093620/27290864 completed.
+[INFO]4366528/27290864 completed.
+[INFO]4639436/27290864 completed.
+[INFO]4912344/27290864 completed.
+[INFO]5185252/27290864 completed.
+[INFO]5458160/27290864 completed.
+[INFO]5731068/27290864 completed.
+[INFO]6003976/27290864 completed.
+[INFO]6276884/27290864 completed.
+[INFO]6549792/27290864 completed.
+[INFO]6822700/27290864 completed.
+[INFO]7095608/27290864 completed.
+[INFO]7368516/27290864 completed.
+[INFO]7641424/27290864 completed.
+[INFO]7914332/27290864 completed.
+[INFO]8187240/27290864 completed.
+[INFO]8460148/27290864 completed.
+[INFO]8733056/27290864 completed.
+[INFO]9005964/27290864 completed.
+[INFO]9278872/27290864 completed.
+[INFO]9551780/27290864 completed.
+[INFO]9824688/27290864 completed.
+[INFO]10097596/27290864 completed.
+[INFO]10370504/27290864 completed.
+[INFO]10643412/27290864 completed.
+[INFO]10916320/27290864 completed.
+[INFO]11189228/27290864 completed.
+[INFO]11462136/27290864 completed.
+[INFO]11735044/27290864 completed.
+[INFO]12007952/27290864 completed.
+[INFO]12280860/27290864 completed.
+[INFO]12553768/27290864 completed.
+[INFO]12826676/27290864 completed.
+[INFO]13099584/27290864 completed.
+[INFO]13372492/27290864 completed.
+[INFO]13645400/27290864 completed.
+[INFO]13918308/27290864 completed.
+[INFO]14191216/27290864 completed.
+[INFO]14464124/27290864 completed.
+[INFO]14737032/27290864 completed.
+[INFO]15009940/27290864 completed.
+[INFO]15282848/27290864 completed.
+[INFO]15555756/27290864 completed.
+[INFO]15828664/27290864 completed.
+[INFO]16101572/27290864 completed.
+[INFO]16374480/27290864 completed.
+[INFO]16647388/27290864 completed.
+[INFO]16920296/27290864 completed.
+[INFO]17193204/27290864 completed.
+[INFO]17466112/27290864 completed.
+[INFO]17739020/27290864 completed.
+[INFO]18011928/27290864 completed.
+[INFO]18284836/27290864 completed.
+[INFO]18557744/27290864 completed.
+[INFO]18830652/27290864 completed.
+[INFO]19103560/27290864 completed.
+[INFO]19376468/27290864 completed.
+[INFO]19649376/27290864 completed.
+[INFO]19922284/27290864 completed.
+[INFO]20195192/27290864 completed.
+[INFO]20468100/27290864 completed.
+[INFO]20741008/27290864 completed.
+[INFO]21013916/27290864 completed.
+[INFO]21286824/27290864 completed.
+[INFO]21559732/27290864 completed.
+[INFO]21832640/27290864 completed.
+[INFO]22105548/27290864 completed.
+[INFO]22378456/27290864 completed.
+[INFO]22651364/27290864 completed.
+[INFO]22924272/27290864 completed.
+[INFO]23197180/27290864 completed.
+[INFO]23470088/27290864 completed.
+[INFO]23742996/27290864 completed.
+[INFO]24015904/27290864 completed.
+[INFO]24288812/27290864 completed.
+[INFO]24561720/27290864 completed.
+[INFO]24834628/27290864 completed.
+[INFO]25107536/27290864 completed.
+[INFO]25380444/27290864 completed.
+[INFO]25653352/27290864 completed.
+[INFO]25926260/27290864 completed.
+[INFO]26199168/27290864 completed.
+[INFO]26472076/27290864 completed.
+[INFO]26744984/27290864 completed.
+[INFO]27017892/27290864 completed.
+[INFO]27290800/27290864 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/600mK-co60.root
+[INFO] Loaded outTree.
+[INFO]0/92112256 completed.
+[INFO]921122/92112256 completed.
+[INFO]1842244/92112256 completed.
+[INFO]2763366/92112256 completed.
+[INFO]3684488/92112256 completed.
+[INFO]4605610/92112256 completed.
+[INFO]5526732/92112256 completed.
+[INFO]6447854/92112256 completed.
+[INFO]7368976/92112256 completed.
+[INFO]8290098/92112256 completed.
+[INFO]9211220/92112256 completed.
+[INFO]10132342/92112256 completed.
+[INFO]11053464/92112256 completed.
+[INFO]11974586/92112256 completed.
+[INFO]12895708/92112256 completed.
+[INFO]13816830/92112256 completed.
+[INFO]14737952/92112256 completed.
+[INFO]15659074/92112256 completed.
+[INFO]16580196/92112256 completed.
+[INFO]17501318/92112256 completed.
+[INFO]18422440/92112256 completed.
+[INFO]19343562/92112256 completed.
+[INFO]20264684/92112256 completed.
+[INFO]21185806/92112256 completed.
+[INFO]22106928/92112256 completed.
+[INFO]23028050/92112256 completed.
+[INFO]23949172/92112256 completed.
+[INFO]24870294/92112256 completed.
+[INFO]25791416/92112256 completed.
+[INFO]26712538/92112256 completed.
+[INFO]27633660/92112256 completed.
+[INFO]28554782/92112256 completed.
+[INFO]29475904/92112256 completed.
+[INFO]30397026/92112256 completed.
+[INFO]31318148/92112256 completed.
+[INFO]32239270/92112256 completed.
+[INFO]33160392/92112256 completed.
+[INFO]34081514/92112256 completed.
+[INFO]35002636/92112256 completed.
+[INFO]35923758/92112256 completed.
+[INFO]36844880/92112256 completed.
+[INFO]37766002/92112256 completed.
+[INFO]38687124/92112256 completed.
+[INFO]39608246/92112256 completed.
+[INFO]40529368/92112256 completed.
+[INFO]41450490/92112256 completed.
+[INFO]42371612/92112256 completed.
+[INFO]43292734/92112256 completed.
+[INFO]44213856/92112256 completed.
+[INFO]45134978/92112256 completed.
+[INFO]46056100/92112256 completed.
+[INFO]46977222/92112256 completed.
+[INFO]47898344/92112256 completed.
+[INFO]48819466/92112256 completed.
+[INFO]49740588/92112256 completed.
+[INFO]50661710/92112256 completed.
+[INFO]51582832/92112256 completed.
+[INFO]52503954/92112256 completed.
+[INFO]53425076/92112256 completed.
+[INFO]54346198/92112256 completed.
+[INFO]55267320/92112256 completed.
+[INFO]56188442/92112256 completed.
+[INFO]57109564/92112256 completed.
+[INFO]58030686/92112256 completed.
+[INFO]58951808/92112256 completed.
+[INFO]59872930/92112256 completed.
+[INFO]60794052/92112256 completed.
+[INFO]61715174/92112256 completed.
+[INFO]62636296/92112256 completed.
+[INFO]63557418/92112256 completed.
+[INFO]64478540/92112256 completed.
+[INFO]65399662/92112256 completed.
+[INFO]66320784/92112256 completed.
+[INFO]67241906/92112256 completed.
+[INFO]68163028/92112256 completed.
+[INFO]69084150/92112256 completed.
+[INFO]70005272/92112256 completed.
+[INFO]70926394/92112256 completed.
+[INFO]71847516/92112256 completed.
+[INFO]72768638/92112256 completed.
+[INFO]73689760/92112256 completed.
+[INFO]74610882/92112256 completed.
+[INFO]75532004/92112256 completed.
+[INFO]76453126/92112256 completed.
+[INFO]77374248/92112256 completed.
+[INFO]78295370/92112256 completed.
+[INFO]79216492/92112256 completed.
+[INFO]80137614/92112256 completed.
+[INFO]81058736/92112256 completed.
+[INFO]81979858/92112256 completed.
+[INFO]82900980/92112256 completed.
+[INFO]83822102/92112256 completed.
+[INFO]84743224/92112256 completed.
+[INFO]85664346/92112256 completed.
+[INFO]86585468/92112256 completed.
+[INFO]87506590/92112256 completed.
+[INFO]88427712/92112256 completed.
+[INFO]89348834/92112256 completed.
+[INFO]90269956/92112256 completed.
+[INFO]91191078/92112256 completed.
+[INFO]92112200/92112256 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TopPb5cm_210Bi_cnaf136.root
+[INFO] Loaded outTree.
+[INFO]0/21828802 completed.
+[INFO]218288/21828802 completed.
+[INFO]436576/21828802 completed.
+[INFO]654864/21828802 completed.
+[INFO]873152/21828802 completed.
+[INFO]1091440/21828802 completed.
+[INFO]1309728/21828802 completed.
+[INFO]1528016/21828802 completed.
+[INFO]1746304/21828802 completed.
+[INFO]1964592/21828802 completed.
+[INFO]2182880/21828802 completed.
+[INFO]2401168/21828802 completed.
+[INFO]2619456/21828802 completed.
+[INFO]2837744/21828802 completed.
+[INFO]3056032/21828802 completed.
+[INFO]3274320/21828802 completed.
+[INFO]3492608/21828802 completed.
+[INFO]3710896/21828802 completed.
+[INFO]3929184/21828802 completed.
+[INFO]4147472/21828802 completed.
+[INFO]4365760/21828802 completed.
+[INFO]4584048/21828802 completed.
+[INFO]4802336/21828802 completed.
+[INFO]5020624/21828802 completed.
+[INFO]5238912/21828802 completed.
+[INFO]5457200/21828802 completed.
+[INFO]5675488/21828802 completed.
+[INFO]5893776/21828802 completed.
+[INFO]6112064/21828802 completed.
+[INFO]6330352/21828802 completed.
+[INFO]6548640/21828802 completed.
+[INFO]6766928/21828802 completed.
+[INFO]6985216/21828802 completed.
+[INFO]7203504/21828802 completed.
+[INFO]7421792/21828802 completed.
+[INFO]7640080/21828802 completed.
+[INFO]7858368/21828802 completed.
+[INFO]8076656/21828802 completed.
+[INFO]8294944/21828802 completed.
+[INFO]8513232/21828802 completed.
+[INFO]8731520/21828802 completed.
+[INFO]8949808/21828802 completed.
+[INFO]9168096/21828802 completed.
+[INFO]9386384/21828802 completed.
+[INFO]9604672/21828802 completed.
+[INFO]9822960/21828802 completed.
+[INFO]10041248/21828802 completed.
+[INFO]10259536/21828802 completed.
+[INFO]10477824/21828802 completed.
+[INFO]10696112/21828802 completed.
+[INFO]10914400/21828802 completed.
+[INFO]11132688/21828802 completed.
+[INFO]11350976/21828802 completed.
+[INFO]11569264/21828802 completed.
+[INFO]11787552/21828802 completed.
+[INFO]12005840/21828802 completed.
+[INFO]12224128/21828802 completed.
+[INFO]12442416/21828802 completed.
+[INFO]12660704/21828802 completed.
+[INFO]12878992/21828802 completed.
+[INFO]13097280/21828802 completed.
+[INFO]13315568/21828802 completed.
+[INFO]13533856/21828802 completed.
+[INFO]13752144/21828802 completed.
+[INFO]13970432/21828802 completed.
+[INFO]14188720/21828802 completed.
+[INFO]14407008/21828802 completed.
+[INFO]14625296/21828802 completed.
+[INFO]14843584/21828802 completed.
+[INFO]15061872/21828802 completed.
+[INFO]15280160/21828802 completed.
+[INFO]15498448/21828802 completed.
+[INFO]15716736/21828802 completed.
+[INFO]15935024/21828802 completed.
+[INFO]16153312/21828802 completed.
+[INFO]16371600/21828802 completed.
+[INFO]16589888/21828802 completed.
+[INFO]16808176/21828802 completed.
+[INFO]17026464/21828802 completed.
+[INFO]17244752/21828802 completed.
+[INFO]17463040/21828802 completed.
+[INFO]17681328/21828802 completed.
+[INFO]17899616/21828802 completed.
+[INFO]18117904/21828802 completed.
+[INFO]18336192/21828802 completed.
+[INFO]18554480/21828802 completed.
+[INFO]18772768/21828802 completed.
+[INFO]18991056/21828802 completed.
+[INFO]19209344/21828802 completed.
+[INFO]19427632/21828802 completed.
+[INFO]19645920/21828802 completed.
+[INFO]19864208/21828802 completed.
+[INFO]20082496/21828802 completed.
+[INFO]20300784/21828802 completed.
+[INFO]20519072/21828802 completed.
+[INFO]20737360/21828802 completed.
+[INFO]20955648/21828802 completed.
+[INFO]21173936/21828802 completed.
+[INFO]21392224/21828802 completed.
+[INFO]21610512/21828802 completed.
+[INFO]21828800/21828802 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-th232only-.01_cnaf9.root
+[INFO] Loaded outTree.
+[INFO]0/9256109 completed.
+[INFO]92561/9256109 completed.
+[INFO]185122/9256109 completed.
+[INFO]277683/9256109 completed.
+[INFO]370244/9256109 completed.
+[INFO]462805/9256109 completed.
+[INFO]555366/9256109 completed.
+[INFO]647927/9256109 completed.
+[INFO]740488/9256109 completed.
+[INFO]833049/9256109 completed.
+[INFO]925610/9256109 completed.
+[INFO]1018171/9256109 completed.
+[INFO]1110732/9256109 completed.
+[INFO]1203293/9256109 completed.
+[INFO]1295854/9256109 completed.
+[INFO]1388415/9256109 completed.
+[INFO]1480976/9256109 completed.
+[INFO]1573537/9256109 completed.
+[INFO]1666098/9256109 completed.
+[INFO]1758659/9256109 completed.
+[INFO]1851220/9256109 completed.
+[INFO]1943781/9256109 completed.
+[INFO]2036342/9256109 completed.
+[INFO]2128903/9256109 completed.
+[INFO]2221464/9256109 completed.
+[INFO]2314025/9256109 completed.
+[INFO]2406586/9256109 completed.
+[INFO]2499147/9256109 completed.
+[INFO]2591708/9256109 completed.
+[INFO]2684269/9256109 completed.
+[INFO]2776830/9256109 completed.
+[INFO]2869391/9256109 completed.
+[INFO]2961952/9256109 completed.
+[INFO]3054513/9256109 completed.
+[INFO]3147074/9256109 completed.
+[INFO]3239635/9256109 completed.
+[INFO]3332196/9256109 completed.
+[INFO]3424757/9256109 completed.
+[INFO]3517318/9256109 completed.
+[INFO]3609879/9256109 completed.
+[INFO]3702440/9256109 completed.
+[INFO]3795001/9256109 completed.
+[INFO]3887562/9256109 completed.
+[INFO]3980123/9256109 completed.
+[INFO]4072684/9256109 completed.
+[INFO]4165245/9256109 completed.
+[INFO]4257806/9256109 completed.
+[INFO]4350367/9256109 completed.
+[INFO]4442928/9256109 completed.
+[INFO]4535489/9256109 completed.
+[INFO]4628050/9256109 completed.
+[INFO]4720611/9256109 completed.
+[INFO]4813172/9256109 completed.
+[INFO]4905733/9256109 completed.
+[INFO]4998294/9256109 completed.
+[INFO]5090855/9256109 completed.
+[INFO]5183416/9256109 completed.
+[INFO]5275977/9256109 completed.
+[INFO]5368538/9256109 completed.
+[INFO]5461099/9256109 completed.
+[INFO]5553660/9256109 completed.
+[INFO]5646221/9256109 completed.
+[INFO]5738782/9256109 completed.
+[INFO]5831343/9256109 completed.
+[INFO]5923904/9256109 completed.
+[INFO]6016465/9256109 completed.
+[INFO]6109026/9256109 completed.
+[INFO]6201587/9256109 completed.
+[INFO]6294148/9256109 completed.
+[INFO]6386709/9256109 completed.
+[INFO]6479270/9256109 completed.
+[INFO]6571831/9256109 completed.
+[INFO]6664392/9256109 completed.
+[INFO]6756953/9256109 completed.
+[INFO]6849514/9256109 completed.
+[INFO]6942075/9256109 completed.
+[INFO]7034636/9256109 completed.
+[INFO]7127197/9256109 completed.
+[INFO]7219758/9256109 completed.
+[INFO]7312319/9256109 completed.
+[INFO]7404880/9256109 completed.
+[INFO]7497441/9256109 completed.
+[INFO]7590002/9256109 completed.
+[INFO]7682563/9256109 completed.
+[INFO]7775124/9256109 completed.
+[INFO]7867685/9256109 completed.
+[INFO]7960246/9256109 completed.
+[INFO]8052807/9256109 completed.
+[INFO]8145368/9256109 completed.
+[INFO]8237929/9256109 completed.
+[INFO]8330490/9256109 completed.
+[INFO]8423051/9256109 completed.
+[INFO]8515612/9256109 completed.
+[INFO]8608173/9256109 completed.
+[INFO]8700734/9256109 completed.
+[INFO]8793295/9256109 completed.
+[INFO]8885856/9256109 completed.
+[INFO]8978417/9256109 completed.
+[INFO]9070978/9256109 completed.
+[INFO]9163539/9256109 completed.
+[INFO]9256100/9256109 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-ra228-pb208-.01_cnaf10.root
+[INFO] Loaded outTree.
+[INFO]0/8475223 completed.
+[INFO]84752/8475223 completed.
+[INFO]169504/8475223 completed.
+[INFO]254256/8475223 completed.
+[INFO]339008/8475223 completed.
+[INFO]423760/8475223 completed.
+[INFO]508512/8475223 completed.
+[INFO]593264/8475223 completed.
+[INFO]678016/8475223 completed.
+[INFO]762768/8475223 completed.
+[INFO]847520/8475223 completed.
+[INFO]932272/8475223 completed.
+[INFO]1017024/8475223 completed.
+[INFO]1101776/8475223 completed.
+[INFO]1186528/8475223 completed.
+[INFO]1271280/8475223 completed.
+[INFO]1356032/8475223 completed.
+[INFO]1440784/8475223 completed.
+[INFO]1525536/8475223 completed.
+[INFO]1610288/8475223 completed.
+[INFO]1695040/8475223 completed.
+[INFO]1779792/8475223 completed.
+[INFO]1864544/8475223 completed.
+[INFO]1949296/8475223 completed.
+[INFO]2034048/8475223 completed.
+[INFO]2118800/8475223 completed.
+[INFO]2203552/8475223 completed.
+[INFO]2288304/8475223 completed.
+[INFO]2373056/8475223 completed.
+[INFO]2457808/8475223 completed.
+[INFO]2542560/8475223 completed.
+[INFO]2627312/8475223 completed.
+[INFO]2712064/8475223 completed.
+[INFO]2796816/8475223 completed.
+[INFO]2881568/8475223 completed.
+[INFO]2966320/8475223 completed.
+[INFO]3051072/8475223 completed.
+[INFO]3135824/8475223 completed.
+[INFO]3220576/8475223 completed.
+[INFO]3305328/8475223 completed.
+[INFO]3390080/8475223 completed.
+[INFO]3474832/8475223 completed.
+[INFO]3559584/8475223 completed.
+[INFO]3644336/8475223 completed.
+[INFO]3729088/8475223 completed.
+[INFO]3813840/8475223 completed.
+[INFO]3898592/8475223 completed.
+[INFO]3983344/8475223 completed.
+[INFO]4068096/8475223 completed.
+[INFO]4152848/8475223 completed.
+[INFO]4237600/8475223 completed.
+[INFO]4322352/8475223 completed.
+[INFO]4407104/8475223 completed.
+[INFO]4491856/8475223 completed.
+[INFO]4576608/8475223 completed.
+[INFO]4661360/8475223 completed.
+[INFO]4746112/8475223 completed.
+[INFO]4830864/8475223 completed.
+[INFO]4915616/8475223 completed.
+[INFO]5000368/8475223 completed.
+[INFO]5085120/8475223 completed.
+[INFO]5169872/8475223 completed.
+[INFO]5254624/8475223 completed.
+[INFO]5339376/8475223 completed.
+[INFO]5424128/8475223 completed.
+[INFO]5508880/8475223 completed.
+[INFO]5593632/8475223 completed.
+[INFO]5678384/8475223 completed.
+[INFO]5763136/8475223 completed.
+[INFO]5847888/8475223 completed.
+[INFO]5932640/8475223 completed.
+[INFO]6017392/8475223 completed.
+[INFO]6102144/8475223 completed.
+[INFO]6186896/8475223 completed.
+[INFO]6271648/8475223 completed.
+[INFO]6356400/8475223 completed.
+[INFO]6441152/8475223 completed.
+[INFO]6525904/8475223 completed.
+[INFO]6610656/8475223 completed.
+[INFO]6695408/8475223 completed.
+[INFO]6780160/8475223 completed.
+[INFO]6864912/8475223 completed.
+[INFO]6949664/8475223 completed.
+[INFO]7034416/8475223 completed.
+[INFO]7119168/8475223 completed.
+[INFO]7203920/8475223 completed.
+[INFO]7288672/8475223 completed.
+[INFO]7373424/8475223 completed.
+[INFO]7458176/8475223 completed.
+[INFO]7542928/8475223 completed.
+[INFO]7627680/8475223 completed.
+[INFO]7712432/8475223 completed.
+[INFO]7797184/8475223 completed.
+[INFO]7881936/8475223 completed.
+[INFO]7966688/8475223 completed.
+[INFO]8051440/8475223 completed.
+[INFO]8136192/8475223 completed.
+[INFO]8220944/8475223 completed.
+[INFO]8305696/8475223 completed.
+[INFO]8390448/8475223 completed.
+[INFO]8475200/8475223 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-th230only-.01_cnaf12.root
+[INFO] Loaded outTree.
+[INFO]0/11756746 completed.
+[INFO]117567/11756746 completed.
+[INFO]235134/11756746 completed.
+[INFO]352701/11756746 completed.
+[INFO]470268/11756746 completed.
+[INFO]587835/11756746 completed.
+[INFO]705402/11756746 completed.
+[INFO]822969/11756746 completed.
+[INFO]940536/11756746 completed.
+[INFO]1058103/11756746 completed.
+[INFO]1175670/11756746 completed.
+[INFO]1293237/11756746 completed.
+[INFO]1410804/11756746 completed.
+[INFO]1528371/11756746 completed.
+[INFO]1645938/11756746 completed.
+[INFO]1763505/11756746 completed.
+[INFO]1881072/11756746 completed.
+[INFO]1998639/11756746 completed.
+[INFO]2116206/11756746 completed.
+[INFO]2233773/11756746 completed.
+[INFO]2351340/11756746 completed.
+[INFO]2468907/11756746 completed.
+[INFO]2586474/11756746 completed.
+[INFO]2704041/11756746 completed.
+[INFO]2821608/11756746 completed.
+[INFO]2939175/11756746 completed.
+[INFO]3056742/11756746 completed.
+[INFO]3174309/11756746 completed.
+[INFO]3291876/11756746 completed.
+[INFO]3409443/11756746 completed.
+[INFO]3527010/11756746 completed.
+[INFO]3644577/11756746 completed.
+[INFO]3762144/11756746 completed.
+[INFO]3879711/11756746 completed.
+[INFO]3997278/11756746 completed.
+[INFO]4114845/11756746 completed.
+[INFO]4232412/11756746 completed.
+[INFO]4349979/11756746 completed.
+[INFO]4467546/11756746 completed.
+[INFO]4585113/11756746 completed.
+[INFO]4702680/11756746 completed.
+[INFO]4820247/11756746 completed.
+[INFO]4937814/11756746 completed.
+[INFO]5055381/11756746 completed.
+[INFO]5172948/11756746 completed.
+[INFO]5290515/11756746 completed.
+[INFO]5408082/11756746 completed.
+[INFO]5525649/11756746 completed.
+[INFO]5643216/11756746 completed.
+[INFO]5760783/11756746 completed.
+[INFO]5878350/11756746 completed.
+[INFO]5995917/11756746 completed.
+[INFO]6113484/11756746 completed.
+[INFO]6231051/11756746 completed.
+[INFO]6348618/11756746 completed.
+[INFO]6466185/11756746 completed.
+[INFO]6583752/11756746 completed.
+[INFO]6701319/11756746 completed.
+[INFO]6818886/11756746 completed.
+[INFO]6936453/11756746 completed.
+[INFO]7054020/11756746 completed.
+[INFO]7171587/11756746 completed.
+[INFO]7289154/11756746 completed.
+[INFO]7406721/11756746 completed.
+[INFO]7524288/11756746 completed.
+[INFO]7641855/11756746 completed.
+[INFO]7759422/11756746 completed.
+[INFO]7876989/11756746 completed.
+[INFO]7994556/11756746 completed.
+[INFO]8112123/11756746 completed.
+[INFO]8229690/11756746 completed.
+[INFO]8347257/11756746 completed.
+[INFO]8464824/11756746 completed.
+[INFO]8582391/11756746 completed.
+[INFO]8699958/11756746 completed.
+[INFO]8817525/11756746 completed.
+[INFO]8935092/11756746 completed.
+[INFO]9052659/11756746 completed.
+[INFO]9170226/11756746 completed.
+[INFO]9287793/11756746 completed.
+[INFO]9405360/11756746 completed.
+[INFO]9522927/11756746 completed.
+[INFO]9640494/11756746 completed.
+[INFO]9758061/11756746 completed.
+[INFO]9875628/11756746 completed.
+[INFO]9993195/11756746 completed.
+[INFO]10110762/11756746 completed.
+[INFO]10228329/11756746 completed.
+[INFO]10345896/11756746 completed.
+[INFO]10463463/11756746 completed.
+[INFO]10581030/11756746 completed.
+[INFO]10698597/11756746 completed.
+[INFO]10816164/11756746 completed.
+[INFO]10933731/11756746 completed.
+[INFO]11051298/11756746 completed.
+[INFO]11168865/11756746 completed.
+[INFO]11286432/11756746 completed.
+[INFO]11403999/11756746 completed.
+[INFO]11521566/11756746 completed.
+[INFO]11639133/11756746 completed.
+[INFO]11756700/11756746 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-ra226-pb210-.01_cnaf13.root
+[INFO] Loaded outTree.
+[INFO]0/12361977 completed.
+[INFO]123619/12361977 completed.
+[INFO]247238/12361977 completed.
+[INFO]370857/12361977 completed.
+[INFO]494476/12361977 completed.
+[INFO]618095/12361977 completed.
+[INFO]741714/12361977 completed.
+[INFO]865333/12361977 completed.
+[INFO]988952/12361977 completed.
+[INFO]1112571/12361977 completed.
+[INFO]1236190/12361977 completed.
+[INFO]1359809/12361977 completed.
+[INFO]1483428/12361977 completed.
+[INFO]1607047/12361977 completed.
+[INFO]1730666/12361977 completed.
+[INFO]1854285/12361977 completed.
+[INFO]1977904/12361977 completed.
+[INFO]2101523/12361977 completed.
+[INFO]2225142/12361977 completed.
+[INFO]2348761/12361977 completed.
+[INFO]2472380/12361977 completed.
+[INFO]2595999/12361977 completed.
+[INFO]2719618/12361977 completed.
+[INFO]2843237/12361977 completed.
+[INFO]2966856/12361977 completed.
+[INFO]3090475/12361977 completed.
+[INFO]3214094/12361977 completed.
+[INFO]3337713/12361977 completed.
+[INFO]3461332/12361977 completed.
+[INFO]3584951/12361977 completed.
+[INFO]3708570/12361977 completed.
+[INFO]3832189/12361977 completed.
+[INFO]3955808/12361977 completed.
+[INFO]4079427/12361977 completed.
+[INFO]4203046/12361977 completed.
+[INFO]4326665/12361977 completed.
+[INFO]4450284/12361977 completed.
+[INFO]4573903/12361977 completed.
+[INFO]4697522/12361977 completed.
+[INFO]4821141/12361977 completed.
+[INFO]4944760/12361977 completed.
+[INFO]5068379/12361977 completed.
+[INFO]5191998/12361977 completed.
+[INFO]5315617/12361977 completed.
+[INFO]5439236/12361977 completed.
+[INFO]5562855/12361977 completed.
+[INFO]5686474/12361977 completed.
+[INFO]5810093/12361977 completed.
+[INFO]5933712/12361977 completed.
+[INFO]6057331/12361977 completed.
+[INFO]6180950/12361977 completed.
+[INFO]6304569/12361977 completed.
+[INFO]6428188/12361977 completed.
+[INFO]6551807/12361977 completed.
+[INFO]6675426/12361977 completed.
+[INFO]6799045/12361977 completed.
+[INFO]6922664/12361977 completed.
+[INFO]7046283/12361977 completed.
+[INFO]7169902/12361977 completed.
+[INFO]7293521/12361977 completed.
+[INFO]7417140/12361977 completed.
+[INFO]7540759/12361977 completed.
+[INFO]7664378/12361977 completed.
+[INFO]7787997/12361977 completed.
+[INFO]7911616/12361977 completed.
+[INFO]8035235/12361977 completed.
+[INFO]8158854/12361977 completed.
+[INFO]8282473/12361977 completed.
+[INFO]8406092/12361977 completed.
+[INFO]8529711/12361977 completed.
+[INFO]8653330/12361977 completed.
+[INFO]8776949/12361977 completed.
+[INFO]8900568/12361977 completed.
+[INFO]9024187/12361977 completed.
+[INFO]9147806/12361977 completed.
+[INFO]9271425/12361977 completed.
+[INFO]9395044/12361977 completed.
+[INFO]9518663/12361977 completed.
+[INFO]9642282/12361977 completed.
+[INFO]9765901/12361977 completed.
+[INFO]9889520/12361977 completed.
+[INFO]10013139/12361977 completed.
+[INFO]10136758/12361977 completed.
+[INFO]10260377/12361977 completed.
+[INFO]10383996/12361977 completed.
+[INFO]10507615/12361977 completed.
+[INFO]10631234/12361977 completed.
+[INFO]10754853/12361977 completed.
+[INFO]10878472/12361977 completed.
+[INFO]11002091/12361977 completed.
+[INFO]11125710/12361977 completed.
+[INFO]11249329/12361977 completed.
+[INFO]11372948/12361977 completed.
+[INFO]11496567/12361977 completed.
+[INFO]11620186/12361977 completed.
+[INFO]11743805/12361977 completed.
+[INFO]11867424/12361977 completed.
+[INFO]11991043/12361977 completed.
+[INFO]12114662/12361977 completed.
+[INFO]12238281/12361977 completed.
+[INFO]12361900/12361977 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-pb210-.001_cnaf14.root
+[INFO] Loaded outTree.
+[INFO]0/6326385 completed.
+[INFO]63263/6326385 completed.
+[INFO]126526/6326385 completed.
+[INFO]189789/6326385 completed.
+[INFO]253052/6326385 completed.
+[INFO]316315/6326385 completed.
+[INFO]379578/6326385 completed.
+[INFO]442841/6326385 completed.
+[INFO]506104/6326385 completed.
+[INFO]569367/6326385 completed.
+[INFO]632630/6326385 completed.
+[INFO]695893/6326385 completed.
+[INFO]759156/6326385 completed.
+[INFO]822419/6326385 completed.
+[INFO]885682/6326385 completed.
+[INFO]948945/6326385 completed.
+[INFO]1012208/6326385 completed.
+[INFO]1075471/6326385 completed.
+[INFO]1138734/6326385 completed.
+[INFO]1201997/6326385 completed.
+[INFO]1265260/6326385 completed.
+[INFO]1328523/6326385 completed.
+[INFO]1391786/6326385 completed.
+[INFO]1455049/6326385 completed.
+[INFO]1518312/6326385 completed.
+[INFO]1581575/6326385 completed.
+[INFO]1644838/6326385 completed.
+[INFO]1708101/6326385 completed.
+[INFO]1771364/6326385 completed.
+[INFO]1834627/6326385 completed.
+[INFO]1897890/6326385 completed.
+[INFO]1961153/6326385 completed.
+[INFO]2024416/6326385 completed.
+[INFO]2087679/6326385 completed.
+[INFO]2150942/6326385 completed.
+[INFO]2214205/6326385 completed.
+[INFO]2277468/6326385 completed.
+[INFO]2340731/6326385 completed.
+[INFO]2403994/6326385 completed.
+[INFO]2467257/6326385 completed.
+[INFO]2530520/6326385 completed.
+[INFO]2593783/6326385 completed.
+[INFO]2657046/6326385 completed.
+[INFO]2720309/6326385 completed.
+[INFO]2783572/6326385 completed.
+[INFO]2846835/6326385 completed.
+[INFO]2910098/6326385 completed.
+[INFO]2973361/6326385 completed.
+[INFO]3036624/6326385 completed.
+[INFO]3099887/6326385 completed.
+[INFO]3163150/6326385 completed.
+[INFO]3226413/6326385 completed.
+[INFO]3289676/6326385 completed.
+[INFO]3352939/6326385 completed.
+[INFO]3416202/6326385 completed.
+[INFO]3479465/6326385 completed.
+[INFO]3542728/6326385 completed.
+[INFO]3605991/6326385 completed.
+[INFO]3669254/6326385 completed.
+[INFO]3732517/6326385 completed.
+[INFO]3795780/6326385 completed.
+[INFO]3859043/6326385 completed.
+[INFO]3922306/6326385 completed.
+[INFO]3985569/6326385 completed.
+[INFO]4048832/6326385 completed.
+[INFO]4112095/6326385 completed.
+[INFO]4175358/6326385 completed.
+[INFO]4238621/6326385 completed.
+[INFO]4301884/6326385 completed.
+[INFO]4365147/6326385 completed.
+[INFO]4428410/6326385 completed.
+[INFO]4491673/6326385 completed.
+[INFO]4554936/6326385 completed.
+[INFO]4618199/6326385 completed.
+[INFO]4681462/6326385 completed.
+[INFO]4744725/6326385 completed.
+[INFO]4807988/6326385 completed.
+[INFO]4871251/6326385 completed.
+[INFO]4934514/6326385 completed.
+[INFO]4997777/6326385 completed.
+[INFO]5061040/6326385 completed.
+[INFO]5124303/6326385 completed.
+[INFO]5187566/6326385 completed.
+[INFO]5250829/6326385 completed.
+[INFO]5314092/6326385 completed.
+[INFO]5377355/6326385 completed.
+[INFO]5440618/6326385 completed.
+[INFO]5503881/6326385 completed.
+[INFO]5567144/6326385 completed.
+[INFO]5630407/6326385 completed.
+[INFO]5693670/6326385 completed.
+[INFO]5756933/6326385 completed.
+[INFO]5820196/6326385 completed.
+[INFO]5883459/6326385 completed.
+[INFO]5946722/6326385 completed.
+[INFO]6009985/6326385 completed.
+[INFO]6073248/6326385 completed.
+[INFO]6136511/6326385 completed.
+[INFO]6199774/6326385 completed.
+[INFO]6263037/6326385 completed.
+[INFO]6326300/6326385 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-pb210-1_cnaf15.root
+[INFO] Loaded outTree.
+[INFO]0/6126811 completed.
+[INFO]61268/6126811 completed.
+[INFO]122536/6126811 completed.
+[INFO]183804/6126811 completed.
+[INFO]245072/6126811 completed.
+[INFO]306340/6126811 completed.
+[INFO]367608/6126811 completed.
+[INFO]428876/6126811 completed.
+[INFO]490144/6126811 completed.
+[INFO]551412/6126811 completed.
+[INFO]612680/6126811 completed.
+[INFO]673948/6126811 completed.
+[INFO]735216/6126811 completed.
+[INFO]796484/6126811 completed.
+[INFO]857752/6126811 completed.
+[INFO]919020/6126811 completed.
+[INFO]980288/6126811 completed.
+[INFO]1041556/6126811 completed.
+[INFO]1102824/6126811 completed.
+[INFO]1164092/6126811 completed.
+[INFO]1225360/6126811 completed.
+[INFO]1286628/6126811 completed.
+[INFO]1347896/6126811 completed.
+[INFO]1409164/6126811 completed.
+[INFO]1470432/6126811 completed.
+[INFO]1531700/6126811 completed.
+[INFO]1592968/6126811 completed.
+[INFO]1654236/6126811 completed.
+[INFO]1715504/6126811 completed.
+[INFO]1776772/6126811 completed.
+[INFO]1838040/6126811 completed.
+[INFO]1899308/6126811 completed.
+[INFO]1960576/6126811 completed.
+[INFO]2021844/6126811 completed.
+[INFO]2083112/6126811 completed.
+[INFO]2144380/6126811 completed.
+[INFO]2205648/6126811 completed.
+[INFO]2266916/6126811 completed.
+[INFO]2328184/6126811 completed.
+[INFO]2389452/6126811 completed.
+[INFO]2450720/6126811 completed.
+[INFO]2511988/6126811 completed.
+[INFO]2573256/6126811 completed.
+[INFO]2634524/6126811 completed.
+[INFO]2695792/6126811 completed.
+[INFO]2757060/6126811 completed.
+[INFO]2818328/6126811 completed.
+[INFO]2879596/6126811 completed.
+[INFO]2940864/6126811 completed.
+[INFO]3002132/6126811 completed.
+[INFO]3063400/6126811 completed.
+[INFO]3124668/6126811 completed.
+[INFO]3185936/6126811 completed.
+[INFO]3247204/6126811 completed.
+[INFO]3308472/6126811 completed.
+[INFO]3369740/6126811 completed.
+[INFO]3431008/6126811 completed.
+[INFO]3492276/6126811 completed.
+[INFO]3553544/6126811 completed.
+[INFO]3614812/6126811 completed.
+[INFO]3676080/6126811 completed.
+[INFO]3737348/6126811 completed.
+[INFO]3798616/6126811 completed.
+[INFO]3859884/6126811 completed.
+[INFO]3921152/6126811 completed.
+[INFO]3982420/6126811 completed.
+[INFO]4043688/6126811 completed.
+[INFO]4104956/6126811 completed.
+[INFO]4166224/6126811 completed.
+[INFO]4227492/6126811 completed.
+[INFO]4288760/6126811 completed.
+[INFO]4350028/6126811 completed.
+[INFO]4411296/6126811 completed.
+[INFO]4472564/6126811 completed.
+[INFO]4533832/6126811 completed.
+[INFO]4595100/6126811 completed.
+[INFO]4656368/6126811 completed.
+[INFO]4717636/6126811 completed.
+[INFO]4778904/6126811 completed.
+[INFO]4840172/6126811 completed.
+[INFO]4901440/6126811 completed.
+[INFO]4962708/6126811 completed.
+[INFO]5023976/6126811 completed.
+[INFO]5085244/6126811 completed.
+[INFO]5146512/6126811 completed.
+[INFO]5207780/6126811 completed.
+[INFO]5269048/6126811 completed.
+[INFO]5330316/6126811 completed.
+[INFO]5391584/6126811 completed.
+[INFO]5452852/6126811 completed.
+[INFO]5514120/6126811 completed.
+[INFO]5575388/6126811 completed.
+[INFO]5636656/6126811 completed.
+[INFO]5697924/6126811 completed.
+[INFO]5759192/6126811 completed.
+[INFO]5820460/6126811 completed.
+[INFO]5881728/6126811 completed.
+[INFO]5942996/6126811 completed.
+[INFO]6004264/6126811 completed.
+[INFO]6065532/6126811 completed.
+[INFO]6126800/6126811 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-pb210-10_cnaf16.root
+[INFO] Loaded outTree.
+[INFO]0/3486705 completed.
+[INFO]34867/3486705 completed.
+[INFO]69734/3486705 completed.
+[INFO]104601/3486705 completed.
+[INFO]139468/3486705 completed.
+[INFO]174335/3486705 completed.
+[INFO]209202/3486705 completed.
+[INFO]244069/3486705 completed.
+[INFO]278936/3486705 completed.
+[INFO]313803/3486705 completed.
+[INFO]348670/3486705 completed.
+[INFO]383537/3486705 completed.
+[INFO]418404/3486705 completed.
+[INFO]453271/3486705 completed.
+[INFO]488138/3486705 completed.
+[INFO]523005/3486705 completed.
+[INFO]557872/3486705 completed.
+[INFO]592739/3486705 completed.
+[INFO]627606/3486705 completed.
+[INFO]662473/3486705 completed.
+[INFO]697340/3486705 completed.
+[INFO]732207/3486705 completed.
+[INFO]767074/3486705 completed.
+[INFO]801941/3486705 completed.
+[INFO]836808/3486705 completed.
+[INFO]871675/3486705 completed.
+[INFO]906542/3486705 completed.
+[INFO]941409/3486705 completed.
+[INFO]976276/3486705 completed.
+[INFO]1011143/3486705 completed.
+[INFO]1046010/3486705 completed.
+[INFO]1080877/3486705 completed.
+[INFO]1115744/3486705 completed.
+[INFO]1150611/3486705 completed.
+[INFO]1185478/3486705 completed.
+[INFO]1220345/3486705 completed.
+[INFO]1255212/3486705 completed.
+[INFO]1290079/3486705 completed.
+[INFO]1324946/3486705 completed.
+[INFO]1359813/3486705 completed.
+[INFO]1394680/3486705 completed.
+[INFO]1429547/3486705 completed.
+[INFO]1464414/3486705 completed.
+[INFO]1499281/3486705 completed.
+[INFO]1534148/3486705 completed.
+[INFO]1569015/3486705 completed.
+[INFO]1603882/3486705 completed.
+[INFO]1638749/3486705 completed.
+[INFO]1673616/3486705 completed.
+[INFO]1708483/3486705 completed.
+[INFO]1743350/3486705 completed.
+[INFO]1778217/3486705 completed.
+[INFO]1813084/3486705 completed.
+[INFO]1847951/3486705 completed.
+[INFO]1882818/3486705 completed.
+[INFO]1917685/3486705 completed.
+[INFO]1952552/3486705 completed.
+[INFO]1987419/3486705 completed.
+[INFO]2022286/3486705 completed.
+[INFO]2057153/3486705 completed.
+[INFO]2092020/3486705 completed.
+[INFO]2126887/3486705 completed.
+[INFO]2161754/3486705 completed.
+[INFO]2196621/3486705 completed.
+[INFO]2231488/3486705 completed.
+[INFO]2266355/3486705 completed.
+[INFO]2301222/3486705 completed.
+[INFO]2336089/3486705 completed.
+[INFO]2370956/3486705 completed.
+[INFO]2405823/3486705 completed.
+[INFO]2440690/3486705 completed.
+[INFO]2475557/3486705 completed.
+[INFO]2510424/3486705 completed.
+[INFO]2545291/3486705 completed.
+[INFO]2580158/3486705 completed.
+[INFO]2615025/3486705 completed.
+[INFO]2649892/3486705 completed.
+[INFO]2684759/3486705 completed.
+[INFO]2719626/3486705 completed.
+[INFO]2754493/3486705 completed.
+[INFO]2789360/3486705 completed.
+[INFO]2824227/3486705 completed.
+[INFO]2859094/3486705 completed.
+[INFO]2893961/3486705 completed.
+[INFO]2928828/3486705 completed.
+[INFO]2963695/3486705 completed.
+[INFO]2998562/3486705 completed.
+[INFO]3033429/3486705 completed.
+[INFO]3068296/3486705 completed.
+[INFO]3103163/3486705 completed.
+[INFO]3138030/3486705 completed.
+[INFO]3172897/3486705 completed.
+[INFO]3207764/3486705 completed.
+[INFO]3242631/3486705 completed.
+[INFO]3277498/3486705 completed.
+[INFO]3312365/3486705 completed.
+[INFO]3347232/3486705 completed.
+[INFO]3382099/3486705 completed.
+[INFO]3416966/3486705 completed.
+[INFO]3451833/3486705 completed.
+[INFO]3486700/3486705 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/TeO2Sx-u238-10_cnaf18.root
+[INFO] Loaded outTree.
+[INFO]0/10386909 completed.
+[INFO]103869/10386909 completed.
+[INFO]207738/10386909 completed.
+[INFO]311607/10386909 completed.
+[INFO]415476/10386909 completed.
+[INFO]519345/10386909 completed.
+[INFO]623214/10386909 completed.
+[INFO]727083/10386909 completed.
+[INFO]830952/10386909 completed.
+[INFO]934821/10386909 completed.
+[INFO]1038690/10386909 completed.
+[INFO]1142559/10386909 completed.
+[INFO]1246428/10386909 completed.
+[INFO]1350297/10386909 completed.
+[INFO]1454166/10386909 completed.
+[INFO]1558035/10386909 completed.
+[INFO]1661904/10386909 completed.
+[INFO]1765773/10386909 completed.
+[INFO]1869642/10386909 completed.
+[INFO]1973511/10386909 completed.
+[INFO]2077380/10386909 completed.
+[INFO]2181249/10386909 completed.
+[INFO]2285118/10386909 completed.
+[INFO]2388987/10386909 completed.
+[INFO]2492856/10386909 completed.
+[INFO]2596725/10386909 completed.
+[INFO]2700594/10386909 completed.
+[INFO]2804463/10386909 completed.
+[INFO]2908332/10386909 completed.
+[INFO]3012201/10386909 completed.
+[INFO]3116070/10386909 completed.
+[INFO]3219939/10386909 completed.
+[INFO]3323808/10386909 completed.
+[INFO]3427677/10386909 completed.
+[INFO]3531546/10386909 completed.
+[INFO]3635415/10386909 completed.
+[INFO]3739284/10386909 completed.
+[INFO]3843153/10386909 completed.
+[INFO]3947022/10386909 completed.
+[INFO]4050891/10386909 completed.
+[INFO]4154760/10386909 completed.
+[INFO]4258629/10386909 completed.
+[INFO]4362498/10386909 completed.
+[INFO]4466367/10386909 completed.
+[INFO]4570236/10386909 completed.
+[INFO]4674105/10386909 completed.
+[INFO]4777974/10386909 completed.
+[INFO]4881843/10386909 completed.
+[INFO]4985712/10386909 completed.
+[INFO]5089581/10386909 completed.
+[INFO]5193450/10386909 completed.
+[INFO]5297319/10386909 completed.
+[INFO]5401188/10386909 completed.
+[INFO]5505057/10386909 completed.
+[INFO]5608926/10386909 completed.
+[INFO]5712795/10386909 completed.
+[INFO]5816664/10386909 completed.
+[INFO]5920533/10386909 completed.
+[INFO]6024402/10386909 completed.
+[INFO]6128271/10386909 completed.
+[INFO]6232140/10386909 completed.
+[INFO]6336009/10386909 completed.
+[INFO]6439878/10386909 completed.
+[INFO]6543747/10386909 completed.
+[INFO]6647616/10386909 completed.
+[INFO]6751485/10386909 completed.
+[INFO]6855354/10386909 completed.
+[INFO]6959223/10386909 completed.
+[INFO]7063092/10386909 completed.
+[INFO]7166961/10386909 completed.
+[INFO]7270830/10386909 completed.
+[INFO]7374699/10386909 completed.
+[INFO]7478568/10386909 completed.
+[INFO]7582437/10386909 completed.
+[INFO]7686306/10386909 completed.
+[INFO]7790175/10386909 completed.
+[INFO]7894044/10386909 completed.
+[INFO]7997913/10386909 completed.
+[INFO]8101782/10386909 completed.
+[INFO]8205651/10386909 completed.
+[INFO]8309520/10386909 completed.
+[INFO]8413389/10386909 completed.
+[INFO]8517258/10386909 completed.
+[INFO]8621127/10386909 completed.
+[INFO]8724996/10386909 completed.
+[INFO]8828865/10386909 completed.
+[INFO]8932734/10386909 completed.
+[INFO]9036603/10386909 completed.
+[INFO]9140472/10386909 completed.
+[INFO]9244341/10386909 completed.
+[INFO]9348210/10386909 completed.
+[INFO]9452079/10386909 completed.
+[INFO]9555948/10386909 completed.
+[INFO]9659817/10386909 completed.
+[INFO]9763686/10386909 completed.
+[INFO]9867555/10386909 completed.
+[INFO]9971424/10386909 completed.
+[INFO]10075293/10386909 completed.
+[INFO]10179162/10386909 completed.
+[INFO]10283031/10386909 completed.
+[INFO]10386900/10386909 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-.01.root
+[INFO] Loaded outTree.
+[INFO]0/8037766 completed.
+[INFO]80377/8037766 completed.
+[INFO]160754/8037766 completed.
+[INFO]241131/8037766 completed.
+[INFO]321508/8037766 completed.
+[INFO]401885/8037766 completed.
+[INFO]482262/8037766 completed.
+[INFO]562639/8037766 completed.
+[INFO]643016/8037766 completed.
+[INFO]723393/8037766 completed.
+[INFO]803770/8037766 completed.
+[INFO]884147/8037766 completed.
+[INFO]964524/8037766 completed.
+[INFO]1044901/8037766 completed.
+[INFO]1125278/8037766 completed.
+[INFO]1205655/8037766 completed.
+[INFO]1286032/8037766 completed.
+[INFO]1366409/8037766 completed.
+[INFO]1446786/8037766 completed.
+[INFO]1527163/8037766 completed.
+[INFO]1607540/8037766 completed.
+[INFO]1687917/8037766 completed.
+[INFO]1768294/8037766 completed.
+[INFO]1848671/8037766 completed.
+[INFO]1929048/8037766 completed.
+[INFO]2009425/8037766 completed.
+[INFO]2089802/8037766 completed.
+[INFO]2170179/8037766 completed.
+[INFO]2250556/8037766 completed.
+[INFO]2330933/8037766 completed.
+[INFO]2411310/8037766 completed.
+[INFO]2491687/8037766 completed.
+[INFO]2572064/8037766 completed.
+[INFO]2652441/8037766 completed.
+[INFO]2732818/8037766 completed.
+[INFO]2813195/8037766 completed.
+[INFO]2893572/8037766 completed.
+[INFO]2973949/8037766 completed.
+[INFO]3054326/8037766 completed.
+[INFO]3134703/8037766 completed.
+[INFO]3215080/8037766 completed.
+[INFO]3295457/8037766 completed.
+[INFO]3375834/8037766 completed.
+[INFO]3456211/8037766 completed.
+[INFO]3536588/8037766 completed.
+[INFO]3616965/8037766 completed.
+[INFO]3697342/8037766 completed.
+[INFO]3777719/8037766 completed.
+[INFO]3858096/8037766 completed.
+[INFO]3938473/8037766 completed.
+[INFO]4018850/8037766 completed.
+[INFO]4099227/8037766 completed.
+[INFO]4179604/8037766 completed.
+[INFO]4259981/8037766 completed.
+[INFO]4340358/8037766 completed.
+[INFO]4420735/8037766 completed.
+[INFO]4501112/8037766 completed.
+[INFO]4581489/8037766 completed.
+[INFO]4661866/8037766 completed.
+[INFO]4742243/8037766 completed.
+[INFO]4822620/8037766 completed.
+[INFO]4902997/8037766 completed.
+[INFO]4983374/8037766 completed.
+[INFO]5063751/8037766 completed.
+[INFO]5144128/8037766 completed.
+[INFO]5224505/8037766 completed.
+[INFO]5304882/8037766 completed.
+[INFO]5385259/8037766 completed.
+[INFO]5465636/8037766 completed.
+[INFO]5546013/8037766 completed.
+[INFO]5626390/8037766 completed.
+[INFO]5706767/8037766 completed.
+[INFO]5787144/8037766 completed.
+[INFO]5867521/8037766 completed.
+[INFO]5947898/8037766 completed.
+[INFO]6028275/8037766 completed.
+[INFO]6108652/8037766 completed.
+[INFO]6189029/8037766 completed.
+[INFO]6269406/8037766 completed.
+[INFO]6349783/8037766 completed.
+[INFO]6430160/8037766 completed.
+[INFO]6510537/8037766 completed.
+[INFO]6590914/8037766 completed.
+[INFO]6671291/8037766 completed.
+[INFO]6751668/8037766 completed.
+[INFO]6832045/8037766 completed.
+[INFO]6912422/8037766 completed.
+[INFO]6992799/8037766 completed.
+[INFO]7073176/8037766 completed.
+[INFO]7153553/8037766 completed.
+[INFO]7233930/8037766 completed.
+[INFO]7314307/8037766 completed.
+[INFO]7394684/8037766 completed.
+[INFO]7475061/8037766 completed.
+[INFO]7555438/8037766 completed.
+[INFO]7635815/8037766 completed.
+[INFO]7716192/8037766 completed.
+[INFO]7796569/8037766 completed.
+[INFO]7876946/8037766 completed.
+[INFO]7957323/8037766 completed.
+[INFO]8037700/8037766 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-.1.root
+[INFO] Loaded outTree.
+[INFO]0/9608132 completed.
+[INFO]96081/9608132 completed.
+[INFO]192162/9608132 completed.
+[INFO]288243/9608132 completed.
+[INFO]384324/9608132 completed.
+[INFO]480405/9608132 completed.
+[INFO]576486/9608132 completed.
+[INFO]672567/9608132 completed.
+[INFO]768648/9608132 completed.
+[INFO]864729/9608132 completed.
+[INFO]960810/9608132 completed.
+[INFO]1056891/9608132 completed.
+[INFO]1152972/9608132 completed.
+[INFO]1249053/9608132 completed.
+[INFO]1345134/9608132 completed.
+[INFO]1441215/9608132 completed.
+[INFO]1537296/9608132 completed.
+[INFO]1633377/9608132 completed.
+[INFO]1729458/9608132 completed.
+[INFO]1825539/9608132 completed.
+[INFO]1921620/9608132 completed.
+[INFO]2017701/9608132 completed.
+[INFO]2113782/9608132 completed.
+[INFO]2209863/9608132 completed.
+[INFO]2305944/9608132 completed.
+[INFO]2402025/9608132 completed.
+[INFO]2498106/9608132 completed.
+[INFO]2594187/9608132 completed.
+[INFO]2690268/9608132 completed.
+[INFO]2786349/9608132 completed.
+[INFO]2882430/9608132 completed.
+[INFO]2978511/9608132 completed.
+[INFO]3074592/9608132 completed.
+[INFO]3170673/9608132 completed.
+[INFO]3266754/9608132 completed.
+[INFO]3362835/9608132 completed.
+[INFO]3458916/9608132 completed.
+[INFO]3554997/9608132 completed.
+[INFO]3651078/9608132 completed.
+[INFO]3747159/9608132 completed.
+[INFO]3843240/9608132 completed.
+[INFO]3939321/9608132 completed.
+[INFO]4035402/9608132 completed.
+[INFO]4131483/9608132 completed.
+[INFO]4227564/9608132 completed.
+[INFO]4323645/9608132 completed.
+[INFO]4419726/9608132 completed.
+[INFO]4515807/9608132 completed.
+[INFO]4611888/9608132 completed.
+[INFO]4707969/9608132 completed.
+[INFO]4804050/9608132 completed.
+[INFO]4900131/9608132 completed.
+[INFO]4996212/9608132 completed.
+[INFO]5092293/9608132 completed.
+[INFO]5188374/9608132 completed.
+[INFO]5284455/9608132 completed.
+[INFO]5380536/9608132 completed.
+[INFO]5476617/9608132 completed.
+[INFO]5572698/9608132 completed.
+[INFO]5668779/9608132 completed.
+[INFO]5764860/9608132 completed.
+[INFO]5860941/9608132 completed.
+[INFO]5957022/9608132 completed.
+[INFO]6053103/9608132 completed.
+[INFO]6149184/9608132 completed.
+[INFO]6245265/9608132 completed.
+[INFO]6341346/9608132 completed.
+[INFO]6437427/9608132 completed.
+[INFO]6533508/9608132 completed.
+[INFO]6629589/9608132 completed.
+[INFO]6725670/9608132 completed.
+[INFO]6821751/9608132 completed.
+[INFO]6917832/9608132 completed.
+[INFO]7013913/9608132 completed.
+[INFO]7109994/9608132 completed.
+[INFO]7206075/9608132 completed.
+[INFO]7302156/9608132 completed.
+[INFO]7398237/9608132 completed.
+[INFO]7494318/9608132 completed.
+[INFO]7590399/9608132 completed.
+[INFO]7686480/9608132 completed.
+[INFO]7782561/9608132 completed.
+[INFO]7878642/9608132 completed.
+[INFO]7974723/9608132 completed.
+[INFO]8070804/9608132 completed.
+[INFO]8166885/9608132 completed.
+[INFO]8262966/9608132 completed.
+[INFO]8359047/9608132 completed.
+[INFO]8455128/9608132 completed.
+[INFO]8551209/9608132 completed.
+[INFO]8647290/9608132 completed.
+[INFO]8743371/9608132 completed.
+[INFO]8839452/9608132 completed.
+[INFO]8935533/9608132 completed.
+[INFO]9031614/9608132 completed.
+[INFO]9127695/9608132 completed.
+[INFO]9223776/9608132 completed.
+[INFO]9319857/9608132 completed.
+[INFO]9415938/9608132 completed.
+[INFO]9512019/9608132 completed.
+[INFO]9608100/9608132 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-pb210-1.root
+[INFO] Loaded outTree.
+[INFO]0/5033414 completed.
+[INFO]50334/5033414 completed.
+[INFO]100668/5033414 completed.
+[INFO]151002/5033414 completed.
+[INFO]201336/5033414 completed.
+[INFO]251670/5033414 completed.
+[INFO]302004/5033414 completed.
+[INFO]352338/5033414 completed.
+[INFO]402672/5033414 completed.
+[INFO]453006/5033414 completed.
+[INFO]503340/5033414 completed.
+[INFO]553674/5033414 completed.
+[INFO]604008/5033414 completed.
+[INFO]654342/5033414 completed.
+[INFO]704676/5033414 completed.
+[INFO]755010/5033414 completed.
+[INFO]805344/5033414 completed.
+[INFO]855678/5033414 completed.
+[INFO]906012/5033414 completed.
+[INFO]956346/5033414 completed.
+[INFO]1006680/5033414 completed.
+[INFO]1057014/5033414 completed.
+[INFO]1107348/5033414 completed.
+[INFO]1157682/5033414 completed.
+[INFO]1208016/5033414 completed.
+[INFO]1258350/5033414 completed.
+[INFO]1308684/5033414 completed.
+[INFO]1359018/5033414 completed.
+[INFO]1409352/5033414 completed.
+[INFO]1459686/5033414 completed.
+[INFO]1510020/5033414 completed.
+[INFO]1560354/5033414 completed.
+[INFO]1610688/5033414 completed.
+[INFO]1661022/5033414 completed.
+[INFO]1711356/5033414 completed.
+[INFO]1761690/5033414 completed.
+[INFO]1812024/5033414 completed.
+[INFO]1862358/5033414 completed.
+[INFO]1912692/5033414 completed.
+[INFO]1963026/5033414 completed.
+[INFO]2013360/5033414 completed.
+[INFO]2063694/5033414 completed.
+[INFO]2114028/5033414 completed.
+[INFO]2164362/5033414 completed.
+[INFO]2214696/5033414 completed.
+[INFO]2265030/5033414 completed.
+[INFO]2315364/5033414 completed.
+[INFO]2365698/5033414 completed.
+[INFO]2416032/5033414 completed.
+[INFO]2466366/5033414 completed.
+[INFO]2516700/5033414 completed.
+[INFO]2567034/5033414 completed.
+[INFO]2617368/5033414 completed.
+[INFO]2667702/5033414 completed.
+[INFO]2718036/5033414 completed.
+[INFO]2768370/5033414 completed.
+[INFO]2818704/5033414 completed.
+[INFO]2869038/5033414 completed.
+[INFO]2919372/5033414 completed.
+[INFO]2969706/5033414 completed.
+[INFO]3020040/5033414 completed.
+[INFO]3070374/5033414 completed.
+[INFO]3120708/5033414 completed.
+[INFO]3171042/5033414 completed.
+[INFO]3221376/5033414 completed.
+[INFO]3271710/5033414 completed.
+[INFO]3322044/5033414 completed.
+[INFO]3372378/5033414 completed.
+[INFO]3422712/5033414 completed.
+[INFO]3473046/5033414 completed.
+[INFO]3523380/5033414 completed.
+[INFO]3573714/5033414 completed.
+[INFO]3624048/5033414 completed.
+[INFO]3674382/5033414 completed.
+[INFO]3724716/5033414 completed.
+[INFO]3775050/5033414 completed.
+[INFO]3825384/5033414 completed.
+[INFO]3875718/5033414 completed.
+[INFO]3926052/5033414 completed.
+[INFO]3976386/5033414 completed.
+[INFO]4026720/5033414 completed.
+[INFO]4077054/5033414 completed.
+[INFO]4127388/5033414 completed.
+[INFO]4177722/5033414 completed.
+[INFO]4228056/5033414 completed.
+[INFO]4278390/5033414 completed.
+[INFO]4328724/5033414 completed.
+[INFO]4379058/5033414 completed.
+[INFO]4429392/5033414 completed.
+[INFO]4479726/5033414 completed.
+[INFO]4530060/5033414 completed.
+[INFO]4580394/5033414 completed.
+[INFO]4630728/5033414 completed.
+[INFO]4681062/5033414 completed.
+[INFO]4731396/5033414 completed.
+[INFO]4781730/5033414 completed.
+[INFO]4832064/5033414 completed.
+[INFO]4882398/5033414 completed.
+[INFO]4932732/5033414 completed.
+[INFO]4983066/5033414 completed.
+[INFO]5033400/5033414 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-th232-10.root
+[INFO] Loaded outTree.
+[INFO]0/27448528 completed.
+[INFO]274485/27448528 completed.
+[INFO]548970/27448528 completed.
+[INFO]823455/27448528 completed.
+[INFO]1097940/27448528 completed.
+[INFO]1372425/27448528 completed.
+[INFO]1646910/27448528 completed.
+[INFO]1921395/27448528 completed.
+[INFO]2195880/27448528 completed.
+[INFO]2470365/27448528 completed.
+[INFO]2744850/27448528 completed.
+[INFO]3019335/27448528 completed.
+[INFO]3293820/27448528 completed.
+[INFO]3568305/27448528 completed.
+[INFO]3842790/27448528 completed.
+[INFO]4117275/27448528 completed.
+[INFO]4391760/27448528 completed.
+[INFO]4666245/27448528 completed.
+[INFO]4940730/27448528 completed.
+[INFO]5215215/27448528 completed.
+[INFO]5489700/27448528 completed.
+[INFO]5764185/27448528 completed.
+[INFO]6038670/27448528 completed.
+[INFO]6313155/27448528 completed.
+[INFO]6587640/27448528 completed.
+[INFO]6862125/27448528 completed.
+[INFO]7136610/27448528 completed.
+[INFO]7411095/27448528 completed.
+[INFO]7685580/27448528 completed.
+[INFO]7960065/27448528 completed.
+[INFO]8234550/27448528 completed.
+[INFO]8509035/27448528 completed.
+[INFO]8783520/27448528 completed.
+[INFO]9058005/27448528 completed.
+[INFO]9332490/27448528 completed.
+[INFO]9606975/27448528 completed.
+[INFO]9881460/27448528 completed.
+[INFO]10155945/27448528 completed.
+[INFO]10430430/27448528 completed.
+[INFO]10704915/27448528 completed.
+[INFO]10979400/27448528 completed.
+[INFO]11253885/27448528 completed.
+[INFO]11528370/27448528 completed.
+[INFO]11802855/27448528 completed.
+[INFO]12077340/27448528 completed.
+[INFO]12351825/27448528 completed.
+[INFO]12626310/27448528 completed.
+[INFO]12900795/27448528 completed.
+[INFO]13175280/27448528 completed.
+[INFO]13449765/27448528 completed.
+[INFO]13724250/27448528 completed.
+[INFO]13998735/27448528 completed.
+[INFO]14273220/27448528 completed.
+[INFO]14547705/27448528 completed.
+[INFO]14822190/27448528 completed.
+[INFO]15096675/27448528 completed.
+[INFO]15371160/27448528 completed.
+[INFO]15645645/27448528 completed.
+[INFO]15920130/27448528 completed.
+[INFO]16194615/27448528 completed.
+[INFO]16469100/27448528 completed.
+[INFO]16743585/27448528 completed.
+[INFO]17018070/27448528 completed.
+[INFO]17292555/27448528 completed.
+[INFO]17567040/27448528 completed.
+[INFO]17841525/27448528 completed.
+[INFO]18116010/27448528 completed.
+[INFO]18390495/27448528 completed.
+[INFO]18664980/27448528 completed.
+[INFO]18939465/27448528 completed.
+[INFO]19213950/27448528 completed.
+[INFO]19488435/27448528 completed.
+[INFO]19762920/27448528 completed.
+[INFO]20037405/27448528 completed.
+[INFO]20311890/27448528 completed.
+[INFO]20586375/27448528 completed.
+[INFO]20860860/27448528 completed.
+[INFO]21135345/27448528 completed.
+[INFO]21409830/27448528 completed.
+[INFO]21684315/27448528 completed.
+[INFO]21958800/27448528 completed.
+[INFO]22233285/27448528 completed.
+[INFO]22507770/27448528 completed.
+[INFO]22782255/27448528 completed.
+[INFO]23056740/27448528 completed.
+[INFO]23331225/27448528 completed.
+[INFO]23605710/27448528 completed.
+[INFO]23880195/27448528 completed.
+[INFO]24154680/27448528 completed.
+[INFO]24429165/27448528 completed.
+[INFO]24703650/27448528 completed.
+[INFO]24978135/27448528 completed.
+[INFO]25252620/27448528 completed.
+[INFO]25527105/27448528 completed.
+[INFO]25801590/27448528 completed.
+[INFO]26076075/27448528 completed.
+[INFO]26350560/27448528 completed.
+[INFO]26625045/27448528 completed.
+[INFO]26899530/27448528 completed.
+[INFO]27174015/27448528 completed.
+[INFO]27448500/27448528 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-th232-10.root
+[INFO] Loaded outTree.
+[INFO]0/18059552 completed.
+[INFO]180595/18059552 completed.
+[INFO]361190/18059552 completed.
+[INFO]541785/18059552 completed.
+[INFO]722380/18059552 completed.
+[INFO]902975/18059552 completed.
+[INFO]1083570/18059552 completed.
+[INFO]1264165/18059552 completed.
+[INFO]1444760/18059552 completed.
+[INFO]1625355/18059552 completed.
+[INFO]1805950/18059552 completed.
+[INFO]1986545/18059552 completed.
+[INFO]2167140/18059552 completed.
+[INFO]2347735/18059552 completed.
+[INFO]2528330/18059552 completed.
+[INFO]2708925/18059552 completed.
+[INFO]2889520/18059552 completed.
+[INFO]3070115/18059552 completed.
+[INFO]3250710/18059552 completed.
+[INFO]3431305/18059552 completed.
+[INFO]3611900/18059552 completed.
+[INFO]3792495/18059552 completed.
+[INFO]3973090/18059552 completed.
+[INFO]4153685/18059552 completed.
+[INFO]4334280/18059552 completed.
+[INFO]4514875/18059552 completed.
+[INFO]4695470/18059552 completed.
+[INFO]4876065/18059552 completed.
+[INFO]5056660/18059552 completed.
+[INFO]5237255/18059552 completed.
+[INFO]5417850/18059552 completed.
+[INFO]5598445/18059552 completed.
+[INFO]5779040/18059552 completed.
+[INFO]5959635/18059552 completed.
+[INFO]6140230/18059552 completed.
+[INFO]6320825/18059552 completed.
+[INFO]6501420/18059552 completed.
+[INFO]6682015/18059552 completed.
+[INFO]6862610/18059552 completed.
+[INFO]7043205/18059552 completed.
+[INFO]7223800/18059552 completed.
+[INFO]7404395/18059552 completed.
+[INFO]7584990/18059552 completed.
+[INFO]7765585/18059552 completed.
+[INFO]7946180/18059552 completed.
+[INFO]8126775/18059552 completed.
+[INFO]8307370/18059552 completed.
+[INFO]8487965/18059552 completed.
+[INFO]8668560/18059552 completed.
+[INFO]8849155/18059552 completed.
+[INFO]9029750/18059552 completed.
+[INFO]9210345/18059552 completed.
+[INFO]9390940/18059552 completed.
+[INFO]9571535/18059552 completed.
+[INFO]9752130/18059552 completed.
+[INFO]9932725/18059552 completed.
+[INFO]10113320/18059552 completed.
+[INFO]10293915/18059552 completed.
+[INFO]10474510/18059552 completed.
+[INFO]10655105/18059552 completed.
+[INFO]10835700/18059552 completed.
+[INFO]11016295/18059552 completed.
+[INFO]11196890/18059552 completed.
+[INFO]11377485/18059552 completed.
+[INFO]11558080/18059552 completed.
+[INFO]11738675/18059552 completed.
+[INFO]11919270/18059552 completed.
+[INFO]12099865/18059552 completed.
+[INFO]12280460/18059552 completed.
+[INFO]12461055/18059552 completed.
+[INFO]12641650/18059552 completed.
+[INFO]12822245/18059552 completed.
+[INFO]13002840/18059552 completed.
+[INFO]13183435/18059552 completed.
+[INFO]13364030/18059552 completed.
+[INFO]13544625/18059552 completed.
+[INFO]13725220/18059552 completed.
+[INFO]13905815/18059552 completed.
+[INFO]14086410/18059552 completed.
+[INFO]14267005/18059552 completed.
+[INFO]14447600/18059552 completed.
+[INFO]14628195/18059552 completed.
+[INFO]14808790/18059552 completed.
+[INFO]14989385/18059552 completed.
+[INFO]15169980/18059552 completed.
+[INFO]15350575/18059552 completed.
+[INFO]15531170/18059552 completed.
+[INFO]15711765/18059552 completed.
+[INFO]15892360/18059552 completed.
+[INFO]16072955/18059552 completed.
+[INFO]16253550/18059552 completed.
+[INFO]16434145/18059552 completed.
+[INFO]16614740/18059552 completed.
+[INFO]16795335/18059552 completed.
+[INFO]16975930/18059552 completed.
+[INFO]17156525/18059552 completed.
+[INFO]17337120/18059552 completed.
+[INFO]17517715/18059552 completed.
+[INFO]17698310/18059552 completed.
+[INFO]17878905/18059552 completed.
+[INFO]18059500/18059552 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-u238-10.root
+[INFO] Loaded outTree.
+[INFO]0/32948951 completed.
+[INFO]329489/32948951 completed.
+[INFO]658978/32948951 completed.
+[INFO]988467/32948951 completed.
+[INFO]1317956/32948951 completed.
+[INFO]1647445/32948951 completed.
+[INFO]1976934/32948951 completed.
+[INFO]2306423/32948951 completed.
+[INFO]2635912/32948951 completed.
+[INFO]2965401/32948951 completed.
+[INFO]3294890/32948951 completed.
+[INFO]3624379/32948951 completed.
+[INFO]3953868/32948951 completed.
+[INFO]4283357/32948951 completed.
+[INFO]4612846/32948951 completed.
+[INFO]4942335/32948951 completed.
+[INFO]5271824/32948951 completed.
+[INFO]5601313/32948951 completed.
+[INFO]5930802/32948951 completed.
+[INFO]6260291/32948951 completed.
+[INFO]6589780/32948951 completed.
+[INFO]6919269/32948951 completed.
+[INFO]7248758/32948951 completed.
+[INFO]7578247/32948951 completed.
+[INFO]7907736/32948951 completed.
+[INFO]8237225/32948951 completed.
+[INFO]8566714/32948951 completed.
+[INFO]8896203/32948951 completed.
+[INFO]9225692/32948951 completed.
+[INFO]9555181/32948951 completed.
+[INFO]9884670/32948951 completed.
+[INFO]10214159/32948951 completed.
+[INFO]10543648/32948951 completed.
+[INFO]10873137/32948951 completed.
+[INFO]11202626/32948951 completed.
+[INFO]11532115/32948951 completed.
+[INFO]11861604/32948951 completed.
+[INFO]12191093/32948951 completed.
+[INFO]12520582/32948951 completed.
+[INFO]12850071/32948951 completed.
+[INFO]13179560/32948951 completed.
+[INFO]13509049/32948951 completed.
+[INFO]13838538/32948951 completed.
+[INFO]14168027/32948951 completed.
+[INFO]14497516/32948951 completed.
+[INFO]14827005/32948951 completed.
+[INFO]15156494/32948951 completed.
+[INFO]15485983/32948951 completed.
+[INFO]15815472/32948951 completed.
+[INFO]16144961/32948951 completed.
+[INFO]16474450/32948951 completed.
+[INFO]16803939/32948951 completed.
+[INFO]17133428/32948951 completed.
+[INFO]17462917/32948951 completed.
+[INFO]17792406/32948951 completed.
+[INFO]18121895/32948951 completed.
+[INFO]18451384/32948951 completed.
+[INFO]18780873/32948951 completed.
+[INFO]19110362/32948951 completed.
+[INFO]19439851/32948951 completed.
+[INFO]19769340/32948951 completed.
+[INFO]20098829/32948951 completed.
+[INFO]20428318/32948951 completed.
+[INFO]20757807/32948951 completed.
+[INFO]21087296/32948951 completed.
+[INFO]21416785/32948951 completed.
+[INFO]21746274/32948951 completed.
+[INFO]22075763/32948951 completed.
+[INFO]22405252/32948951 completed.
+[INFO]22734741/32948951 completed.
+[INFO]23064230/32948951 completed.
+[INFO]23393719/32948951 completed.
+[INFO]23723208/32948951 completed.
+[INFO]24052697/32948951 completed.
+[INFO]24382186/32948951 completed.
+[INFO]24711675/32948951 completed.
+[INFO]25041164/32948951 completed.
+[INFO]25370653/32948951 completed.
+[INFO]25700142/32948951 completed.
+[INFO]26029631/32948951 completed.
+[INFO]26359120/32948951 completed.
+[INFO]26688609/32948951 completed.
+[INFO]27018098/32948951 completed.
+[INFO]27347587/32948951 completed.
+[INFO]27677076/32948951 completed.
+[INFO]28006565/32948951 completed.
+[INFO]28336054/32948951 completed.
+[INFO]28665543/32948951 completed.
+[INFO]28995032/32948951 completed.
+[INFO]29324521/32948951 completed.
+[INFO]29654010/32948951 completed.
+[INFO]29983499/32948951 completed.
+[INFO]30312988/32948951 completed.
+[INFO]30642477/32948951 completed.
+[INFO]30971966/32948951 completed.
+[INFO]31301455/32948951 completed.
+[INFO]31630944/32948951 completed.
+[INFO]31960433/32948951 completed.
+[INFO]32289922/32948951 completed.
+[INFO]32619411/32948951 completed.
+[INFO]32948900/32948951 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-th232-.01.root
+[INFO] Loaded outTree.
+[INFO]0/36392314 completed.
+[INFO]363923/36392314 completed.
+[INFO]727846/36392314 completed.
+[INFO]1091769/36392314 completed.
+[INFO]1455692/36392314 completed.
+[INFO]1819615/36392314 completed.
+[INFO]2183538/36392314 completed.
+[INFO]2547461/36392314 completed.
+[INFO]2911384/36392314 completed.
+[INFO]3275307/36392314 completed.
+[INFO]3639230/36392314 completed.
+[INFO]4003153/36392314 completed.
+[INFO]4367076/36392314 completed.
+[INFO]4730999/36392314 completed.
+[INFO]5094922/36392314 completed.
+[INFO]5458845/36392314 completed.
+[INFO]5822768/36392314 completed.
+[INFO]6186691/36392314 completed.
+[INFO]6550614/36392314 completed.
+[INFO]6914537/36392314 completed.
+[INFO]7278460/36392314 completed.
+[INFO]7642383/36392314 completed.
+[INFO]8006306/36392314 completed.
+[INFO]8370229/36392314 completed.
+[INFO]8734152/36392314 completed.
+[INFO]9098075/36392314 completed.
+[INFO]9461998/36392314 completed.
+[INFO]9825921/36392314 completed.
+[INFO]10189844/36392314 completed.
+[INFO]10553767/36392314 completed.
+[INFO]10917690/36392314 completed.
+[INFO]11281613/36392314 completed.
+[INFO]11645536/36392314 completed.
+[INFO]12009459/36392314 completed.
+[INFO]12373382/36392314 completed.
+[INFO]12737305/36392314 completed.
+[INFO]13101228/36392314 completed.
+[INFO]13465151/36392314 completed.
+[INFO]13829074/36392314 completed.
+[INFO]14192997/36392314 completed.
+[INFO]14556920/36392314 completed.
+[INFO]14920843/36392314 completed.
+[INFO]15284766/36392314 completed.
+[INFO]15648689/36392314 completed.
+[INFO]16012612/36392314 completed.
+[INFO]16376535/36392314 completed.
+[INFO]16740458/36392314 completed.
+[INFO]17104381/36392314 completed.
+[INFO]17468304/36392314 completed.
+[INFO]17832227/36392314 completed.
+[INFO]18196150/36392314 completed.
+[INFO]18560073/36392314 completed.
+[INFO]18923996/36392314 completed.
+[INFO]19287919/36392314 completed.
+[INFO]19651842/36392314 completed.
+[INFO]20015765/36392314 completed.
+[INFO]20379688/36392314 completed.
+[INFO]20743611/36392314 completed.
+[INFO]21107534/36392314 completed.
+[INFO]21471457/36392314 completed.
+[INFO]21835380/36392314 completed.
+[INFO]22199303/36392314 completed.
+[INFO]22563226/36392314 completed.
+[INFO]22927149/36392314 completed.
+[INFO]23291072/36392314 completed.
+[INFO]23654995/36392314 completed.
+[INFO]24018918/36392314 completed.
+[INFO]24382841/36392314 completed.
+[INFO]24746764/36392314 completed.
+[INFO]25110687/36392314 completed.
+[INFO]25474610/36392314 completed.
+[INFO]25838533/36392314 completed.
+[INFO]26202456/36392314 completed.
+[INFO]26566379/36392314 completed.
+[INFO]26930302/36392314 completed.
+[INFO]27294225/36392314 completed.
+[INFO]27658148/36392314 completed.
+[INFO]28022071/36392314 completed.
+[INFO]28385994/36392314 completed.
+[INFO]28749917/36392314 completed.
+[INFO]29113840/36392314 completed.
+[INFO]29477763/36392314 completed.
+[INFO]29841686/36392314 completed.
+[INFO]30205609/36392314 completed.
+[INFO]30569532/36392314 completed.
+[INFO]30933455/36392314 completed.
+[INFO]31297378/36392314 completed.
+[INFO]31661301/36392314 completed.
+[INFO]32025224/36392314 completed.
+[INFO]32389147/36392314 completed.
+[INFO]32753070/36392314 completed.
+[INFO]33116993/36392314 completed.
+[INFO]33480916/36392314 completed.
+[INFO]33844839/36392314 completed.
+[INFO]34208762/36392314 completed.
+[INFO]34572685/36392314 completed.
+[INFO]34936608/36392314 completed.
+[INFO]35300531/36392314 completed.
+[INFO]35664454/36392314 completed.
+[INFO]36028377/36392314 completed.
+[INFO]36392300/36392314 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVTowerSx-u238-.01.root
+[INFO] Loaded outTree.
+[INFO]0/35428558 completed.
+[INFO]354285/35428558 completed.
+[INFO]708570/35428558 completed.
+[INFO]1062855/35428558 completed.
+[INFO]1417140/35428558 completed.
+[INFO]1771425/35428558 completed.
+[INFO]2125710/35428558 completed.
+[INFO]2479995/35428558 completed.
+[INFO]2834280/35428558 completed.
+[INFO]3188565/35428558 completed.
+[INFO]3542850/35428558 completed.
+[INFO]3897135/35428558 completed.
+[INFO]4251420/35428558 completed.
+[INFO]4605705/35428558 completed.
+[INFO]4959990/35428558 completed.
+[INFO]5314275/35428558 completed.
+[INFO]5668560/35428558 completed.
+[INFO]6022845/35428558 completed.
+[INFO]6377130/35428558 completed.
+[INFO]6731415/35428558 completed.
+[INFO]7085700/35428558 completed.
+[INFO]7439985/35428558 completed.
+[INFO]7794270/35428558 completed.
+[INFO]8148555/35428558 completed.
+[INFO]8502840/35428558 completed.
+[INFO]8857125/35428558 completed.
+[INFO]9211410/35428558 completed.
+[INFO]9565695/35428558 completed.
+[INFO]9919980/35428558 completed.
+[INFO]10274265/35428558 completed.
+[INFO]10628550/35428558 completed.
+[INFO]10982835/35428558 completed.
+[INFO]11337120/35428558 completed.
+[INFO]11691405/35428558 completed.
+[INFO]12045690/35428558 completed.
+[INFO]12399975/35428558 completed.
+[INFO]12754260/35428558 completed.
+[INFO]13108545/35428558 completed.
+[INFO]13462830/35428558 completed.
+[INFO]13817115/35428558 completed.
+[INFO]14171400/35428558 completed.
+[INFO]14525685/35428558 completed.
+[INFO]14879970/35428558 completed.
+[INFO]15234255/35428558 completed.
+[INFO]15588540/35428558 completed.
+[INFO]15942825/35428558 completed.
+[INFO]16297110/35428558 completed.
+[INFO]16651395/35428558 completed.
+[INFO]17005680/35428558 completed.
+[INFO]17359965/35428558 completed.
+[INFO]17714250/35428558 completed.
+[INFO]18068535/35428558 completed.
+[INFO]18422820/35428558 completed.
+[INFO]18777105/35428558 completed.
+[INFO]19131390/35428558 completed.
+[INFO]19485675/35428558 completed.
+[INFO]19839960/35428558 completed.
+[INFO]20194245/35428558 completed.
+[INFO]20548530/35428558 completed.
+[INFO]20902815/35428558 completed.
+[INFO]21257100/35428558 completed.
+[INFO]21611385/35428558 completed.
+[INFO]21965670/35428558 completed.
+[INFO]22319955/35428558 completed.
+[INFO]22674240/35428558 completed.
+[INFO]23028525/35428558 completed.
+[INFO]23382810/35428558 completed.
+[INFO]23737095/35428558 completed.
+[INFO]24091380/35428558 completed.
+[INFO]24445665/35428558 completed.
+[INFO]24799950/35428558 completed.
+[INFO]25154235/35428558 completed.
+[INFO]25508520/35428558 completed.
+[INFO]25862805/35428558 completed.
+[INFO]26217090/35428558 completed.
+[INFO]26571375/35428558 completed.
+[INFO]26925660/35428558 completed.
+[INFO]27279945/35428558 completed.
+[INFO]27634230/35428558 completed.
+[INFO]27988515/35428558 completed.
+[INFO]28342800/35428558 completed.
+[INFO]28697085/35428558 completed.
+[INFO]29051370/35428558 completed.
+[INFO]29405655/35428558 completed.
+[INFO]29759940/35428558 completed.
+[INFO]30114225/35428558 completed.
+[INFO]30468510/35428558 completed.
+[INFO]30822795/35428558 completed.
+[INFO]31177080/35428558 completed.
+[INFO]31531365/35428558 completed.
+[INFO]31885650/35428558 completed.
+[INFO]32239935/35428558 completed.
+[INFO]32594220/35428558 completed.
+[INFO]32948505/35428558 completed.
+[INFO]33302790/35428558 completed.
+[INFO]33657075/35428558 completed.
+[INFO]34011360/35428558 completed.
+[INFO]34365645/35428558 completed.
+[INFO]34719930/35428558 completed.
+[INFO]35074215/35428558 completed.
+[INFO]35428500/35428558 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/CuNOSVOthersSx-u238-.01.root
+[INFO] Loaded outTree.
+[INFO]0/21152949 completed.
+[INFO]211529/21152949 completed.
+[INFO]423058/21152949 completed.
+[INFO]634587/21152949 completed.
+[INFO]846116/21152949 completed.
+[INFO]1057645/21152949 completed.
+[INFO]1269174/21152949 completed.
+[INFO]1480703/21152949 completed.
+[INFO]1692232/21152949 completed.
+[INFO]1903761/21152949 completed.
+[INFO]2115290/21152949 completed.
+[INFO]2326819/21152949 completed.
+[INFO]2538348/21152949 completed.
+[INFO]2749877/21152949 completed.
+[INFO]2961406/21152949 completed.
+[INFO]3172935/21152949 completed.
+[INFO]3384464/21152949 completed.
+[INFO]3595993/21152949 completed.
+[INFO]3807522/21152949 completed.
+[INFO]4019051/21152949 completed.
+[INFO]4230580/21152949 completed.
+[INFO]4442109/21152949 completed.
+[INFO]4653638/21152949 completed.
+[INFO]4865167/21152949 completed.
+[INFO]5076696/21152949 completed.
+[INFO]5288225/21152949 completed.
+[INFO]5499754/21152949 completed.
+[INFO]5711283/21152949 completed.
+[INFO]5922812/21152949 completed.
+[INFO]6134341/21152949 completed.
+[INFO]6345870/21152949 completed.
+[INFO]6557399/21152949 completed.
+[INFO]6768928/21152949 completed.
+[INFO]6980457/21152949 completed.
+[INFO]7191986/21152949 completed.
+[INFO]7403515/21152949 completed.
+[INFO]7615044/21152949 completed.
+[INFO]7826573/21152949 completed.
+[INFO]8038102/21152949 completed.
+[INFO]8249631/21152949 completed.
+[INFO]8461160/21152949 completed.
+[INFO]8672689/21152949 completed.
+[INFO]8884218/21152949 completed.
+[INFO]9095747/21152949 completed.
+[INFO]9307276/21152949 completed.
+[INFO]9518805/21152949 completed.
+[INFO]9730334/21152949 completed.
+[INFO]9941863/21152949 completed.
+[INFO]10153392/21152949 completed.
+[INFO]10364921/21152949 completed.
+[INFO]10576450/21152949 completed.
+[INFO]10787979/21152949 completed.
+[INFO]10999508/21152949 completed.
+[INFO]11211037/21152949 completed.
+[INFO]11422566/21152949 completed.
+[INFO]11634095/21152949 completed.
+[INFO]11845624/21152949 completed.
+[INFO]12057153/21152949 completed.
+[INFO]12268682/21152949 completed.
+[INFO]12480211/21152949 completed.
+[INFO]12691740/21152949 completed.
+[INFO]12903269/21152949 completed.
+[INFO]13114798/21152949 completed.
+[INFO]13326327/21152949 completed.
+[INFO]13537856/21152949 completed.
+[INFO]13749385/21152949 completed.
+[INFO]13960914/21152949 completed.
+[INFO]14172443/21152949 completed.
+[INFO]14383972/21152949 completed.
+[INFO]14595501/21152949 completed.
+[INFO]14807030/21152949 completed.
+[INFO]15018559/21152949 completed.
+[INFO]15230088/21152949 completed.
+[INFO]15441617/21152949 completed.
+[INFO]15653146/21152949 completed.
+[INFO]15864675/21152949 completed.
+[INFO]16076204/21152949 completed.
+[INFO]16287733/21152949 completed.
+[INFO]16499262/21152949 completed.
+[INFO]16710791/21152949 completed.
+[INFO]16922320/21152949 completed.
+[INFO]17133849/21152949 completed.
+[INFO]17345378/21152949 completed.
+[INFO]17556907/21152949 completed.
+[INFO]17768436/21152949 completed.
+[INFO]17979965/21152949 completed.
+[INFO]18191494/21152949 completed.
+[INFO]18403023/21152949 completed.
+[INFO]18614552/21152949 completed.
+[INFO]18826081/21152949 completed.
+[INFO]19037610/21152949 completed.
+[INFO]19249139/21152949 completed.
+[INFO]19460668/21152949 completed.
+[INFO]19672197/21152949 completed.
+[INFO]19883726/21152949 completed.
+[INFO]20095255/21152949 completed.
+[INFO]20306784/21152949 completed.
+[INFO]20518313/21152949 completed.
+[INFO]20729842/21152949 completed.
+[INFO]20941371/21152949 completed.
+[INFO]21152900/21152949 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/4KTot-co60.root
+[INFO] Loaded outTree.
+[INFO]0/5291532 completed.
+[INFO]52915/5291532 completed.
+[INFO]105830/5291532 completed.
+[INFO]158745/5291532 completed.
+[INFO]211660/5291532 completed.
+[INFO]264575/5291532 completed.
+[INFO]317490/5291532 completed.
+[INFO]370405/5291532 completed.
+[INFO]423320/5291532 completed.
+[INFO]476235/5291532 completed.
+[INFO]529150/5291532 completed.
+[INFO]582065/5291532 completed.
+[INFO]634980/5291532 completed.
+[INFO]687895/5291532 completed.
+[INFO]740810/5291532 completed.
+[INFO]793725/5291532 completed.
+[INFO]846640/5291532 completed.
+[INFO]899555/5291532 completed.
+[INFO]952470/5291532 completed.
+[INFO]1005385/5291532 completed.
+[INFO]1058300/5291532 completed.
+[INFO]1111215/5291532 completed.
+[INFO]1164130/5291532 completed.
+[INFO]1217045/5291532 completed.
+[INFO]1269960/5291532 completed.
+[INFO]1322875/5291532 completed.
+[INFO]1375790/5291532 completed.
+[INFO]1428705/5291532 completed.
+[INFO]1481620/5291532 completed.
+[INFO]1534535/5291532 completed.
+[INFO]1587450/5291532 completed.
+[INFO]1640365/5291532 completed.
+[INFO]1693280/5291532 completed.
+[INFO]1746195/5291532 completed.
+[INFO]1799110/5291532 completed.
+[INFO]1852025/5291532 completed.
+[INFO]1904940/5291532 completed.
+[INFO]1957855/5291532 completed.
+[INFO]2010770/5291532 completed.
+[INFO]2063685/5291532 completed.
+[INFO]2116600/5291532 completed.
+[INFO]2169515/5291532 completed.
+[INFO]2222430/5291532 completed.
+[INFO]2275345/5291532 completed.
+[INFO]2328260/5291532 completed.
+[INFO]2381175/5291532 completed.
+[INFO]2434090/5291532 completed.
+[INFO]2487005/5291532 completed.
+[INFO]2539920/5291532 completed.
+[INFO]2592835/5291532 completed.
+[INFO]2645750/5291532 completed.
+[INFO]2698665/5291532 completed.
+[INFO]2751580/5291532 completed.
+[INFO]2804495/5291532 completed.
+[INFO]2857410/5291532 completed.
+[INFO]2910325/5291532 completed.
+[INFO]2963240/5291532 completed.
+[INFO]3016155/5291532 completed.
+[INFO]3069070/5291532 completed.
+[INFO]3121985/5291532 completed.
+[INFO]3174900/5291532 completed.
+[INFO]3227815/5291532 completed.
+[INFO]3280730/5291532 completed.
+[INFO]3333645/5291532 completed.
+[INFO]3386560/5291532 completed.
+[INFO]3439475/5291532 completed.
+[INFO]3492390/5291532 completed.
+[INFO]3545305/5291532 completed.
+[INFO]3598220/5291532 completed.
+[INFO]3651135/5291532 completed.
+[INFO]3704050/5291532 completed.
+[INFO]3756965/5291532 completed.
+[INFO]3809880/5291532 completed.
+[INFO]3862795/5291532 completed.
+[INFO]3915710/5291532 completed.
+[INFO]3968625/5291532 completed.
+[INFO]4021540/5291532 completed.
+[INFO]4074455/5291532 completed.
+[INFO]4127370/5291532 completed.
+[INFO]4180285/5291532 completed.
+[INFO]4233200/5291532 completed.
+[INFO]4286115/5291532 completed.
+[INFO]4339030/5291532 completed.
+[INFO]4391945/5291532 completed.
+[INFO]4444860/5291532 completed.
+[INFO]4497775/5291532 completed.
+[INFO]4550690/5291532 completed.
+[INFO]4603605/5291532 completed.
+[INFO]4656520/5291532 completed.
+[INFO]4709435/5291532 completed.
+[INFO]4762350/5291532 completed.
+[INFO]4815265/5291532 completed.
+[INFO]4868180/5291532 completed.
+[INFO]4921095/5291532 completed.
+[INFO]4974010/5291532 completed.
+[INFO]5026925/5291532 completed.
+[INFO]5079840/5291532 completed.
+[INFO]5132755/5291532 completed.
+[INFO]5185670/5291532 completed.
+[INFO]5238585/5291532 completed.
+[INFO]5291500/5291532 completed.
+[INFO] 100% completed.
+================================
+[INFO] Processing /nfs/cuore1/data/simulation/CUORE/2017/ntp/mu-R5m_cnaf127.root
+[INFO] Loaded outTree.
+[INFO]0/100130248 completed.
+[INFO]1001302/100130248 completed.
+[INFO]2002604/100130248 completed.
+[INFO]3003906/100130248 completed.
+[INFO]4005208/100130248 completed.
+[INFO]5006510/100130248 completed.
+[INFO]6007812/100130248 completed.
+[INFO]7009114/100130248 completed.
+[INFO]8010416/100130248 completed.
+[INFO]9011718/100130248 completed.
+[INFO]10013020/100130248 completed.
+[INFO]11014322/100130248 completed.
+[INFO]12015624/100130248 completed.
+[INFO]13016926/100130248 completed.
+[INFO]14018228/100130248 completed.
+[INFO]15019530/100130248 completed.
+[INFO]16020832/100130248 completed.
+[INFO]17022134/100130248 completed.
+[INFO]18023436/100130248 completed.
+[INFO]19024738/100130248 completed.
+[INFO]20026040/100130248 completed.
+[INFO]21027342/100130248 completed.
+[INFO]22028644/100130248 completed.
+[INFO]23029946/100130248 completed.
+[INFO]24031248/100130248 completed.
+[INFO]25032550/100130248 completed.
+[INFO]26033852/100130248 completed.
+[INFO]27035154/100130248 completed.
+[INFO]28036456/100130248 completed.
+[INFO]29037758/100130248 completed.
+[INFO]30039060/100130248 completed.
+[INFO]31040362/100130248 completed.
+[INFO]32041664/100130248 completed.
+[INFO]33042966/100130248 completed.
+[INFO]34044268/100130248 completed.
+[INFO]35045570/100130248 completed.
+[INFO]36046872/100130248 completed.
+[INFO]37048174/100130248 completed.
+[INFO]38049476/100130248 completed.
+[INFO]39050778/100130248 completed.
+[INFO]40052080/100130248 completed.
+[INFO]41053382/100130248 completed.
+[INFO]42054684/100130248 completed.
+[INFO]43055986/100130248 completed.
+[INFO]44057288/100130248 completed.
+[INFO]45058590/100130248 completed.
+[INFO]46059892/100130248 completed.
+[INFO]47061194/100130248 completed.
+[INFO]48062496/100130248 completed.
+[INFO]49063798/100130248 completed.
+[INFO]50065100/100130248 completed.
+[INFO]51066402/100130248 completed.
+[INFO]52067704/100130248 completed.
+[INFO]53069006/100130248 completed.
+[INFO]54070308/100130248 completed.
+[INFO]55071610/100130248 completed.
+[INFO]56072912/100130248 completed.
+[INFO]57074214/100130248 completed.
+[INFO]58075516/100130248 completed.
+[INFO]59076818/100130248 completed.
+[INFO]60078120/100130248 completed.
+[INFO]61079422/100130248 completed.
+[INFO]62080724/100130248 completed.
+[INFO]63082026/100130248 completed.
+[INFO]64083328/100130248 completed.
+[INFO]65084630/100130248 completed.
+[INFO]66085932/100130248 completed.
+[INFO]67087234/100130248 completed.
+[INFO]68088536/100130248 completed.
+[INFO]69089838/100130248 completed.
+[INFO]70091140/100130248 completed.
+[INFO]71092442/100130248 completed.
+[INFO]72093744/100130248 completed.
+[INFO]73095046/100130248 completed.
+[INFO]74096348/100130248 completed.
+[INFO]75097650/100130248 completed.
+[INFO]76098952/100130248 completed.
+[INFO]77100254/100130248 completed.
+[INFO]78101556/100130248 completed.
+[INFO]79102858/100130248 completed.
+[INFO]80104160/100130248 completed.
+[INFO]81105462/100130248 completed.
+[INFO]82106764/100130248 completed.
+[INFO]83108066/100130248 completed.
+[INFO]84109368/100130248 completed.
+[INFO]85110670/100130248 completed.
+[INFO]86111972/100130248 completed.
+[INFO]87113274/100130248 completed.
+[INFO]88114576/100130248 completed.
+[INFO]89115878/100130248 completed.
+[INFO]90117180/100130248 completed.
+[INFO]91118482/100130248 completed.
+[INFO]92119784/100130248 completed.
+[INFO]93121086/100130248 completed.
+[INFO]94122388/100130248 completed.
+[INFO]95123690/100130248 completed.
+[INFO]96124992/100130248 completed.
+[INFO]97126294/100130248 completed.
+[INFO]98127596/100130248 completed.
+[INFO]99128898/100130248 completed.
+[INFO]100130200/100130248 completed.
+[INFO] 100% completed.
+================================
+[INFO] Written output into /nfs/cuore1/scratch/gfantini/spacebased/out/ProduceJagsM2Spectrum.root

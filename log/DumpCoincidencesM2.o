@@ -1,0 +1,65 @@
+  [SETUP]  Diana software environment set to /nfs/cuore1/scratch/gfantini/cuoresw
+  [SETUP]  CUORE DB Host : cuore-postgres.lngs.infn.it:35432
+  [SETUP]  CUORE DB User : cuore
+  [SETUP]  CUORE DB Name : qdb
+HOST IS  cuorenode134
+MANPATH=/cuore/soft/root_v5.34.34/man:/usr/share/man/overrides:/usr/share/man:/usr/local/share/man
+HOSTNAME=cuorenode134
+PBS_VERSION=TORQUE-4.2.10
+SHELL=/bin/bash
+HISTSIZE=1000
+PBS_JOBNAME=DumpCoincidencesM2.pbs
+PBS_ENVIRONMENT=PBS_BATCH
+CUORE_INSTALL=/nfs/cuore1/scratch/gfantini/cuoresw
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+CUORE_DB_HOST=cuore-postgres.lngs.infn.it
+PBS_O_WORKDIR=/nfs/cuore1/scratch/gfantini/spacebased/jobs
+USER=gfantini
+PBS_TASKNUM=1
+LD_LIBRARY_PATH=/afs/lngs.infn.it/experiment/cuore/soft_node101/postgresql-9.6.6/lib:/cuore/soft_node101/gsl-1.16/lib:/cuore/soft/fftw/lib:/nfs/cuore1/scratch/gfantini/cuoresw/lib:/cuore/soft/root_v5.34.34/lib
+PBS_O_HOME=/home/gfantini
+PBS_WALLTIME=360000
+LIBPATH=/cuore/soft/root_v5.34.34/lib
+PBS_MOMPORT=15003
+PBS_GPUFILE=/var/lib/torque/aux//2535587.xmaster.lngs.infn.itgpu
+CUORE_DB_PWD=
+CUORE_DB_USER=cuore
+PBS_O_QUEUE=cuore
+PATH=/afs/lngs.infn.it/experiment/cuore/soft_node101/postgresql-9.6.6/bin:/nfs/cuore1/scratch/gfantini/cuoresw/bin:/cuore/soft/root_v5.34.34/bin:/usr/lib64/qt-3.3/bin:/usr/local/git/bin/:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin
+PBS_O_LOGNAME=gfantini
+MAIL=/var/spool/mail/gfantini
+PBS_O_LANG=en_US.UTF-8
+PBS_JOBCOOKIE=F303CE735079D95086D46C3C9693B4FD
+PWD=/afs/lngs.infn.it/user/cuore/gfantini
+LANG=C
+PBS_NODENUM=0
+PBS_NUM_NODES=1
+PBS_O_SHELL=/bin/bash
+PBS_JOBID=2535587.xmaster.lngs.infn.it
+ROOTSYS=/cuore/soft/root_v5.34.34
+ENVIRONMENT=BATCH
+HISTCONTROL=ignoredups
+HOME=/home/gfantini
+SHLVL=2
+PBS_O_HOST=cuore-login1.lngs.infn.it
+CUORE_DB_PORT=35432
+DYLD_LIBRARY_PATH=/cuore/soft/root_v5.34.34/lib
+PBS_VNODENUM=0
+PYTHONPATH=/cuore/soft/root_v5.34.34/lib
+LOGNAME=gfantini
+CVS_RSH=ssh
+QTLIB=/usr/lib64/qt-3.3/lib
+PBS_QUEUE=cuore
+PBS_O_MAIL=/var/spool/mail/gfantini
+PBS_MICFILE=/var/lib/torque/aux//2535587.xmaster.lngs.infn.itmic
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+SHLIB_PATH=/cuore/soft/root_v5.34.34/lib
+CUORE_DB_NAME=qdb
+PBS_NP=1
+PBS_O_SERVER=xmaster.lngs.infn.it
+PBS_NUM_PPN=1
+PBS_NODEFILE=/var/lib/torque/aux//2535587.xmaster.lngs.infn.it
+G_BROKEN_FILENAMES=1
+PBS_O_PATH=/afs/lngs.infn.it/experiment/cuore/soft_node101/postgresql-9.6.6/bin:/nfs/cuore1/scratch/gfantini/cuoresw/bin:/cuore/soft/root_v5.34.34/bin:/nfs/cuore/geant4///bin/9.6.p03:/cuore/soft/mongo/scons/bin:/cuore/soft/fftw/bin:/cuore/soft/gsl/bin:/cuore/soft/postgresql/bin:/cuore/soft/bin:/usr/lib64/qt-3.3/bin:/usr/local/git/bin/:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/nfs/cuore1/scratch/gfantini/JagsBkgAnalysis/Codes/back2ground/2.6/:/nfs/cuore1/scratch/gfantini/JagsBkgAnalysis/Codes/jags2root/:/nfs/cuore1/scratch/gfantini/JagsBkgAnalysis/Codes/PrepareData/CUORE/:/nfs/cuore1/scratch/gfantini/JagsBkgAnalysis/scripts/:/cuore/soft/root/lib
+_=/usr/bin/printenv
