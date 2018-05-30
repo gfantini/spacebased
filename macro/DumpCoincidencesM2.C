@@ -167,7 +167,7 @@ void DumpCoincidencesM2(string outputFile = "DumpCoincidencesM2.root")
   int ee;
   for(ee=0; ee < nTotEvents; ee++){
     pChain->GetEntry(ee);    
-    if(ee%10000 == 0)cout << "Event "<< ee << " / " << nTotEvents << " invalid " << nInvalid << endl;
+    if(ee%10000 == 0)cout << "Event "<< ee << " / " << nTotEvents << "("<< 100*ee/(double)nTotEvents << "%). Invalid: " << nInvalid << endl;
     
     // skip invalid
     if( !pCoincidenceData->IsValid() ){

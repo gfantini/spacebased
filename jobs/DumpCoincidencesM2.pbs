@@ -49,4 +49,5 @@ printenv
 export CUORE_DB_NAME=qdb_merged_prl1_final
 export DATE=`date +'%F_%T'`
 
+
 /nfs/cuore1/scratch/gfantini/spacebased/bin/DumpCoincidencesM2 &> /nfs/cuore1/scratch/gfantini/spacebased/log/DumpCoincidencesM2_${DATE}.log

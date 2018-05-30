@@ -1,0 +1,53 @@
+##### READ ME ######
+#very simple batch submission script to run a root macro
+#(From T.O'Donnell's example)
+
+#To submit the job do: qsub example1.pbs
+#in the shell
+##### END OF README #####
+
+#!/bin/bash
+### ashtagPBS is a command
+
+### Email option - receive an email when the job is finished or crashes
+#PBS -m abe
+#PBS -M guido.fantini@gssi.it
+
+### Set what queue the job will go to
+#PBS -q cuore
+
+### Where the error logs and outputs of the job will be stored
+#(localhost:: is important to put when you runa a job into a batch session)
+#PBS -e localhost:/nfs/cuore1/scratch/gfantini/spacebased/log/DumpCoincidencesM2bug.e
+#PBS -o localhost:/nfs/cuore1/scratch/gfantini/spacebased/log/DumpCoincidencesM2bug.o
+
+########## NEVER EVER DEFINE ANYTHING BEFORE THIS LINE #########################################
+
+
+#Source the environment file
+##Decomment this to load the new test version
+source /nfs/cuore1/scratch/gfantini/cuoresw/setup.sh
+
+#print some environment variables just to check later how they were set
+echo "HOST IS " $HOSTNAME
+# Set G4 and PYTHON variables for MC production
+#echo "**** SETTING GEANT4 VARIABLES"
+#source /nfs/cuore/geant4/sbin/setup-g4.9.6.p03-lngs
+#echo "**** SETTING PYTHON PATH"
+#export PYTHONPATH=/cuore/soft/python_libs/python2.7/lib/python2.7/site-packages/:${PYTHONPATH}
+printenv
+
+#Actually run the root macro
+# define which program you want to run: root
+# -b is for running in batch interactive session
+# -q is to quit the session after it is finished
+# give the input macro path
+# >> path to the output txt file (what is printed onto root terminal)
+# root -b -q /nfs/cuore1/scratch/gfantini/jobs/simpleROOT.C >> /nfs/cuore1/scratch/gfantini/jobs/out/simpleroot.txt
+
+## Or type the command...
+export CUORE_DB_NAME=qdb_merged_prl1_final
+export DATE=`date +'%F_%T'`
+
+
+/nfs/cuore1/scratch/gfantini/spacebased/bin/DumpCoincidencesM2bug &> /nfs/cuore1/scratch/gfantini/spacebased/log/DumpCoincidencesM2bug_${DATE}.log
