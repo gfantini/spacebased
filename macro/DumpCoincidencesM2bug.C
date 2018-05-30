@@ -114,14 +114,14 @@ void DumpCoincidencesM2(string outputFile = "DumpCoincidencesM2bug.root")
   // make this sw faster
 
   pChain->SetBranchStatus("*",0);
-  pChain->SetBranchStatus("DAQ@PulseInfo.",1);
-  pChain->SetBranchStatus("RejectBadIntervals_AntiCoincidence_Tower@Passed.",1);
-  pChain->SetBranchStatus("BadForAnalysis_Coincidence_Tower@Passed.",1);
-  pChain->SetBranchStatus("SampleInfoFilter@Passed.",1);
-  pChain->SetBranchStatus("FilterInInterval_Coincidence_Tower@Passed.",1);
-  pChain->SetBranchStatus("EnergySelector_QNDBD@Energy.",1);
-  pChain->SetBranchStatus("Coincidence_OFTime_200mm@CoincidenceData.",1);
-  pChain->SetBranchStatus("Coincidence_OFTime_200mm@TotalEnergy.",1);
+  pChain->SetBranchStatus("DAQ@PulseInfo.*",1);
+  pChain->SetBranchStatus("RejectBadIntervals_AntiCoincidence_Tower@Passed.*",1);
+  pChain->SetBranchStatus("BadForAnalysis_Coincidence_Tower@Passed.*",1);
+  pChain->SetBranchStatus("SampleInfoFilter@Passed.*",1);
+  pChain->SetBranchStatus("FilterInInterval_Coincidence_Tower@Passed.*",1);
+  pChain->SetBranchStatus("EnergySelector_QNDBD@Energy.*",1);
+  pChain->SetBranchStatus("Coincidence_OFTime_200mm@CoincidenceData.*",1);
+  pChain->SetBranchStatus("Coincidence_OFTime_200mm@TotalEnergy.*",1);
 
 
   Int_t debug;
