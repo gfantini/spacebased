@@ -90,7 +90,7 @@ using namespace QChannelUtils; // Jeremy -> neighbor channels
 using namespace Cuore;
 using namespace std;
 
-void NonInteractivePlot()
+void NonInteractivePlot(string outFileExtraLabel = "")
 {
   string path = "/nfs/cuore1/scratch/gfantini/mydiana/output/ds3021/Coincidence1200_301530_C.list";
   QChain* ch = new QChain();
@@ -105,13 +105,15 @@ void NonInteractivePlot()
   ch->SetBranchStatus("Coincidence_OFTime_Sync_20ms_150keV_1200mm@TotalEnergy.*",1);
   ch->SetBranchStatus("EnergySelector_QNDBD@Energy.*",1);
   ch->SetBranchStatus("Coincidence_OFTime_Sync_20ms_150keV_1200mm@CoincidenceData.*",1);
-  
+  ch->SetBranchStatus("Coincidence_OFTime_Sync_20ms_150keV_1200mm@Radius.*",1);
+  ch->SetBranchStatus("BCountPulses@CountPulsesData.*",1);
+  ch->SetBranchStatus("BaselineModule@BaselineData.*",1);
   // define things
   QPulseInfo* pPulseInfo= 0;
   ch->SetBranchAddress("DAQ@PulseInfo.",&pPulseInfo);
   QBool* pRejectBadIntervals= 0;
   ch->SetBranchAddress("RejectBadIntervals_AntiCoincidence_Tower@Passed.",&pRejectBadIntervals);
-  QBool* pSampleInfoFilter= 0;
+  QBool* pSampleInfoFilter= 0; // This is SingleTrigger
   ch->SetBranchAddress("SampleInfoFilter@Passed.",&pSampleInfoFilter);
   QBool* pBadForAnalysis= 0;
   ch->SetBranchAddress("BadForAnalysis_Coincidence_Sync_GF@Passed.",&pBadForAnalysis);
@@ -123,16 +125,32 @@ void NonInteractivePlot()
   ch->SetBranchAddress("EnergySelector_QNDBD@Energy.",&pEnergy);
   QCoincidenceData* pCoincidenceData= 0;
   ch->SetBranchAddress("Coincidence_OFTime_Sync_20ms_150keV_1200mm@CoincidenceData.",&pCoincidenceData);
+  QDouble* pRadius = 0;
+  ch->SetBranchAddress("Coincidence_OFTime_Sync_20ms_150keV_1200mm@Radius.",&pRadius);
+  QCountPulsesData* pCountPulses = 0;
+  ch->SetBranchAddress("BCountPulses@CountPulsesData.",&pCountPulses);
+  QBaselineData* pBaselineData = 0;
+  ch->SetBranchAddress("BaselineModule@BaselineData.",&pBaselineData);
+
   // derived things
   Int_t Multiplicity;
   Bool_t IsSignal;
   
-  // define plots...
-  TGraph* gMx = new TGraph(); // X = Energy Y = TotalEnergy - Energy
-  int counter_gMx = 0;
-  TGraph* gMxSelected = new TGraph();
-  int counter_gMxSelected = 0;
-
+  // define TTree
+  TTree* outTree = new TTree("outTree","Tree for coincidence things");
+  Int_t bMultiplicity;
+  Double_t bTotalEnergy;
+  Double_t bEnergy;
+  Double_t bRadius;
+  //  Int_t bNumberOfPulses;
+  Double_t bBaselineSlope;
+  outTree->Branch("Multiplicity",&bMultiplicity,"Multiplicity/I");
+  outTree->Branch("TotalEnergy",&bTotalEnergy,"TotalEnergy/D");
+  outTree->Branch("Energy",&bEnergy,"Energy/D");
+  outTree->Branch("Radius",&bRadius,"Radius/D");
+  outTree->Branch("BaselineSlope",&bBaselineSlope,"BaselineSlope/D");
+  //  outTree->Branch("NumberOfPulses",&bNumberOfPulses,"NumberOfPulses/I");
+  
   // loop over events (once!)
   Int_t Nevents = ch->GetEntries();
   int i;
@@ -143,30 +161,29 @@ void NonInteractivePlot()
     Multiplicity = pCoincidenceData->fMultiplicity;
     if(i%1000 == 1)cout << "Event " << i << " / " << Nevents << " ( " << 100*i/(double)Nevents << " % )" << endl;//printout
     
-    if(IsSignal && *pRejectBadIntervals == true && *pSampleInfoFilter == true && *pBadForAnalysis == true && *pFilterInInterval == true){// base selection 
-      if(*pTotalEnergy + *pEnergy < 3e3 && *pEnergy < 3e3){// select energy region (large)
-	gMx->SetPoint(counter_gMx,*pEnergy,*pTotalEnergy - *pEnergy);
-	if(abs(*pTotalEnergy - 2615) < 10 ){// TotalEnergy = 2615 +/- 10 keV
-	  gMxSelected->SetPoint(counter_gMxSelected,*pEnergy,*pTotalEnergy - *pEnergy);
-	  }
-      }
+    if(IsSignal && *pRejectBadIntervals == true && pCountPulses->GetNumberOfPulses() == 1 && *pSampleInfoFilter == true && *pBadForAnalysis == true && *pFilterInInterval == true){// base selection 
+      // fill variables to put into tree
+      bMultiplicity = Multiplicity;
+      bTotalEnergy = *pTotalEnergy;
+      bEnergy = *pEnergy;
+      bRadius = *pRadius;
+      bBaselineSlope = pBaselineData->GetBaselineSlope();
+      //      bNumberOfPulses = pCountPulses->GetNumberOfPulses();
+      outTree->Fill();
+      // -------------------------------
     }
   }
-  cout << "Event " << i << " / " << Nevents << " ( " << 100*(i/(double)Nevents) << " % )" << endl;//printout
-  
-  // do all the plotting
-  TCanvas* c1 = new TCanvas();
-  gMx->Draw("AP");
-  gMxSelected->SetMarkerColor(kRed);
-  gMxSelected->Draw("PSAME");
-  
-  string pathOutputFile = "/nfs/cuore1/scratch/gfantini/spacebased/out/PlotCoincidencesEnergyVsEnergy_fast.root";
+  cout << "Event " << i << " / " << Nevents << " ( " << 100.*(double)i/(double)Nevents << " % )" << endl;//printout
+
+  // do all the output
+  string pathOutputFile = "/nfs/cuore1/scratch/gfantini/spacebased/out/PlotCoincidencesEnergyVsEnergy.root";
+  pathOutputFile += outFileExtraLabel;
   cout << "Writing output ROOT: " << pathOutputFile << endl;
   TFile* pOutputFile = new TFile(pathOutputFile.c_str(),"recreate");
-  gMx->Write();
-  gMxSelected->Write();
-  c1->Write();
+  outTree->Write();
   pOutputFile->Close();
+
+  cout << "Goodbye!" << endl;
 };
 
 int main()
