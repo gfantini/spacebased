@@ -96,6 +96,16 @@ void NonInteractivePlot()
   QChain* ch = new QChain();
   ch->Add(path.c_str());
   
+  ch->SetBranchStatus("*",0);
+  ch->SetBranchStatus("DAQ@PulseInfo.*",1);
+  ch->SetBranchStatus("RejectBadIntervals_AntiCoincidence_Tower@Passed.*",1);
+  ch->SetBranchStatus("SampleInfoFilter@Passed.*",1);
+  ch->SetBranchStatus("BadForAnalysis_Coincidence_Sync_GF@Passed.*",1);
+  ch->SetBranchStatus("FilterInInterval_Coincidence_Tower@Passed.*",1);
+  ch->SetBranchStatus("Coincidence_OFTime_Sync_20ms_150keV_1200mm@TotalEnergy.*",1);
+  ch->SetBranchStatus("EnergySelector_QNDBD@Energy.*",1);
+  ch->SetBranchStatus("Coincidence_OFTime_Sync_20ms_150keV_1200mm@CoincidenceData.*",1);
+  
   // define things
   QPulseInfo* pPulseInfo= 0;
   ch->SetBranchAddress("DAQ@PulseInfo.",&pPulseInfo);
@@ -150,7 +160,7 @@ void NonInteractivePlot()
   gMxSelected->SetMarkerColor(kRed);
   gMxSelected->Draw("PSAME");
   
-  string pathOutputFile = "/nfs/cuore1/scratch/gfantini/spacebased/out/PlotCoincidencesEnergyVsEnergy.root";
+  string pathOutputFile = "/nfs/cuore1/scratch/gfantini/spacebased/out/PlotCoincidencesEnergyVsEnergy_fast.root";
   cout << "Writing output ROOT: " << pathOutputFile << endl;
   TFile* pOutputFile = new TFile(pathOutputFile.c_str(),"recreate");
   gMx->Write();
