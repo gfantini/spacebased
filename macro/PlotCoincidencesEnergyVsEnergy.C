@@ -152,7 +152,7 @@ void NonInteractivePlot()
       }
     }
   }
-  cout << "Event " << i << " / " << Nevents << " ( " << 100*i/(double)Nevents << " % )" << endl;//printout
+  cout << "Event " << i << " / " << Nevents << " ( " << 100*(i/(double)Nevents) << " % )" << endl;//printout
   
   // do all the plotting
   TCanvas* c1 = new TCanvas();
