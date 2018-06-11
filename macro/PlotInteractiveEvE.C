@@ -91,9 +91,11 @@ void PlotInteractiveEvE()
   //  h2615acc->SetLineColor(kBlue);
   //  h2615acc->Draw("SAME");
 
-  delete pFinput;
-  cout << "Producing output on /nfs/cuore1/scratch/gfantini/spacebased/out/PlotInteractiveEvE.root" << endl;
-  TFile* pFout = new TFile("/nfs/cuore1/scratch/gfantini/spacebased/out/PlotInteractiveEvE.root","RECREATE");
+//  delete pFinput;
+//  cout << "Producing output on /nfs/cuore1/scratch/gfantini/spacebased/out/PlotInteractiveEvE.root" << endl;
+//  TFile* pFout = new TFile("/nfs/cuore1/scratch/gfantini/spacebased/out/PlotInteractiveEvE.root","RECREATE");
+	TFile* pFout = pFinput;
+	cout << "Appending output to " << input << endl;
   if(pFout->IsZombie())cerr << "Aiuto, uno zombie" << endl;
 
   h2615sum->Write("hsum");
