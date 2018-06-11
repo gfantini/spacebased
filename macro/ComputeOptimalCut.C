@@ -1,0 +1,137 @@
+int ComputeOptimalCut(string filename ="PlotCoincidencesEnergyVsEnergy.root",char multiplicity = '2'/* 2 / X */){
+  string input = "/nfs/cuore1/scratch/gfantini/spacebased/out/";
+  input += filename;
+  TFile* inputFile = new TFile(input.c_str(),"UPDATE");
+  TH1D *hSignal = 0; // 100,0,1060
+  TH1D *hBackground = 0;
+  
+  if(multiplicity == '2'){
+    gDirectory->GetObject("hsumM2",hSignal);
+    gDirectory->GetObject("haccM2",hBackground);
+  }
+
+  if(multiplicity == 'X'){
+    gDirectory->GetObject("hsumMX",hSignal);
+    gDirectory->GetObject("haccMX",hBackground);
+  }
+
+  if(multiplicity != '2' && multiplicity != 'X'){
+    cerr << "FATAL! multiplicity should be either 2 or X" << endl;
+    cerr << "multiplicity = " << multiplicity << endl;
+    return 1;
+  }
+
+  if(hSignal == 0 || hBackground == 0){
+    cerr << "FATAL! Probably you did not process with the step that creates hsumM* / haccM*" << endl;
+    return 1;
+  }
+  // computation of efficiency
+  TGraph * gEffiSignal = new TGraph();
+  int NSignal = 0;
+  cout << "hSignal: GetNbinsX = " << hSignal->GetNbinsX() << endl;
+  cout << "hSignal: GetEntries= " << hSignal->GetEntries() << endl;
+  for(int i=1;i<hSignal->GetNbinsX();i++){
+    NSignal += hSignal->GetBinContent(i);
+    gEffiSignal->SetPoint(i-1,hSignal->GetBinCenter(i),NSignal/(double)hSignal->GetEntries());
+  }
+  TCanvas *c1 = new TCanvas();
+  gEffiSignal->GetXaxis()->SetTitle("R [mm]");
+  gEffiSignal->GetYaxis()->SetTitle("Efficiency (Signal)");
+  gEffiSignal->Draw("APL");
+
+  TGraph * gEffiBackground = new TGraph();
+  int NBackground = 0;  
+  cout << "hBackground: GetNbinsX = " << hBackground->GetNbinsX() << endl;
+  cout << "hBackground: GetEntries= " << hBackground->GetEntries() << endl;
+  for(int i=1;i<hBackground->GetNbinsX();i++){
+    NBackground += hBackground->GetBinContent(i);
+    gEffiBackground->SetPoint(i-1,hBackground->GetBinCenter(i),NBackground/(double)hBackground->GetEntries());
+  }
+  TCanvas *c2 = new TCanvas();
+  gEffiBackground->GetXaxis()->SetTitle("R [mm]");
+  gEffiBackground->GetYaxis()->SetTitle("Efficiency (Background)");
+  gEffiBackground->Draw("APL");
+
+  // compute efficiency vs purity == Nsignal / (Nsignal + Nbackground)
+  TGraph * gRvsEffiSignal = new TGraph(gEffiSignal->GetN(),gEffiSignal->GetY(),gEffiSignal->GetX());
+  TGraph * gRvsEffiBackground = new TGraph(gEffiBackground->GetN(),gEffiBackground->GetY(),gEffiBackground->GetX());
+  /* debug
+  TCanvas* c1 = new TCanvas();
+  gRvsEffiSignal->Draw("AP");
+  TCanvas* c2 = new TCanvas();
+  gRvsEffiBackground->Draw("AP");
+  */
+  
+  TGraph * gPurityVsEffi = new TGraph();
+  const double Rstep = 1; // mm
+  const double Rmax = 1100; // mm
+  double R=0;
+  double EffiSignal;
+  double EffiBackground;
+  int k = 0;
+  double Purity;
+
+  cout << "NSignal:\t"<< NSignal << endl;
+  cout << "NBackground:\t"<< NBackground << endl;
+  while(R<Rmax){
+    EffiSignal = gEffiSignal->Eval(R); // get efficiency given R
+    EffiBackground = gEffiBackground->Eval(R);
+    cout << "R: EffiS / EffiB = "<< R << ":\t " << EffiSignal << " / " << EffiBackground << endl;
+    if(EffiSignal == 0. && EffiBackground == 0){
+      k++; R+=Rstep;
+      continue;
+    }
+    Purity = NSignal*EffiSignal/(NSignal*EffiSignal+NBackground*EffiBackground);
+    gPurityVsEffi->SetPoint(k,EffiSignal,Purity);
+    k++;
+    R += Rstep;
+  }
+  TCanvas *c3 = new TCanvas();
+  gPurityVsEffi->GetYaxis()->SetTitle("Purity");
+  gPurityVsEffi->GetXaxis()->SetTitle("Efficiency (Signal)");
+  gPurityVsEffi->Draw("AP");
+
+  cout << "Appending output to " << input << endl;
+  gEffiSignal->Write(Form("gEffiSignalM%c",multiplicity));
+  gEffiBackground->Write(Form("gEffiBackgroundM%c",multiplicity));
+  gPurityVsEffi->Write(Form("gPurityVsEffiM%c",multiplicity));
+  
+  MakeFancyPlot(gEffiSignal,gEffiBackground,gPurityVsEffi,multiplicity,filename);
+  
+  delete inputFile; // free the memory
+
+  return 0;
+}
+
+void MakeFancyPlot(TGraph* eS,TGraph* eB,TGraph* PvsE,char multiplicity,string filename,string output = "/nfs/cuore1/scratch/gfantini/spacebased/out/"){
+  TCanvas* c1 = new TCanvas("c1","",1600,900);
+  c1->Divide(2,1);
+  c1->cd(1);
+  // ......
+  eS->SetLineColor(8); // nice green
+  eS->SetLineWidth(3); // thick enough
+  eS->GetXaxis()->SetTitle("R [mm]");
+  eS->GetYaxis()->SetTitle("Efficiency");
+  eS->SetTitle(Form("Multiplicity %c\n %s",multiplicity,filename.c_str()) );
+  eS->Draw("APL");
+  // ------
+  eB->SetLineColor(2);
+  eB->SetLineWidth(3);
+  eB->Draw("PL");
+  TLegend* leg = new TLegend(0.5,0.2,.9,.6,"Radial Cut Performance");
+  leg->AddEntry(eS,"Signal Efficiency");
+  leg->AddEntry(eB,"Background Efficiency");
+  leg->Draw();
+
+  c1->cd(2);
+  PvsE->GetXaxis()->SetTitle("Efficiency (signal)");
+  PvsE->GetYaxis()->SetTitle("Purity");
+  PvsE->SetMarkerStyle(kOpenCircle);
+  PvsE->SetLineColor(1);
+  PvsE->SetLineWidth(4);
+  PvsE->SetTitle(Form("Multiplicity %c\n %s",multiplicity,filename.c_str()) );
+  PvsE->Draw("APL");
+  
+  c1->SaveAs(Form("%s/FancyPlot_M%c_File%s.pdf",output.c_str(),multiplicity,filename.c_str()) );
+  cout << "Written plot into " << Form("%s/FancyPlot_M%c_File%s.pdf",output.c_str(),multiplicity,filename.c_str()) << endl;
+}
