@@ -48,5 +48,9 @@ printenv
 ## Or type the command...
 export CUORE_DB_NAME=qdb_merged_prl1_final
 export DATE=`date +'%F_%T'`
+export EXTRALABEL=1200mm
 
-/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy.log
+#/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy CoincidenceTest100_301530_C.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${EXTRALABEL}.log
+
+# 1200 mm
+/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence1200_301530_C.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${EXTRALABEL}.log
