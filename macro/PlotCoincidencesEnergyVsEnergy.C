@@ -104,10 +104,10 @@ void NonInteractivePlot(string inFileName = "CoincidenceTest200_301530_C.list",s
   ch->SetBranchStatus("SampleInfoFilter@Passed.*",1);
   ch->SetBranchStatus("BadForAnalysis_Coincidence_Sync_GF@Passed.*",1);
   ch->SetBranchStatus("FilterInInterval_Coincidence_Tower@Passed.*",1);
-  ch->SetBranchStatus( Form("Coincidence_OFTime_Sync_20ms_150keV_%s@TotalEnergy.*",ExtraLabel) ,1);
+  ch->SetBranchStatus( Form("Coincidence_OFTime_Sync_20ms_150keV_%s@TotalEnergy.*",ExtraLabel.c_str()) ,1);
   ch->SetBranchStatus("EnergySelector_QNDBD@Energy.*",1);
-  ch->SetBranchStatus(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@CoincidenceData.*",ExtraLabel) ,1);
-  ch->SetBranchStatus(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@Radius.*",ExtraLabel) ,1);
+  ch->SetBranchStatus(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@CoincidenceData.*",ExtraLabel.c_str()) ,1);
+  ch->SetBranchStatus(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@Radius.*",ExtraLabel.c_str()) ,1);
   ch->SetBranchStatus("BCountPulses@CountPulsesData.*",1);
   ch->SetBranchStatus("BaselineModule@BaselineData.*",1);
   // define things
@@ -122,13 +122,13 @@ void NonInteractivePlot(string inFileName = "CoincidenceTest200_301530_C.list",s
   QBool* pFilterInInterval= 0;
   ch->SetBranchAddress("FilterInInterval_Coincidence_Tower@Passed.",&pFilterInInterval);
   QDouble* pTotalEnergy= 0;
-  ch->SetBranchAddress(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@TotalEnergy.",ExtraLabel) ,&pTotalEnergy);
+  ch->SetBranchAddress(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@TotalEnergy.",ExtraLabel.c_str()) ,&pTotalEnergy);
   QDouble* pEnergy= 0;
   ch->SetBranchAddress("EnergySelector_QNDBD@Energy.",&pEnergy);
   QCoincidenceData* pCoincidenceData= 0;
-  ch->SetBranchAddress(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@CoincidenceData.",ExtraLabel) ,&pCoincidenceData);
+  ch->SetBranchAddress(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@CoincidenceData.",ExtraLabel.c_str()) ,&pCoincidenceData);
   QDouble* pRadius = 0;
-  ch->SetBranchAddress(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@Radius.",ExtraLabel) ,&pRadius);
+  ch->SetBranchAddress(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@Radius.",ExtraLabel.c_str()) ,&pRadius);
   QCountPulsesData* pCountPulses = 0;
   ch->SetBranchAddress("BCountPulses@CountPulsesData.",&pCountPulses);
   QBaselineData* pBaselineData = 0;

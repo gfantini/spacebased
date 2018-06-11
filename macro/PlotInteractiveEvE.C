@@ -12,10 +12,11 @@
 
 using namespace std;
 
-void PlotInteractiveEvE()
+void PlotInteractiveEvE(string filename = "PlotCoincidencesEnergyVsEnergy.root")
 {
-  string input = "/nfs/cuore1/scratch/gfantini/spacebased/out/PlotCoincidencesEnergyVsEnergy.root";
-  TFile* pFinput = new TFile(input.c_str(),"READ");
+  string input = "/nfs/cuore1/scratch/gfantini/spacebased/out/";
+	input += filename;
+  TFile* pFinput = new TFile(input.c_str(),"UPDATE");
   TTree* outTree;
   gDirectory->GetObject("outTree",outTree);
   outTree->Show(0);
