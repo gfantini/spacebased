@@ -179,7 +179,7 @@ void NonInteractivePlot(string inFileName = "CoincidenceTest200_301530_C.list",s
 
   // do all the output
   string pathOutputFile = "/nfs/cuore1/scratch/gfantini/spacebased/out/PlotCoincidencesEnergyVsEnergy.root";
-  pathOutputFile += outFileExtraLabel;
+  pathOutputFile += ExtraLabel;
   cout << "Writing output ROOT: " << pathOutputFile << endl;
   TFile* pOutputFile = new TFile(pathOutputFile.c_str(),"recreate");
   outTree->Write();
