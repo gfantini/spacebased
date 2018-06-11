@@ -161,7 +161,7 @@ void NonInteractivePlot(string inFileName = "CoincidenceTest200_301530_C.list",s
     // compute derived things
     IsSignal = pPulseInfo->GetIsSignal();
     Multiplicity = pCoincidenceData->fMultiplicity;
-    if(i%1000 == 1)cout << "Event " << i << " / " << Nevents << " ( " << 100*i/(double)Nevents << " % )" << endl;//printout
+    if(i%1000 == 1)cout << "Event " << i << " / " << Nevents << " ( " << 100.*i/(double)Nevents << " % )" << endl;//printout
     
     if(IsSignal && *pRejectBadIntervals == true && pCountPulses->GetNumberOfPulses() == 1 && *pSampleInfoFilter == true && *pBadForAnalysis == true && *pFilterInInterval == true){// base selection 
       // fill variables to put into tree
