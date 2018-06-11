@@ -90,22 +90,24 @@ using namespace QChannelUtils; // Jeremy -> neighbor channels
 using namespace Cuore;
 using namespace std;
 
-void NonInteractivePlot(string outFileExtraLabel = "")
+//void NonInteractivePlot(string inFileName = "Coincidence1200_301530_C.list",string outFileExtraLabel = "")
+void NonInteractivePlot(string inFileName = "CoincidenceTest200_301530_C.list",string ExtraLabel = "200mm")
 {
-  string path = "/nfs/cuore1/scratch/gfantini/mydiana/output/ds3021/Coincidence1200_301530_C.list";
+  string path = "/nfs/cuore1/scratch/gfantini/mydiana/output/ds3021/";
+  path+=inFileName;
   QChain* ch = new QChain();
   ch->Add(path.c_str());
-  
+  // Coincidence_OFTime_Sync_20ms_150keV_1200mm@ == coincidence label (SEARCH && REPLACE)
   ch->SetBranchStatus("*",0);
   ch->SetBranchStatus("DAQ@PulseInfo.*",1);
   ch->SetBranchStatus("RejectBadIntervals_AntiCoincidence_Tower@Passed.*",1);
   ch->SetBranchStatus("SampleInfoFilter@Passed.*",1);
   ch->SetBranchStatus("BadForAnalysis_Coincidence_Sync_GF@Passed.*",1);
   ch->SetBranchStatus("FilterInInterval_Coincidence_Tower@Passed.*",1);
-  ch->SetBranchStatus("Coincidence_OFTime_Sync_20ms_150keV_1200mm@TotalEnergy.*",1);
+  ch->SetBranchStatus( Form("Coincidence_OFTime_Sync_20ms_150keV_%s@TotalEnergy.*",ExtraLabel) ,1);
   ch->SetBranchStatus("EnergySelector_QNDBD@Energy.*",1);
-  ch->SetBranchStatus("Coincidence_OFTime_Sync_20ms_150keV_1200mm@CoincidenceData.*",1);
-  ch->SetBranchStatus("Coincidence_OFTime_Sync_20ms_150keV_1200mm@Radius.*",1);
+  ch->SetBranchStatus(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@CoincidenceData.*",ExtraLabel) ,1);
+  ch->SetBranchStatus(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@Radius.*",ExtraLabel) ,1);
   ch->SetBranchStatus("BCountPulses@CountPulsesData.*",1);
   ch->SetBranchStatus("BaselineModule@BaselineData.*",1);
   // define things
@@ -120,13 +122,13 @@ void NonInteractivePlot(string outFileExtraLabel = "")
   QBool* pFilterInInterval= 0;
   ch->SetBranchAddress("FilterInInterval_Coincidence_Tower@Passed.",&pFilterInInterval);
   QDouble* pTotalEnergy= 0;
-  ch->SetBranchAddress("Coincidence_OFTime_Sync_20ms_150keV_1200mm@TotalEnergy.",&pTotalEnergy);
+  ch->SetBranchAddress(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@TotalEnergy.",ExtraLabel) ,&pTotalEnergy);
   QDouble* pEnergy= 0;
   ch->SetBranchAddress("EnergySelector_QNDBD@Energy.",&pEnergy);
   QCoincidenceData* pCoincidenceData= 0;
-  ch->SetBranchAddress("Coincidence_OFTime_Sync_20ms_150keV_1200mm@CoincidenceData.",&pCoincidenceData);
+  ch->SetBranchAddress(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@CoincidenceData.",ExtraLabel) ,&pCoincidenceData);
   QDouble* pRadius = 0;
-  ch->SetBranchAddress("Coincidence_OFTime_Sync_20ms_150keV_1200mm@Radius.",&pRadius);
+  ch->SetBranchAddress(Form("Coincidence_OFTime_Sync_20ms_150keV_%s@Radius.",ExtraLabel) ,&pRadius);
   QCountPulsesData* pCountPulses = 0;
   ch->SetBranchAddress("BCountPulses@CountPulsesData.",&pCountPulses);
   QBaselineData* pBaselineData = 0;
@@ -186,10 +188,17 @@ void NonInteractivePlot(string outFileExtraLabel = "")
   cout << "Goodbye!" << endl;
 };
 
-int main()
+int main(int argc, char *argv[])
 {
-
-  NonInteractivePlot();
+  if(argc == 1){
+    NonInteractivePlot();
+  }else if(argc == 3){
+    NonInteractivePlot(argv[1],argv[2]); // argv[0] is the executable name
+  }else{
+    //    cout << "argv[0]: " << argv[0] << endl;
+    //    cout << "argv[1]: " << argv[1] << endl;
+    cout << "Call either with 0 arguments (default) or 2 arguments (inputFileName,outputExtraLabel). argc = "<< argc << endl;
+  }
   return 0;
 
 }
