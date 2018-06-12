@@ -89,11 +89,12 @@ using namespace QChannelUtils; // Jeremy -> neighbor channels
 // Avoid putting Cuore:: in front of objects defined in the Cuore namespace
 using namespace Cuore;
 using namespace std;
+string Gpath = "/nfs/cuore1/scratch/gfantini/mydiana/output/ds3021/";
 
 //void NonInteractivePlot(string inFileName = "Coincidence1200_301530_C.list",string outFileExtraLabel = "")
 void NonInteractivePlot(string inFileName = "CoincidenceTest200_301530_C.list",string ExtraLabel = "200mm")
 {
-  string path = "/nfs/cuore1/scratch/gfantini/mydiana/output/ds3021/";
+  string path = Gpath;
   path+=inFileName;
   QChain* ch = new QChain();
   ch->Add(path.c_str());
@@ -178,26 +179,32 @@ void NonInteractivePlot(string inFileName = "CoincidenceTest200_301530_C.list",s
   cout << "Event " << i << " / " << Nevents << " ( " << 100.*(double)i/(double)Nevents << " % )" << endl;//printout
 
   // do all the output
-  string pathOutputFile = "/nfs/cuore1/scratch/gfantini/spacebased/out/PlotCoincidencesEnergyVsEnergy.root";
-  pathOutputFile += ExtraLabel;
+  string pathOutputFile = "/nfs/cuore1/scratch/gfantini/spacebased/out/PlotCoincidencesEnergyVsEnergy";
+  pathOutputFile += "["+inFileName+"]";
+  pathOutputFile += "_"+ExtraLabel;
+  pathOutputFile += ".root";
   cout << "Writing output ROOT: " << pathOutputFile << endl;
-  TFile* pOutputFile = new TFile(pathOutputFile.c_str(),"recreate");
-  outTree->Write();
-  pOutputFile->Close();
-
+  TFile* pOutputFile = new TFile(pathOutputFile.c_str(),"RECREATE");
+  if(pOutputFile->IsZombie()){
+    cerr << "Could not create output file! Is Zombie!" << endl;
+  }else{
+    cout << "Output file is not zombie." << endl;
+    outTree->Write();
+    pOutputFile->Close();
+    delete pOutputFile;
+  }
   cout << "Goodbye!" << endl;
 };
 
 int main(int argc, char *argv[])
 {
-  if(argc == 1){
-    NonInteractivePlot();
-  }else if(argc == 3){
+  if(argc == 3){
     NonInteractivePlot(argv[1],argv[2]); // argv[0] is the executable name
   }else{
     //    cout << "argv[0]: " << argv[0] << endl;
     //    cout << "argv[1]: " << argv[1] << endl;
-    cout << "Call either with 0 arguments (default) or 2 arguments (inputFileName,outputExtraLabel). argc = "<< argc << endl;
+    cout << "Call  with 2 arguments (inputFileName,ExtraLabel). argc = "<< argc << endl;
+    cout << "Will look for inputFileName inside " << Gpath << endl;
   }
   return 0;
 

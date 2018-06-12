@@ -48,9 +48,20 @@ printenv
 ## Or type the command...
 export CUORE_DB_NAME=qdb_merged_prl1_final
 export DATE=`date +'%F_%T'`
-export EXTRALABEL=1200mm
+export RUN=301472
 
-#/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy CoincidenceTest100_301530_C.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${EXTRALABEL}.log
+export RADIUS=1200
+export EXTRALABEL=${RADIUS}mm
+/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence${RADIUS}_${RUN}_B.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${RUN}_${EXTRALABEL}.log
 
-# 1200 mm
-/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence1200_301530_C.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${EXTRALABEL}.log
+export RADIUS=500
+export EXTRALABEL=${RADIUS}mm
+/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence${RADIUS}_${RUN}_B.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${RUN}_${EXTRALABEL}.log
+
+export RADIUS=200
+export EXTRALABEL=${RADIUS}mm
+/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence${RADIUS}_${RUN}_B.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${RUN}_${EXTRALABEL}.log
+
+export RADIUS=100
+export EXTRALABEL=${RADIUS}mm
+/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence${RADIUS}_${RUN}_B.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${RUN}_${EXTRALABEL}.log

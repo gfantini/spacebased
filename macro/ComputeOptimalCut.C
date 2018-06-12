@@ -34,10 +34,6 @@ int ComputeOptimalCut(string filename ="PlotCoincidencesEnergyVsEnergy.root",cha
     NSignal += hSignal->GetBinContent(i);
     gEffiSignal->SetPoint(i-1,hSignal->GetBinCenter(i),NSignal/(double)hSignal->GetEntries());
   }
-  TCanvas *c1 = new TCanvas();
-  gEffiSignal->GetXaxis()->SetTitle("R [mm]");
-  gEffiSignal->GetYaxis()->SetTitle("Efficiency (Signal)");
-  gEffiSignal->Draw("APL");
 
   TGraph * gEffiBackground = new TGraph();
   int NBackground = 0;  
@@ -47,10 +43,19 @@ int ComputeOptimalCut(string filename ="PlotCoincidencesEnergyVsEnergy.root",cha
     NBackground += hBackground->GetBinContent(i);
     gEffiBackground->SetPoint(i-1,hBackground->GetBinCenter(i),NBackground/(double)hBackground->GetEntries());
   }
-  TCanvas *c2 = new TCanvas();
-  gEffiBackground->GetXaxis()->SetTitle("R [mm]");
-  gEffiBackground->GetYaxis()->SetTitle("Efficiency (Background)");
-  gEffiBackground->Draw("APL");
+
+  // compute score function
+  TGraph* gScore = new TGraph();
+  double R = 0.;
+  double Rstep = 1.;
+  int j = 0;
+  double nS = hSignal->GetEntries();
+  double nB = hBackground->GetEntries();
+  while(R < 1200.){
+    gScore->SetPoint(j,R,nS*gEffiSignal->Eval(R)/sqrt(1e-6+nS*gEffiSignal->Eval(R) + nB*gEffiBackground->Eval(R)) );
+    R+=Rstep;
+    j++;
+  }
 
   // compute efficiency vs purity == Nsignal / (Nsignal + Nbackground)
   TGraph * gRvsEffiSignal = new TGraph(gEffiSignal->GetN(),gEffiSignal->GetY(),gEffiSignal->GetX());
@@ -86,24 +91,21 @@ int ComputeOptimalCut(string filename ="PlotCoincidencesEnergyVsEnergy.root",cha
     k++;
     R += Rstep;
   }
-  TCanvas *c3 = new TCanvas();
-  gPurityVsEffi->GetYaxis()->SetTitle("Purity");
-  gPurityVsEffi->GetXaxis()->SetTitle("Efficiency (Signal)");
-  gPurityVsEffi->Draw("AP");
 
   cout << "Appending output to " << input << endl;
-  gEffiSignal->Write(Form("gEffiSignalM%c",multiplicity));
-  gEffiBackground->Write(Form("gEffiBackgroundM%c",multiplicity));
-  gPurityVsEffi->Write(Form("gPurityVsEffiM%c",multiplicity));
-  
-  MakeFancyPlot(gEffiSignal,gEffiBackground,gPurityVsEffi,multiplicity,filename);
+  gEffiSignal->Write(Form("gEffiSignalM%c",multiplicity),1ULL << (2)); // 1ULL << (2) sarebbe kWriteDelete
+  gEffiBackground->Write(Form("gEffiBackgroundM%c",multiplicity),1ULL << (2));
+  gPurityVsEffi->Write(Form("gPurityVsEffiM%c",multiplicity),1ULL << (2));
+  gScore->Write(Form("gScoreM%c",multiplicity),1ULL << (2));
+
+  MakeFancyPlot(gEffiSignal,gEffiBackground,gScore,gPurityVsEffi,multiplicity,filename);
   
   delete inputFile; // free the memory
 
   return 0;
 }
-
-void MakeFancyPlot(TGraph* eS,TGraph* eB,TGraph* PvsE,char multiplicity,string filename,string output = "/nfs/cuore1/scratch/gfantini/spacebased/out/"){
+// nS == total signal events nB == total bkg events
+void MakeFancyPlot(TGraph* eS,TGraph* eB,TGraph* gScore,TGraph* PvsE,char multiplicity,string filename,string output = "/nfs/cuore1/scratch/gfantini/spacebased/out/"){
   TCanvas* c1 = new TCanvas("c1","",1600,900);
   c1->Divide(2,1);
   c1->cd(1);
@@ -118,6 +120,8 @@ void MakeFancyPlot(TGraph* eS,TGraph* eB,TGraph* PvsE,char multiplicity,string f
   eB->SetLineColor(2);
   eB->SetLineWidth(3);
   eB->Draw("PL");
+  // ******
+
   TLegend* leg = new TLegend(0.5,0.2,.9,.6,"Radial Cut Performance");
   leg->AddEntry(eS,"Signal Efficiency");
   leg->AddEntry(eB,"Background Efficiency");
@@ -132,6 +136,14 @@ void MakeFancyPlot(TGraph* eS,TGraph* eB,TGraph* PvsE,char multiplicity,string f
   PvsE->SetTitle(Form("Multiplicity %c\n %s",multiplicity,filename.c_str()) );
   PvsE->Draw("APL");
   
+  TCanvas* c2 = new TCanvas();
+  gScore->GetXaxis()->SetTitle("R [mm]");
+  gScore->GetYaxis()->SetTitle("S/#sqrt{S+B}");
+  gScore->SetLineColor(4);
+  gScore->SetLineWidth(2);
+  gScore->Draw("APL");
+
   c1->SaveAs(Form("%s/FancyPlot_M%c_File%s.pdf",output.c_str(),multiplicity,filename.c_str()) );
+  c2->SaveAs(Form("%s/FancyPlotScore_M%c_File%s.pdf",output.c_str(),multiplicity,filename.c_str()) );
   cout << "Written plot into " << Form("%s/FancyPlot_M%c_File%s.pdf",output.c_str(),multiplicity,filename.c_str()) << endl;
 }
