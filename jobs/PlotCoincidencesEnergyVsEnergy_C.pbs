@@ -48,20 +48,21 @@ printenv
 ## Or type the command...
 export CUORE_DB_NAME=qdb_merged_prl1_final
 export DATE=`date +'%F_%T'`
-export RUN=301472
+export RUN=301530
+export MEASTYPE=C
 
 export RADIUS=1200
 export EXTRALABEL=${RADIUS}mm
-/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence${RADIUS}_${RUN}_B.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${RUN}_${EXTRALABEL}.log
+/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence${RADIUS}_${RUN}_${MEASTYPE}.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${RUN}_${EXTRALABEL}.log
 
 export RADIUS=500
 export EXTRALABEL=${RADIUS}mm
-/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence${RADIUS}_${RUN}_B.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${RUN}_${EXTRALABEL}.log
+/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence${RADIUS}_${RUN}_${MEASTYPE}.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${RUN}_${EXTRALABEL}.log
 
 export RADIUS=200
 export EXTRALABEL=${RADIUS}mm
-/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence${RADIUS}_${RUN}_B.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${RUN}_${EXTRALABEL}.log
+/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence${RADIUS}_${RUN}_${MEASTYPE}.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${RUN}_${EXTRALABEL}.log
 
 export RADIUS=100
 export EXTRALABEL=${RADIUS}mm
-/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence${RADIUS}_${RUN}_B.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${RUN}_${EXTRALABEL}.log
+/nfs/cuore1/scratch/gfantini/spacebased/bin/PlotCoincidencesEnergyVsEnergy Coincidence${RADIUS}_${RUN}_${MEASTYPE}.list ${EXTRALABEL} &> /nfs/cuore1/scratch/gfantini/spacebased/log/PlotCoincidencesEnergyVsEnergy_${RUN}_${EXTRALABEL}.log

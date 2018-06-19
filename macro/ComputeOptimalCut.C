@@ -1,6 +1,7 @@
 int ComputeOptimalCut(string filename ="PlotCoincidencesEnergyVsEnergy.root",char multiplicity = '2'/* 2 / X */){
   string input = "/nfs/cuore1/scratch/gfantini/spacebased/out/";
   input += filename;
+  cout << "Opening " << input << endl;
   TFile* inputFile = new TFile(input.c_str(),"UPDATE");
   TH1D *hSignal = 0; // 100,0,1060
   TH1D *hBackground = 0;
@@ -127,6 +128,36 @@ void MakeFancyPlot(TGraph* eS,TGraph* eB,TGraph* gScore,TGraph* PvsE,char multip
   leg->AddEntry(eB,"Background Efficiency");
   leg->Draw();
 
+  
+  // rescale TGraph
+  Double_t max = 0.;
+  for(int i=0;i<gScore->GetN(); i++)
+    if(max < gScore->GetY()[i]) max = gScore->GetY()[i];
+  Double_t rightmax = max;
+  Double_t scale = gPad->GetUymax()/rightmax;
+  double x,y;
+  for(int i=0; i<gScore->GetN(); i++){
+    gScore->GetPoint(i,x,y);
+    gScore->SetPoint(i,x,scale*y);
+  }
+  gScore->GetXaxis()->SetTitle("R [mm]");
+  gScore->GetYaxis()->SetTitle("S/#sqrt{S+B}");
+  gScore->SetLineColor(4);
+  gScore->SetLineWidth(2);
+  gScore->Draw("PLSAME");
+
+  cout << "DEBUG: rightmax = \t" << rightmax << endl;
+  cout << "DEBUG: scale = \t" << scale << endl;
+
+  //draw an axis on the right side                                                                                                                                                                                                             // xmin, ymin, xmax, ymax, <Highest value for the tick mark labels written on the axis>, Number of divisions, Drawing options 
+  TGaxis *axis = new TGaxis(0.95*gScore->GetXaxis()->GetXmax(),0.,
+                            0.95*gScore->GetXaxis()->GetXmax(), 1.1 ,.1,rightmax,20,"+L");
+  axis->SetLineColor(kBlue);
+  axis->SetTextColor(kBlue);
+  axis->SetTitle("S/#sqrt{S+B}");
+  axis->SetTitleOffset(1.35);
+  axis->Draw("SAME");
+
   c1->cd(2);
   PvsE->GetXaxis()->SetTitle("Efficiency (signal)");
   PvsE->GetYaxis()->SetTitle("Purity");
@@ -135,15 +166,7 @@ void MakeFancyPlot(TGraph* eS,TGraph* eB,TGraph* gScore,TGraph* PvsE,char multip
   PvsE->SetLineWidth(4);
   PvsE->SetTitle(Form("Multiplicity %c\n %s",multiplicity,filename.c_str()) );
   PvsE->Draw("APL");
-  
-  TCanvas* c2 = new TCanvas();
-  gScore->GetXaxis()->SetTitle("R [mm]");
-  gScore->GetYaxis()->SetTitle("S/#sqrt{S+B}");
-  gScore->SetLineColor(4);
-  gScore->SetLineWidth(2);
-  gScore->Draw("APL");
 
   c1->SaveAs(Form("%s/FancyPlot_M%c_File%s.pdf",output.c_str(),multiplicity,filename.c_str()) );
-  c2->SaveAs(Form("%s/FancyPlotScore_M%c_File%s.pdf",output.c_str(),multiplicity,filename.c_str()) );
   cout << "Written plot into " << Form("%s/FancyPlot_M%c_File%s.pdf",output.c_str(),multiplicity,filename.c_str()) << endl;
 }

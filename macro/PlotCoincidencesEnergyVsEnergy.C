@@ -97,6 +97,7 @@ void NonInteractivePlot(string inFileName = "CoincidenceTest200_301530_C.list",s
   string path = Gpath;
   path+=inFileName;
   QChain* ch = new QChain();
+  cout << "Opening file " << path << endl;
   ch->Add(path.c_str());
   // Coincidence_OFTime_Sync_20ms_150keV_1200mm@ == coincidence label (SEARCH && REPLACE)
   ch->SetBranchStatus("*",0);
