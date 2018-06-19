@@ -23,10 +23,10 @@ TH1D hSumM2 histogram of radii of M2
 PlotEnergySpectrumCalibration.C
 Computes a matrix of corrections with bin 1keV * 1keV
 Right now only M2 is supported.
-# OUTPUT
+### OUTPUT
 Append to .root of data a TH2D with the corrections from the MC
 
-##[MANDATORY] [INTERACTIVE] Produce Efficiency plots for signal and bkg, and Purity : Efficiency curve
+## [MANDATORY] [INTERACTIVE] Produce Efficiency plots for signal and bkg, and Purity : Efficiency curve
 ### REQUIRES: PlotEnergySpectrumCalibration.C (correction matrix)
 ComputeOptimalCut.C
 Produces different plots of efficiencies and score function S/sqrt(S+B) as a function of R to select the best radius
