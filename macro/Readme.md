@@ -9,22 +9,28 @@ This will read the space based coincidences from /nfs/cuore1/scratch/gfantini/my
 ### OUTPUT
 TTree "outTree" with the basic informations needed to produce whatever plot you need.
 
-## [MANDATORY] Produce Radius distributions for 2615sum and 2615acc events
-### REQUIRES:   PlotCoincidencesEnergyVsEnergy
-PlotInteractiveEvE.C
-Will read the reduced ntuple file and output a root file with histograms.
-Actually would be nice if it appended those histograms to the file .root it reads
-### OUTPUT
-TH1D hSumMX histogram of radii of all multiplicities
-TH1D hSumM2 histogram of radii of M2
+
+
 
 ## [MANDATORY] Produce Matrix of corrections for the accidentals / true coincidences from MC
-### REQUIRES:   PlotCoincidencesEnergyVsEnergy output.root and MC file of calibration *_g4cuore.root 
+### REQUIRES:   PlotCoincidencesEnergyVsEnergy output.root and MC file of calibration *_g4cuore.root
 PlotEnergySpectrumCalibration.C
 Computes a matrix of corrections with bin 1keV * 1keV
 Right now only M2 is supported.
 ### OUTPUT
 Append to .root of data a TH2D with the corrections from the MC
+
+
+## [MANDATORY] Produce Radius distributions for 2615sum and 2615acc events
+### REQUIRES:   PlotCoincidencesEnergyVsEnergy
+PlotInteractiveEvE.C
+Will read the reduced ntuple file and append in the root file some histograms.
+IF in the original file the correction matrix is present -> applies correction
+### OUTPUT
+TH1D hSumMX histogram of radii of all multiplicities
+TH1D hSumM2 histogram of radii of M2
+
+
 
 ## [MANDATORY] [INTERACTIVE] Produce Efficiency plots for signal and bkg, and Purity : Efficiency curve
 ### REQUIRES: PlotEnergySpectrumCalibration.C (correction matrix)
