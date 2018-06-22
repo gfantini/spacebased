@@ -25,11 +25,11 @@ Append to .root of data a TH2D with the corrections from the MC
 ### REQUIRES:   PlotCoincidencesEnergyVsEnergy
 PlotInteractiveEvE.C
 Will read the reduced ntuple file and append in the root file some histograms.
-IF in the original file the correction matrix is present -> applies correction
 ### OUTPUT
 TH1D hSumMX histogram of radii of all multiplicities
 TH1D hSumM2 histogram of radii of M2
-
+### Comparison of Data / MC spectra
+Can be done with this file PlotInteractiveEvE.C interactively calling PlotComparison()
 
 
 ## [MANDATORY] [INTERACTIVE] Produce Efficiency plots for signal and bkg, and Purity : Efficiency curve

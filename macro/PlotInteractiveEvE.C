@@ -137,6 +137,7 @@ void PlotComparison()
   ge->SetFillColor(8);
   ge->GetXaxis()->SetRangeUser(0.,1200.);
   ge->Draw("4same"); // smooth filled area (3 = non-smooth)
+  gResidual->Draw("PSAME");
   c1->SaveAs( (folder+"PlotCompareDataMC_Signal.pdf").c_str() );
   
   // produce plot of residuals!
@@ -180,7 +181,7 @@ void PlotComparison()
   geB->SetFillColor(8);
   geB->GetXaxis()->SetRangeUser(0.,1200.);
   geB->Draw("4same"); // smooth filled area (3 = non-smooth)
-
+  gResidualB->Draw("PSAME");
   cBackground->SaveAs( (folder+"PlotCompareDataMC_Background.pdf").c_str() );
 }
 #endif

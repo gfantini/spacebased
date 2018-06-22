@@ -146,6 +146,22 @@ void MakeFancyPlot(TGraph* eS,TGraph* eB,TGraph* gScore,TGraph* PvsE,char multip
   gScore->SetLineWidth(2);
   gScore->Draw("PLSAME");
 
+  // find maximum score
+  TGraph* gMaximumScore = new TGraph();
+  double MaximumScore = 0.;
+  double MaximumScorePosition = 0.;
+  for(int i=0;i<gScore->GetN();i++)
+    if(gScore->GetY()[i] > MaximumScore){
+      MaximumScore = gScore->GetY()[i];
+      MaximumScorePosition = gScore->GetX()[i];
+    }
+  cout << "Optimal radius (maximum score): R = " << MaximumScorePosition << " [mm]" << endl;
+  gMaximumScore->SetPoint(0,MaximumScorePosition,MaximumScore);
+  gMaximumScore->SetMarkerStyle(29); 
+  gMaximumScore->SetMarkerSize(2);
+  gMaximumScore->SetMarkerColor(4);
+  gMaximumScore->Draw("PSAME");
+
   cout << "DEBUG: rightmax = \t" << rightmax << endl;
   cout << "DEBUG: scale = \t" << scale << endl;
 
